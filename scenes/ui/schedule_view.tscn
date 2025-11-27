@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://e5idhaoct3vn"]
+
+[ext_resource type="Texture2D" uid="uid://dj5k13nswahq" path="res://art/space_white.png" id="1_2a0r5"]
+
+[node name="ScheduleView" type="Control"]
+editor_description = "安排界面"
+layout_mode = 3
+anchor_right = 0.60052085
+anchor_bottom = 0.48240742
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer"]
+self_modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture_normal = ExtResource("1_2a0r5")
+stretch_mode = 4
+
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer"]
+self_modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture_normal = ExtResource("1_2a0r5")
+stretch_mode = 4
+
+[node name="TextureButton3" type="TextureButton" parent="HBoxContainer"]
+self_modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture_normal = ExtResource("1_2a0r5")
+stretch_mode = 4
+
+[node name="TextureButton4" type="TextureButton" parent="HBoxContainer"]
+self_modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture_normal = ExtResource("1_2a0r5")
+stretch_mode = 4

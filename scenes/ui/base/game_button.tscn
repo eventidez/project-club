@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://blgtls5kerxxi"]
+
+[ext_resource type="Texture2D" uid="uid://dj5k13nswahq" path="res://art/space_white.png" id="1_qkmkd"]
+[ext_resource type="LabelSettings" uid="uid://chk4brpdu56du" path="res://default_label.tres" id="2_ahnmp"]
+
+[node name="GameButton" type="TextureButton"]
+custom_minimum_size = Vector2(200, 80)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -41.5
+offset_right = 124.0
+offset_bottom = 41.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_qkmkd")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Button"
+label_settings = ExtResource("2_ahnmp")
+horizontal_alignment = 1
+vertical_alignment = 1

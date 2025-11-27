@@ -1,0 +1,133 @@
+[gd_scene load_steps=10 format=3 uid="uid://lnayq8ohod6r"]
+
+[ext_resource type="Script" uid="uid://capc3jjav2bpk" path="res://src/ui/ComputerView.cs" id="1_h438b"]
+[ext_resource type="Texture2D" uid="uid://dj5k13nswahq" path="res://art/space_white.png" id="2_524od"]
+[ext_resource type="PackedScene" uid="uid://blgtls5kerxxi" path="res://scenes/ui/base/game_button.tscn" id="3_hu0ko"]
+[ext_resource type="PackedScene" uid="uid://e5idhaoct3vn" path="res://scenes/ui/schedule_view.tscn" id="3_i0irq"]
+[ext_resource type="PackedScene" uid="uid://k6mcpntj5xws" path="res://scenes/ui/base/number_value_view.tscn" id="4_i0irq"]
+[ext_resource type="PackedScene" uid="uid://srjypf2t0g7w" path="res://scenes/ui/worker_view.tscn" id="4_twi7n"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_h438b"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_524od"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_hu0ko"]
+
+[node name="ComputerView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h438b")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.8392157)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Content" type="TextureRect" parent="."]
+self_modulate = Color(0.6194887, 0.61948866, 0.6194887, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -722.0
+offset_top = -418.0
+offset_right = 722.0
+offset_bottom = 226.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_524od")
+
+[node name="TextureRect2" type="TextureRect" parent="Content"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -498.0
+offset_top = -268.0
+offset_right = 655.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_524od")
+
+[node name="ScheduleView" parent="Content/TextureRect2" instance=ExtResource("3_i0irq")]
+layout_mode = 1
+
+[node name="WorkerView" parent="Content/TextureRect2" instance=ExtResource("4_twi7n")]
+layout_mode = 1
+
+[node name="Buttons" type="VBoxContainer" parent="Content"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 17.0
+offset_top = -194.0
+offset_right = 217.0
+offset_bottom = 194.0
+grow_vertical = 2
+theme_override_constants/separation = 74
+alignment = 1
+
+[node name="ScheduleButton" parent="Content/Buttons" instance=ExtResource("3_hu0ko")]
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_h438b")
+
+[node name="Label" parent="Content/Buttons/ScheduleButton" index="0"]
+text = "排班"
+
+[node name="WorkerButton" parent="Content/Buttons" instance=ExtResource("3_hu0ko")]
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_524od")
+
+[node name="Label" parent="Content/Buttons/WorkerButton" index="0"]
+text = "店员"
+
+[node name="GameButton3" parent="Content/Buttons" instance=ExtResource("3_hu0ko")]
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_hu0ko")
+
+[node name="Label" parent="Content/Buttons/GameButton3" index="0"]
+text = "装修"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 41.0
+offset_top = -297.0
+offset_right = 343.0
+offset_bottom = -25.0
+grow_vertical = 0
+theme_override_constants/separation = 20
+alignment = 2
+
+[node name="NumberValueView" parent="VBoxContainer" instance=ExtResource("4_i0irq")]
+layout_mode = 2
+
+[node name="NumberValueView2" parent="VBoxContainer" instance=ExtResource("4_i0irq")]
+layout_mode = 2
+
+[node name="NumberValueView3" parent="VBoxContainer" instance=ExtResource("4_i0irq")]
+layout_mode = 2
+
+[editable path="Content/Buttons/ScheduleButton"]
+[editable path="Content/Buttons/WorkerButton"]
+[editable path="Content/Buttons/GameButton3"]

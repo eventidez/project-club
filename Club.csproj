@@ -1,0 +1,16 @@
+<Project Sdk="Godot.NET.Sdk/4.5.1">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Chickensoft.AutoInject" Version="2.9.1" />
+    <PackageReference Include="Chickensoft.GodotNodeInterfaces" Version="2.4.47" />
+    <PackageReference Include="Chickensoft.Introspection" Version="3.0.2" />
+    <PackageReference Include="Chickensoft.Introspection.Generator" Version="3.0.2" />
+    <PackageReference Include="MiniExcel" Version="1.41.4" />
+  </ItemGroup>
+  
+  <Import Project="addons\YarnSpinner-Godot\YarnSpinner-Godot.props" />
+</Project>

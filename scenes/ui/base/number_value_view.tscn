@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://k6mcpntj5xws"]
+
+[ext_resource type="Texture2D" uid="uid://dj5k13nswahq" path="res://art/space_white.png" id="1_shoa5"]
+[ext_resource type="LabelSettings" uid="uid://chk4brpdu56du" path="res://default_label.tres" id="2_g6u5h"]
+
+[node name="NumberValueView" type="TextureRect"]
+custom_minimum_size = Vector2(0, 70)
+texture = ExtResource("1_shoa5")
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 128.0
+grow_vertical = 2
+text = "预计收入"
+label_settings = ExtResource("2_g6u5h")
+vertical_alignment = 1
+
+[node name="ValueLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "1200"
+label_settings = ExtResource("2_g6u5h")
+horizontal_alignment = 2
+vertical_alignment = 1
