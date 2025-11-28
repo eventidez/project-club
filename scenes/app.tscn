@@ -1,15 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://ulydkqp6f8rr"]
+[gd_scene load_steps=11 format=3 uid="uid://ulydkqp6f8rr"]
 
 [ext_resource type="PackedScene" uid="uid://blgtls5kerxxi" path="res://scenes/ui/base/game_button.tscn" id="1_0wu41"]
 [ext_resource type="Script" uid="uid://d3o455vluscmv" path="res://src/App.cs" id="1_1670a"]
 [ext_resource type="Script" uid="uid://brtwfv6tvicos" path="res://src/Game.cs" id="2_ceqke"]
-[ext_resource type="Texture2D" uid="uid://cy1t2yj5h2koa" path="res://art/inana_common.png" id="2_cl6f3"]
 [ext_resource type="Texture2D" uid="uid://cb3pywf1t0ov8" path="res://art/background/Bg_temp.png" id="2_ljqyw"]
-[ext_resource type="Script" uid="uid://cr7c1peyldkto" path="res://src/MouseArea2d.cs" id="3_ljqyw"]
-[ext_resource type="Script" uid="uid://bpx2tbyj5tp08" path="res://src/GameRole.cs" id="4_v5dbw"]
+[ext_resource type="PackedScene" uid="uid://dfnlotkle4hrc" path="res://scenes/role.tscn" id="4_6qkjt"]
 [ext_resource type="Texture2D" uid="uid://dakcydywy07ui" path="res://art/background/参考.jpg" id="5_jv7dx"]
 [ext_resource type="Texture2D" uid="uid://dj5k13nswahq" path="res://art/space_white.png" id="6_ljqyw"]
-[ext_resource type="Script" uid="uid://du3vprba1sb7o" path="res://src/ui/RoleMenuView.cs" id="7_ceqke"]
 [ext_resource type="LabelSettings" uid="uid://chk4brpdu56du" path="res://default_label.tres" id="7_jv7dx"]
 [ext_resource type="PackedScene" uid="uid://lnayq8ohod6r" path="res://scenes/ui/computer_view.tscn" id="9_v5dbw"]
 
@@ -28,52 +25,8 @@ script = ExtResource("2_ceqke")
 position = Vector2(960, 540)
 texture = ExtResource("2_ljqyw")
 
-[node name="Role" type="Node2D" parent="Game" node_paths=PackedStringArray("_mouseArea2D", "_menuView")]
+[node name="Role" parent="Game" instance=ExtResource("4_6qkjt")]
 position = Vector2(462, 1096)
-script = ExtResource("4_v5dbw")
-_mouseArea2D = NodePath("MouseArea2d")
-_menuView = NodePath("RoleMenuView")
-metadata/_edit_group_ = true
-
-[node name="MouseArea2d" type="Node" parent="Game/Role" node_paths=PackedStringArray("_area2d")]
-script = ExtResource("3_ljqyw")
-_area2d = NodePath("../Area2D")
-
-[node name="Skin" type="Sprite2D" parent="Game/Role"]
-position = Vector2(-93, 0)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("2_cl6f3")
-offset = Vector2(0, -780)
-
-[node name="Area2D" type="Area2D" parent="Game/Role"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Game/Role/Area2D"]
-visible = false
-polygon = PackedVector2Array(-86, -890, -166, -925, -257, -878, -294, -618, -321, -427, -345, -311, -393, -190, -417, -117, -242, -6, 85, -16, -43, -325, -16, -398, 122, -285, 219, -267, 194, -368, 57, -422, 44, -529, -20, -624, -86, -629, -90, -706, -60, -789)
-
-[node name="RoleMenuView" type="VBoxContainer" parent="Game/Role"]
-visible = false
-offset_left = 26.0
-offset_top = -843.0
-offset_right = 226.0
-offset_bottom = -635.0
-theme_override_constants/separation = 20
-alignment = 1
-script = ExtResource("7_ceqke")
-
-[node name="GameButton" parent="Game/Role/RoleMenuView" instance=ExtResource("1_0wu41")]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-
-[node name="Label" parent="Game/Role/RoleMenuView/GameButton" index="0"]
-text = "聊天"
-
-[node name="GameButton2" parent="Game/Role/RoleMenuView" instance=ExtResource("1_0wu41")]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-
-[node name="Label" parent="Game/Role/RoleMenuView/GameButton2" index="0"]
-text = "换装"
 
 [node name="BgTemp2" type="Sprite2D" parent="Game"]
 visible = false
@@ -177,6 +130,3 @@ offset_left = -100.0
 offset_top = -40.0
 offset_right = 100.0
 offset_bottom = 40.0
-
-[editable path="Game/Role/RoleMenuView/GameButton"]
-[editable path="Game/Role/RoleMenuView/GameButton2"]

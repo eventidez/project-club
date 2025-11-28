@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfnlotkle4hrc"]
+
+[ext_resource type="Script" uid="uid://bpx2tbyj5tp08" path="res://src/GameRole.cs" id="1_277nf"]
+[ext_resource type="Script" uid="uid://cr7c1peyldkto" path="res://src/MouseArea2d.cs" id="2_gjlbr"]
+[ext_resource type="Texture2D" uid="uid://cy1t2yj5h2koa" path="res://art/inana_common.png" id="3_vxpe0"]
+[ext_resource type="Script" uid="uid://du3vprba1sb7o" path="res://src/ui/RoleMenuView.cs" id="4_f3mg5"]
+[ext_resource type="PackedScene" uid="uid://blgtls5kerxxi" path="res://scenes/ui/base/game_button.tscn" id="5_3jdy1"]
+
+[node name="Role" type="Node2D" node_paths=PackedStringArray("_mouseArea2D", "_menuView")]
+script = ExtResource("1_277nf")
+_mouseArea2D = NodePath("MouseArea2d")
+_menuView = NodePath("RoleMenuView")
+metadata/_edit_group_ = true
+
+[node name="MouseArea2d" type="Node" parent="." node_paths=PackedStringArray("_area2d")]
+script = ExtResource("2_gjlbr")
+_area2d = NodePath("../Area2D")
+
+[node name="Skin" type="Sprite2D" parent="."]
+position = Vector2(-93, 0)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_vxpe0")
+offset = Vector2(0, -780)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
+polygon = PackedVector2Array(-86, -890, -166, -925, -257, -878, -294, -618, -321, -427, -345, -311, -393, -190, -417, -117, -242, -6, 85, -16, -43, -325, -16, -398, 122, -285, 219, -267, 194, -368, 57, -422, 44, -529, -20, -624, -86, -629, -90, -706, -60, -789)
+
+[node name="RoleMenuView" type="VBoxContainer" parent="."]
+visible = false
+offset_left = 26.0
+offset_top = -843.0
+offset_right = 226.0
+offset_bottom = -635.0
+theme_override_constants/separation = 20
+alignment = 1
+script = ExtResource("4_f3mg5")
+
+[node name="GameButton" parent="RoleMenuView" instance=ExtResource("5_3jdy1")]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="Label" parent="RoleMenuView/GameButton" index="0"]
+text = "聊天"
+
+[node name="GameButton2" parent="RoleMenuView" instance=ExtResource("5_3jdy1")]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="Label" parent="RoleMenuView/GameButton2" index="0"]
+text = "换装"
+
+[editable path="RoleMenuView/GameButton"]
+[editable path="RoleMenuView/GameButton2"]
