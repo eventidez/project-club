@@ -39,8 +39,9 @@ self_modulate = Color(1, 1, 1, 0.41568628)
 position = Vector2(960, 540)
 texture = ExtResource("4_518ne")
 
-[node name="MainCanvas" type="CanvasLayer" parent="." node_paths=PackedStringArray("_computerView")]
+[node name="MainCanvas" type="CanvasLayer" parent="." node_paths=PackedStringArray("_mainView", "_computerView")]
 script = ExtResource("7_cof0n")
+_mainView = NodePath("MainView")
 _computerView = NodePath("ComputerView")
 _computerAreaPressed = ExtResource("4_mn5u6")
 

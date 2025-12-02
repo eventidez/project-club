@@ -1,10 +1,15 @@
 using Godot;
 using System;
+using Chickensoft.AutoInject;
+using Chickensoft.Introspection;
 
 namespace Game.UI;
 
+[Meta(typeof(IAutoNode))]
 public partial class MainView : BaseView
 {
+    public override void _Notification(int what) => this.Notify(what);
+
     public override void _EnterTree()
     {
         base._EnterTree();
@@ -12,10 +17,7 @@ public partial class MainView : BaseView
         GD.Print(nameof(_EnterTree));
     }
 
-    public override void _Draw()
+    public void OnResolved()
     {
-        base._Draw();
-
-        GD.Print(nameof(_Draw), ": ", Visible);
     }
 }
