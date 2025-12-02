@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqixqcuanml2y"]
+
+[ext_resource type="Script" uid="uid://budnld4qd513n" path="res://addons/YarnSpinner-Godot/Runtime/DialogueRunner.cs" id="1_o2lx1"]
+
+[node name="Dialogue" type="Node2D"]
+
+[node name="DialogueRunner" type="Node" parent="."]
+script = ExtResource("1_o2lx1")
+metadata/_custom_type_script = "uid://budnld4qd513n"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1382.0
+offset_top = -388.0
+offset_right = -56.0
+offset_bottom = -58.0
+grow_horizontal = 0
+grow_vertical = 0
+color = Color(0, 0, 0, 0.44313726)

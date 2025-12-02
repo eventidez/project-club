@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://rixc16whkeds"]
+
+[ext_resource type="PackedScene" uid="uid://blgtls5kerxxi" path="res://scenes/ui/base/game_button.tscn" id="1_u4pil"]
+
+[node name="GameButton" instance=ExtResource("1_u4pil")]
+custom_minimum_size = Vector2(200, 50)

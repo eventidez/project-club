@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfnlotkle4hrc"]
+
+[ext_resource type="Script" uid="uid://bpx2tbyj5tp08" path="res://src/GameRoleForm.cs" id="1_7go5a"]
+[ext_resource type="Script" uid="uid://cr7c1peyldkto" path="res://src/core/input/MouseArea2d.cs" id="2_7ts3a"]
+[ext_resource type="Texture2D" uid="uid://cy1t2yj5h2koa" path="res://art/inana_common.png" id="3_1pi4e"]
+[ext_resource type="PackedScene" uid="uid://q72a2x2cgpvt" path="res://scenes/role/role_menu_view.tscn" id="4_gnfo1"]
+
+[node name="Role" type="Node2D" node_paths=PackedStringArray("_mouseArea2D", "_menuView")]
+script = ExtResource("1_7go5a")
+_mouseArea2D = NodePath("MouseArea2d")
+_menuView = NodePath("RoleMenuView")
+metadata/_edit_group_ = true
+
+[node name="MouseArea2d" type="Node" parent="." node_paths=PackedStringArray("_area2d")]
+script = ExtResource("2_7ts3a")
+_area2d = NodePath("../Area2D")
+
+[node name="Skin" type="Sprite2D" parent="."]
+position = Vector2(-93, 0)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_1pi4e")
+offset = Vector2(0, -780)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
+polygon = PackedVector2Array(-86, -890, -166, -925, -257, -878, -294, -618, -321, -427, -345, -311, -393, -190, -417, -117, -242, -6, 85, -16, -43, -325, -16, -398, 122, -285, 219, -267, 194, -368, 57, -422, 44, -529, -20, -624, -86, -629, -90, -706, -60, -789)
+
+[node name="RoleMenuView" parent="." instance=ExtResource("4_gnfo1")]

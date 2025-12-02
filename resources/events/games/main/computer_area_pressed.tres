@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="VoidEventChannel" load_steps=2 format=3 uid="uid://cw7x1j31gc762"]
+
+[ext_resource type="Script" uid="uid://pavnbi4sec6w" path="res://src/core/event/VoidEventChannel.cs" id="1_26gf1"]
+
+[resource]
+script = ExtResource("1_26gf1")
+metadata/_custom_type_script = "uid://pavnbi4sec6w"

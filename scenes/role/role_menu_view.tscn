@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://q72a2x2cgpvt"]
+
+[ext_resource type="Script" uid="uid://du3vprba1sb7o" path="res://src/ui/RoleMenuView.cs" id="1_h1mfn"]
+[ext_resource type="PackedScene" uid="uid://blgtls5kerxxi" path="res://scenes/ui/base/game_button.tscn" id="2_mr32v"]
+[ext_resource type="PackedScene" uid="uid://rixc16whkeds" path="res://scenes/ui/game_role_button.tscn" id="3_cciad"]
+
+[node name="RoleMenuView" type="VBoxContainer" node_paths=PackedStringArray("_buttonContainers")]
+offset_left = 26.0
+offset_top = -843.0
+offset_right = 226.0
+offset_bottom = -635.0
+theme_override_constants/separation = 20
+alignment = 1
+script = ExtResource("1_h1mfn")
+_buttonContainers = [NodePath("First"), NodePath("Seconly")]
+
+[node name="First" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="ChatButton" parent="First" instance=ExtResource("2_mr32v")]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="Label" parent="First/ChatButton" index="0"]
+text = "聊天"
+
+[node name="ClothingButton" parent="First" instance=ExtResource("2_mr32v")]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="Label" parent="First/ClothingButton" index="0"]
+text = "换装"
+
+[node name="Seconly" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Button" parent="Seconly" instance=ExtResource("3_cciad")]
+layout_mode = 2
+
+[node name="Label" parent="Seconly/Button" index="0"]
+text = "日常"
+
+[node name="GameButton2" parent="Seconly" instance=ExtResource("3_cciad")]
+layout_mode = 2
+
+[node name="Label" parent="Seconly/GameButton2" index="0"]
+text = "内衣"
+
+[node name="GameButton3" parent="Seconly" instance=ExtResource("3_cciad")]
+layout_mode = 2
+
+[node name="Label" parent="Seconly/GameButton3" index="0"]
+text = "情趣"
+
+[connection signal="pressed" from="First/ClothingButton" to="." method="OnClothingButtonPressed"]
+
+[editable path="First/ChatButton"]
+[editable path="First/ClothingButton"]
+[editable path="Seconly/Button"]
+[editable path="Seconly/GameButton2"]
+[editable path="Seconly/GameButton3"]
