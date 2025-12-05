@@ -6,6 +6,8 @@ namespace GameSystems.Event
     [GlobalClass]
     public partial class VoidEventChannel : Resource
     {
+        [Export(PropertyHint.MultilineText, "20")] public string EventName { get; set; }
+
         private Action _eventRaised;
 
         public event Action EventRaised

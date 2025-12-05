@@ -66,3 +66,10 @@ offset_left = -100.0
 offset_top = -40.0
 offset_right = 100.0
 offset_bottom = 40.0
+
+[node name="GameButton2" parent="CanvasLayer/TitleView" instance=ExtResource("1_0wu41")]
+layout_mode = 1
+offset_left = -99.0
+offset_top = 89.0
+offset_right = 101.0
+offset_bottom = 169.0

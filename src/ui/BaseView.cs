@@ -1,3 +1,4 @@
+using System;
 using Chickensoft.AutoInject;
 using Chickensoft.Introspection;
 using Godot;
@@ -16,6 +17,8 @@ public partial class BaseView : Control
         Visible = true;
         Controller.AddView(this);
     }
+
+    public virtual void OnOpen() { }
 
     public void Close()
     {

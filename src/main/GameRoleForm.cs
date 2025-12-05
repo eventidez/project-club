@@ -3,12 +3,24 @@ using System;
 
 namespace Game;
 
-public partial class GameRoleForm : Node2D , IRoleForm
+public partial class GameRoleForm : Node2D, IGameRoleForm
 {
-    [Export] private MouseArea2d _mouseArea2D;
-    [Export] private RoleMenuView _menuView;
+    [Export] private MouseArea2d _mouseArea2D = default;
+    [Export] private RoleMenuView _menuView = default;
 
-    public Action<IRoleForm> RolePressed;
+    private bool _isSelect = false;
+
+    public Action<IGameRoleForm> RolePressed;
+
+    public bool IsSelect
+    {
+        get => _isSelect;
+        set
+        {
+            _isSelect = value;
+            _menuView.Visible = _isSelect;
+        }
+    }
 
     public override void _Ready()
     {

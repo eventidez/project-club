@@ -8,7 +8,7 @@ public abstract partial class RuntimeSet<T> : Resource where T : GodotObject
 {
     private List<T> _items = [];
 
-    public IReadOnlyList<T> Item => _items;
+    public IReadOnlyList<T> Items => _items;
     public Action ItemsChanged;
 
     public void Add(T thing)

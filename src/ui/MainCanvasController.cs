@@ -16,6 +16,7 @@ public partial class MainCanvasController : CanvasLayer, IMainCanvasController, 
 {
     public override void _Notification(int what) => this.Notify(what);
 
+    [Export] private RoleMenuView _roleMenuView = default;
     [Export] private MainView _mainView = default;
     [Export] private ComputerView _computerView = default;
     [Export] private VoidEventChannel _computerAreaPressed = default;
@@ -36,6 +37,26 @@ public partial class MainCanvasController : CanvasLayer, IMainCanvasController, 
         _computerAreaPressed.EventRaised -= _computerView.Open;
     }
 
+    public override void _Ready()
+    {
+        base._Ready();
+        for (int i = 0; i < GetChildCount(); i++)
+        {
+            var child = GetChild(i);
+            if (child is not BaseView view)
+            {
+                continue;
+            }
+
+            view.Visible = false;
+        }
+    }
+
+    public void OpenRoleMenu()
+    {
+
+    }
+
     public void OnResolved()
     {
         _mainView.Open();
@@ -44,7 +65,7 @@ public partial class MainCanvasController : CanvasLayer, IMainCanvasController, 
     public void AddView(BaseView view)
     {
         _views.Add(view);
-        GD.Print(_views.Count);
+        // GD.Print(_views.Count);
     }
 
     public void RemoveView(BaseView view)

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dj5k13nswahq" path="res://art/space_white.png" id="2_jslhe"]
 [ext_resource type="LabelSettings" uid="uid://chk4brpdu56du" path="res://default_label.tres" id="3_wctgg"]
 
-[node name="MainView" type="Control"]
+[node name="MainView" type="Control" node_paths=PackedStringArray("_dateLabel", "_nextDayButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +13,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_uvgb6")
+_dateLabel = NodePath("Panel/Label")
+_nextDayButton = NodePath("NextButton")
 
 [node name="NextButton" type="TextureButton" parent="."]
 layout_mode = 1
@@ -55,3 +57,5 @@ offset_right = 296.0
 offset_bottom = 83.0
 text = "4月1日"
 label_settings = ExtResource("3_wctgg")
+
+[connection signal="pressed" from="NextButton" to="." method="NextDay"]

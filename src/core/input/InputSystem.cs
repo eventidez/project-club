@@ -30,4 +30,10 @@ public partial class InputSystem : Node
             // GD.Print(e.GetType(), "   >", e.Pressed);
         }
     }
+
+    // public override void _ShortcutInput(InputEvent @event)
+    // {
+    //     base._ShortcutInput(@event);
+    //     GD.Print(@event.GetType());
+    // }
 }

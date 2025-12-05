@@ -1,22 +1,16 @@
-using Chickensoft.AutoInject;
-using Chickensoft.Introspection;
 using Godot;
 using System;
+using Chickensoft.AutoInject;
+using Chickensoft.Introspection;
 
 namespace Game;
-
-public class ClassA
-{
-    public ClassA()
-    {
-        // GD.Print(GetType());
-    }
-}
 
 [Meta(typeof(IAutoNode))]
 public partial class App : Node, IProvide<string>
 {
     public override void _Notification(int what) => this.Notify(what);
+
+    private TestX _test = default;
 
     string IProvide<string>.Value() => "APP";
 
@@ -36,6 +30,30 @@ public partial class App : Node, IProvide<string>
 
     public void AddGame()
     {
+        if (_test == null)
+        {
+            _test = new TestX();
+        }
+
+        if (_test.GetParent() == null)
+        {
+            AddChild(_test);
+        }
+
+        // GD.PrintErr(GetPath(), "  AddGame");
+    }
+
+    public void RemoveGame()
+    {
+        if (_test == null)
+        {
+            return;
+        }
+
+        if (_test.GetParent() == this)
+        {
+            RemoveChild(_test);
+        }
         // AddChild(new Game());
         // GD.PrintErr(GetPath(), "  AddGame");
     }

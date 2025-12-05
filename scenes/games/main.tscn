@@ -1,51 +1,69 @@
-[gd_scene load_steps=11 format=3 uid="uid://bvfxi0tpjl43l"]
+[gd_scene load_steps=13 format=3 uid="uid://bvfxi0tpjl43l"]
 
-[ext_resource type="Script" uid="uid://dqjv6wdlqkng8" path="res://src/MainGame.cs" id="1_3vo7c"]
+[ext_resource type="Script" uid="uid://dqjv6wdlqkng8" path="res://src/main/MainGame.cs" id="1_3vo7c"]
 [ext_resource type="Texture2D" uid="uid://cb3pywf1t0ov8" path="res://art/background/Bg_temp.png" id="2_8otcw"]
+[ext_resource type="Resource" uid="uid://bdprmx4teneq0" path="res://resources/runtime_sets/main_roles.tres" id="2_cof0n"]
 [ext_resource type="PackedScene" uid="uid://dfnlotkle4hrc" path="res://scenes/role/role.tscn" id="3_bbq7e"]
 [ext_resource type="Script" uid="uid://cr7c1peyldkto" path="res://src/core/input/MouseArea2d.cs" id="3_j2hlb"]
-[ext_resource type="Script" uid="uid://bknut24qsq06f" path="res://src/GameComputerArea.cs" id="3_swccm"]
+[ext_resource type="Script" uid="uid://bknut24qsq06f" path="res://src/main/GameComputerArea.cs" id="3_swccm"]
 [ext_resource type="Texture2D" uid="uid://dakcydywy07ui" path="res://art/background/参考.jpg" id="4_518ne"]
 [ext_resource type="Resource" uid="uid://cw7x1j31gc762" path="res://resources/events/games/main/computer_area_pressed.tres" id="4_mn5u6"]
 [ext_resource type="Script" uid="uid://s0li1vwxtuw3" path="res://src/ui/MainCanvasController.cs" id="7_cof0n"]
 [ext_resource type="PackedScene" uid="uid://lnayq8ohod6r" path="res://scenes/ui/computer/computer_view.tscn" id="8_7gcnn"]
 [ext_resource type="PackedScene" uid="uid://d340t47ycaptk" path="res://scenes/ui/main_view.tscn" id="9_swccm"]
+[ext_resource type="PackedScene" uid="uid://q72a2x2cgpvt" path="res://scenes/role/role_menu_view.tscn" id="10_mn5u6"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_3vo7c")
+_roleNodeSet = ExtResource("2_cof0n")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Level" type="Node2D" parent="."]
+editor_description = "传出的 Event
+Computer 
+Roles"
+
+[node name="Background" type="Sprite2D" parent="Level"]
 position = Vector2(960, 540)
 texture = ExtResource("2_8otcw")
 
-[node name="ComputerArea2D" type="Area2D" parent="Background"]
-position = Vector2(646, 174)
+[node name="ComputerArea2D" type="Area2D" parent="Level"]
+position = Vector2(1606, 714)
 script = ExtResource("3_swccm")
 _pressed = ExtResource("4_mn5u6")
 
-[node name="MouseArea2d" type="Node" parent="Background/ComputerArea2D"]
+[node name="MouseArea2d" type="Node" parent="Level/ComputerArea2D"]
 script = ExtResource("3_j2hlb")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Background/ComputerArea2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level/ComputerArea2D"]
 visible = false
 polygon = PackedVector2Array(-233, -168, 228, -145, 210, 160, -230, 117)
 
-[node name="Role" parent="." instance=ExtResource("3_bbq7e")]
+[node name="Role" parent="Level" instance=ExtResource("3_bbq7e")]
 position = Vector2(462, 1096)
 
-[node name="Temp" type="Sprite2D" parent="."]
+[node name="Temp" type="Sprite2D" parent="Level"]
 visible = false
 self_modulate = Color(1, 1, 1, 0.41568628)
 position = Vector2(960, 540)
 texture = ExtResource("4_518ne")
 
-[node name="MainCanvas" type="CanvasLayer" parent="." node_paths=PackedStringArray("_mainView", "_computerView")]
+[node name="MainCanvas" type="CanvasLayer" parent="." node_paths=PackedStringArray("_roleMenuView", "_mainView", "_computerView")]
 script = ExtResource("7_cof0n")
-_mainView = NodePath("MainView")
-_computerView = NodePath("ComputerView")
+_roleMenuView = NodePath("RoleMenu")
+_mainView = NodePath("Main")
+_computerView = NodePath("Computer")
 _computerAreaPressed = ExtResource("4_mn5u6")
 
-[node name="MainView" parent="MainCanvas" instance=ExtResource("9_swccm")]
-
-[node name="ComputerView" parent="MainCanvas" instance=ExtResource("8_7gcnn")]
+[node name="RoleMenu" parent="MainCanvas" instance=ExtResource("10_mn5u6")]
 visible = false
+offset_left = 486.0
+offset_top = 290.0
+offset_right = 686.0
+offset_bottom = 498.0
+
+[node name="Main" parent="MainCanvas" instance=ExtResource("9_swccm")]
+
+[node name="Computer" parent="MainCanvas" instance=ExtResource("8_7gcnn")]
+visible = false
+
+[connection signal="NextDayButtonPressed" from="MainCanvas/Main" to="." method="NextDay"]
