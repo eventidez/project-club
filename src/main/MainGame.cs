@@ -48,6 +48,7 @@ public partial class MainGame : Node, IMainGameRepo, IProvide<IMainGameRepo>, IP
         _roles.Clear();
         foreach (var role in _roleNodeSet.GetNodes<GameRoleForm>())
         {
+            // role.Data
             role.RolePressed = OnGameRolePressed;
             _roles.Add(role);
         }

@@ -10,6 +10,7 @@ public partial class GameRoleForm : Node2D, IGameRoleForm
 
     private bool _isSelect = false;
 
+    public DRole Data { get; set; }
     public Action<IGameRoleForm> RolePressed;
 
     public bool IsSelect
