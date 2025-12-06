@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="VoidEventChannel" load_steps=2 format=3 uid="uid://b43mlq0do8vre"]
+
+[ext_resource type="Script" uid="uid://pavnbi4sec6w" path="res://src/core/event/VoidEventChannel.cs" id="1_qdola"]
+
+[resource]
+script = ExtResource("1_qdola")
+EventName = "input_empty_mouse_pressed"
+metadata/_custom_type_script = "uid://pavnbi4sec6w"

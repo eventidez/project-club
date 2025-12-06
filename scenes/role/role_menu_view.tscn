@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://q72a2x2cgpvt"]
+[gd_scene load_steps=5 format=3 uid="uid://q72a2x2cgpvt"]
 
 [ext_resource type="Script" uid="uid://du3vprba1sb7o" path="res://src/ui/RoleMenuView.cs" id="1_h1mfn"]
+[ext_resource type="Resource" uid="uid://b43mlq0do8vre" path="res://resources/events/input/empty_mouse_pressed.tres" id="2_cciad"]
 [ext_resource type="PackedScene" uid="uid://blgtls5kerxxi" path="res://scenes/ui/base/game_button.tscn" id="2_mr32v"]
 [ext_resource type="PackedScene" uid="uid://rixc16whkeds" path="res://scenes/ui/game_role_button.tscn" id="3_cciad"]
 
@@ -9,10 +10,12 @@ offset_left = 26.0
 offset_top = -843.0
 offset_right = 226.0
 offset_bottom = -635.0
+mouse_filter = 2
 theme_override_constants/separation = 20
 alignment = 1
 script = ExtResource("1_h1mfn")
 _buttonContainers = [NodePath("First"), NodePath("Seconly")]
+_emptyMousePressed = ExtResource("2_cciad")
 
 [node name="First" type="VBoxContainer" parent="."]
 layout_mode = 2

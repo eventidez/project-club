@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" uid="uid://cr7c1peyldkto" path="res://src/core/input/MouseArea2d.cs" id="1_4qyh6"]
 
-[node name="Node2D" type="Node"]
+[node name="Area2dMouseZone" type="Node"]
 script = ExtResource("1_4qyh6")

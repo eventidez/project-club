@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://ulydkqp6f8rr"]
+[gd_scene load_steps=8 format=3 uid="uid://ulydkqp6f8rr"]
 
 [ext_resource type="PackedScene" uid="uid://blgtls5kerxxi" path="res://scenes/ui/base/game_button.tscn" id="1_0wu41"]
 [ext_resource type="Script" uid="uid://d3o455vluscmv" path="res://src/App.cs" id="1_1670a"]
 [ext_resource type="Script" uid="uid://c6qi8ua6nax3u" path="res://src/core/input/InputSystem.cs" id="2_v5dbw"]
 [ext_resource type="Script" uid="uid://cra7vqw1h8d0p" path="res://src/core/event/EventBus.cs" id="3_awiwq"]
 [ext_resource type="PackedScene" uid="uid://bvfxi0tpjl43l" path="res://scenes/games/main.tscn" id="3_cl6f3"]
+[ext_resource type="Resource" uid="uid://b43mlq0do8vre" path="res://resources/events/input/empty_mouse_pressed.tres" id="4_k6d74"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0wu41"]
 font_size = 120
@@ -20,6 +21,7 @@ metadata/_custom_type_script = "uid://cra7vqw1h8d0p"
 
 [node name="InputSystem" type="Node" parent="Managers"]
 script = ExtResource("2_v5dbw")
+_emptyMousePressed = ExtResource("4_k6d74")
 
 [node name="Game" type="Node2D" parent="."]
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Chickensoft.AutoInject;
 using Chickensoft.Introspection;
 using GameSystems.RuntimeSet;
+using GameSystems.Event;
 
 namespace Game;
 
@@ -18,6 +19,8 @@ public partial class MainGame : Node, IMainGameRepo, IProvide<IMainGameRepo>, IP
     public override void _Notification(int what) => this.Notify(what);
 
     [Export] private GodotNodeRuntimeSet _roleNodeSet = default;
+    [Export] private VoidEventChannel _emptyMousePressed = default;
+
     private MainGameSet _mainGameSet = default;
     private List<IGameRoleForm> _roles = [];
 
@@ -28,11 +31,14 @@ public partial class MainGame : Node, IMainGameRepo, IProvide<IMainGameRepo>, IP
     {
         _mainGameSet = new MainGameSet();
         this.Provide();
+
+        _emptyMousePressed.EventRaised += CloseRoles;
     }
 
     public override void _ExitTree()
     {
         base._ExitTree();
+        _emptyMousePressed.EventRaised -= CloseRoles;
     }
 
     public override void _Ready()
@@ -50,6 +56,14 @@ public partial class MainGame : Node, IMainGameRepo, IProvide<IMainGameRepo>, IP
     public void NextDay()
     {
         _mainGameSet.Day += 1;
+    }
+
+    private void CloseRoles()
+    {
+        foreach (var role in _roles)
+        {
+            role.IsSelect = false;
+        }
     }
 
     private void OnGameRolePressed(IGameRoleForm roleForm)

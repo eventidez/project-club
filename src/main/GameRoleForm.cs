@@ -18,7 +18,14 @@ public partial class GameRoleForm : Node2D, IGameRoleForm
         set
         {
             _isSelect = value;
-            _menuView.Visible = _isSelect;
+            if (_isSelect)
+            {
+                _menuView.Open();
+            }
+            else
+            {
+                _menuView.Close();
+            }
         }
     }
 
@@ -27,6 +34,7 @@ public partial class GameRoleForm : Node2D, IGameRoleForm
         base._Ready();
         // _mouseArea2D.MouseEntered = OnAreaMouseEntered;
         // _mouseArea2D.MouseExited = OnAreaMouseExited;
+        _menuView.CancelPressed = () => IsSelect = false;
         EventTriggerListener.Get(this).Pressed = OnRolePressed;
     }
 
