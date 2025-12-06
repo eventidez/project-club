@@ -22,14 +22,14 @@ theme_override_constants/separation = 20
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 
-[node name="Label" parent="First/ChatButton" index="0"]
+[node name="Label" parent="First/ChatButton" index="1"]
 text = "聊天"
 
 [node name="ClothingButton" parent="First" instance=ExtResource("2_mr32v")]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 
-[node name="Label" parent="First/ClothingButton" index="0"]
+[node name="Label" parent="First/ClothingButton" index="1"]
 text = "换装"
 
 [node name="Seconly" type="VBoxContainer" parent="."]
@@ -40,19 +40,19 @@ theme_override_constants/separation = 20
 [node name="Button" parent="Seconly" instance=ExtResource("3_cciad")]
 layout_mode = 2
 
-[node name="Label" parent="Seconly/Button" index="0"]
+[node name="Label" parent="Seconly/Button" index="1"]
 text = "日常"
 
 [node name="GameButton2" parent="Seconly" instance=ExtResource("3_cciad")]
 layout_mode = 2
 
-[node name="Label" parent="Seconly/GameButton2" index="0"]
+[node name="Label" parent="Seconly/GameButton2" index="1"]
 text = "内衣"
 
 [node name="GameButton3" parent="Seconly" instance=ExtResource("3_cciad")]
 layout_mode = 2
 
-[node name="Label" parent="Seconly/GameButton3" index="0"]
+[node name="Label" parent="Seconly/GameButton3" index="1"]
 text = "情趣"
 
 [connection signal="pressed" from="First/ClothingButton" to="." method="OnClothingButtonPressed"]

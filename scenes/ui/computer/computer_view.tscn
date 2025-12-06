@@ -65,8 +65,13 @@ texture = ExtResource("2_524od")
 
 [node name="ScheduleView" parent="Content/TextureRect2" instance=ExtResource("3_i0irq")]
 layout_mode = 1
+anchor_left = 0.018213356
+anchor_top = 0.038387716
+anchor_right = 0.97918475
+anchor_bottom = 0.9577735
 
 [node name="WorkerView" parent="Content/TextureRect2" instance=ExtResource("4_twi7n")]
+visible = false
 layout_mode = 1
 
 [node name="Buttons" type="VBoxContainer" parent="Content"]
@@ -87,7 +92,7 @@ layout_mode = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_yc27j")
 
-[node name="Label" parent="Content/Buttons/ScheduleButton" index="0"]
+[node name="Label" parent="Content/Buttons/ScheduleButton" index="1"]
 text = "排班"
 
 [node name="WorkerButton" parent="Content/Buttons" instance=ExtResource("3_hu0ko")]
@@ -95,7 +100,7 @@ layout_mode = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_dod05")
 
-[node name="Label" parent="Content/Buttons/WorkerButton" index="0"]
+[node name="Label" parent="Content/Buttons/WorkerButton" index="1"]
 text = "店员"
 
 [node name="GameButton3" parent="Content/Buttons" instance=ExtResource("3_hu0ko")]
@@ -103,7 +108,7 @@ layout_mode = 2
 toggle_mode = true
 button_group = SubResource("ButtonGroup_tykni")
 
-[node name="Label" parent="Content/Buttons/GameButton3" index="0"]
+[node name="Label" parent="Content/Buttons/GameButton3" index="1"]
 text = "装修"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]

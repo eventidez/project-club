@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://blgtls5kerxxi"]
+[gd_scene load_steps=5 format=3 uid="uid://blgtls5kerxxi"]
 
 [ext_resource type="Texture2D" uid="uid://dj5k13nswahq" path="res://art/space_white.png" id="1_qkmkd"]
 [ext_resource type="Script" uid="uid://bxrkcsv4g5bq1" path="res://src/ui/GameButton.cs" id="2_8qhl7"]
 [ext_resource type="LabelSettings" uid="uid://chk4brpdu56du" path="res://default_label.tres" id="2_ahnmp"]
+[ext_resource type="PackedScene" uid="uid://ca6srvxbesx5c" path="res://scenes/core/control_mouse_zone.tscn" id="3_eb4rw"]
 
 [node name="GameButton" type="TextureButton" node_paths=PackedStringArray("_label")]
 custom_minimum_size = Vector2(200, 80)
@@ -21,6 +22,8 @@ texture_normal = ExtResource("1_qkmkd")
 stretch_mode = 0
 script = ExtResource("2_8qhl7")
 _label = NodePath("Label")
+
+[node name="ControlMouseZone" parent="." instance=ExtResource("3_eb4rw")]
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

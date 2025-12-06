@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://h7p5x7p31s0l"]
+
+[ext_resource type="Script" uid="uid://cr7c1peyldkto" path="res://src/core/input/MouseArea2d.cs" id="1_4qyh6"]
+
+[node name="Node2D" type="Node"]
+script = ExtResource("1_4qyh6")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca6srvxbesx5c"]
+
+[ext_resource type="Script" uid="uid://bjngpl5i8wn86" path="res://src/core/input/ControlMouseZone.cs" id="1_kxh5p"]
+
+[node name="ControlMouseZone" type="Node"]
+script = ExtResource("1_kxh5p")

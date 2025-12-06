@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bvfxi0tpjl43l"]
+[gd_scene load_steps=12 format=3 uid="uid://bvfxi0tpjl43l"]
 
 [ext_resource type="Script" uid="uid://dqjv6wdlqkng8" path="res://src/main/MainGame.cs" id="1_3vo7c"]
 [ext_resource type="Texture2D" uid="uid://cb3pywf1t0ov8" path="res://art/background/Bg_temp.png" id="2_8otcw"]
@@ -11,7 +11,6 @@
 [ext_resource type="Script" uid="uid://s0li1vwxtuw3" path="res://src/ui/MainCanvasController.cs" id="7_cof0n"]
 [ext_resource type="PackedScene" uid="uid://lnayq8ohod6r" path="res://scenes/ui/computer/computer_view.tscn" id="8_7gcnn"]
 [ext_resource type="PackedScene" uid="uid://d340t47ycaptk" path="res://scenes/ui/main_view.tscn" id="9_swccm"]
-[ext_resource type="PackedScene" uid="uid://q72a2x2cgpvt" path="res://scenes/role/role_menu_view.tscn" id="10_mn5u6"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_3vo7c")
@@ -47,19 +46,11 @@ self_modulate = Color(1, 1, 1, 0.41568628)
 position = Vector2(960, 540)
 texture = ExtResource("4_518ne")
 
-[node name="MainCanvas" type="CanvasLayer" parent="." node_paths=PackedStringArray("_roleMenuView", "_mainView", "_computerView")]
+[node name="MainCanvas" type="CanvasLayer" parent="." node_paths=PackedStringArray("_mainView", "_computerView")]
 script = ExtResource("7_cof0n")
-_roleMenuView = NodePath("RoleMenu")
 _mainView = NodePath("Main")
 _computerView = NodePath("Computer")
 _computerAreaPressed = ExtResource("4_mn5u6")
-
-[node name="RoleMenu" parent="MainCanvas" instance=ExtResource("10_mn5u6")]
-visible = false
-offset_left = 486.0
-offset_top = 290.0
-offset_right = 686.0
-offset_bottom = 498.0
 
 [node name="Main" parent="MainCanvas" instance=ExtResource("9_swccm")]
 

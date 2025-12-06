@@ -11,7 +11,6 @@ public partial class RoleMenuView : Control
     {
         base._Ready();
         Visible = false;
-        MouseEntered += () => GD.Print(GetPath());
     }
 
     public void Open(IGameRoleForm roleForm = default)

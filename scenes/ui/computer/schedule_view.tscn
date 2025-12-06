@@ -12,6 +12,47 @@ grow_vertical = 2
 mouse_filter = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 484.0
+offset_bottom = 294.0
+columns = 2
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer"]
+self_modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(240, 120)
+layout_mode = 2
+texture_normal = ExtResource("1_2a0r5")
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="GridContainer"]
+self_modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(240, 120)
+layout_mode = 2
+texture_normal = ExtResource("1_2a0r5")
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="GridContainer"]
+self_modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(240, 120)
+layout_mode = 2
+texture_normal = ExtResource("1_2a0r5")
+stretch_mode = 0
+
+[node name="TextureButton5" type="TextureButton" parent="GridContainer"]
+self_modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(240, 120)
+layout_mode = 2
+texture_normal = ExtResource("1_2a0r5")
+stretch_mode = 0
+
+[node name="TextureButton4" type="TextureButton" parent="GridContainer"]
+self_modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(240, 120)
+layout_mode = 2
+texture_normal = ExtResource("1_2a0r5")
+stretch_mode = 0
+
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 12
@@ -44,6 +85,37 @@ texture_normal = ExtResource("1_2a0r5")
 stretch_mode = 4
 
 [node name="TextureButton4" type="TextureButton" parent="HBoxContainer"]
+self_modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture_normal = ExtResource("1_2a0r5")
+stretch_mode = 4
+
+[node name="GridContainer2" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+columns = 3
+
+[node name="TextureButton5" type="TextureButton" parent="GridContainer2"]
+self_modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture_normal = ExtResource("1_2a0r5")
+stretch_mode = 4
+
+[node name="TextureButton6" type="TextureButton" parent="GridContainer2"]
+self_modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture_normal = ExtResource("1_2a0r5")
+stretch_mode = 4
+
+[node name="TextureButton7" type="TextureButton" parent="GridContainer2"]
 self_modulate = Color(1, 0, 0, 1)
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2

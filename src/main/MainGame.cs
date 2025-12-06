@@ -54,15 +54,15 @@ public partial class MainGame : Node, IMainGameRepo, IProvide<IMainGameRepo>, IP
 
     private void OnGameRolePressed(IGameRoleForm roleForm)
     {
-        // if (roleForm.IsSelect)
-        // {
-        //     return;
-        // }
+        if (roleForm.IsSelect)
+        {
+            return;
+        }
 
-        // GD.Print($"Press: {roleForm}");
-        // foreach (var role in _roles)
-        // {
-        //     role.IsSelect = role == roleForm;
-        // }
+        GD.Print($"Press: {roleForm}");
+        foreach (var role in _roles)
+        {
+            role.IsSelect = role == roleForm;
+        }
     }
 }

@@ -16,7 +16,6 @@ public partial class MainCanvasController : CanvasLayer, IMainCanvasController, 
 {
     public override void _Notification(int what) => this.Notify(what);
 
-    [Export] private RoleMenuView _roleMenuView = default;
     [Export] private MainView _mainView = default;
     [Export] private ComputerView _computerView = default;
     [Export] private VoidEventChannel _computerAreaPressed = default;

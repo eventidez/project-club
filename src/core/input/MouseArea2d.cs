@@ -1,6 +1,7 @@
 using Godot;
 using System;
-using GameSystems.RuntimeSet;
+
+namespace GameSystems.Input;
 
 public partial class MouseArea2d : Node
 {

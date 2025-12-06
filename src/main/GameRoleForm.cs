@@ -5,7 +5,7 @@ namespace Game;
 
 public partial class GameRoleForm : Node2D, IGameRoleForm
 {
-    [Export] private MouseArea2d _mouseArea2D = default;
+    // [Export] private MouseArea2d _mouseArea2D = default;
     [Export] private RoleMenuView _menuView = default;
 
     private bool _isSelect = false;
