@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="SettingFile" load_steps=2 format=3 uid="uid://cld24642iqt0t"]
+
+[ext_resource type="Script" uid="uid://cnrrnx13oyqi0" path="res://src/core/setting/SettingFile.cs" id="1_qppi1"]
+
+[resource]
+script = ExtResource("1_qppi1")
+metadata/_custom_type_script = "uid://cnrrnx13oyqi0"

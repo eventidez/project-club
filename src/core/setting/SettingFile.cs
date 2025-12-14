@@ -3,9 +3,12 @@ using System;
 
 namespace GameSystems.Setting;
 
+[GlobalClass]
 public partial class SettingFile : Resource
 {
     private ConfigFile _configFile = new();
+
+    public ConfigFile ConfigFile => _configFile;
 
     public void SetValue(string groupName, string settingName, Variant value)
     {

@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://ulydkqp6f8rr"]
+[gd_scene load_steps=9 format=3 uid="uid://ulydkqp6f8rr"]
 
 [ext_resource type="PackedScene" uid="uid://blgtls5kerxxi" path="res://scenes/ui/base/game_button.tscn" id="1_0wu41"]
 [ext_resource type="Script" uid="uid://d3o455vluscmv" path="res://src/App.cs" id="1_1670a"]
+[ext_resource type="Resource" uid="uid://cld24642iqt0t" path="res://resources/setting/settings.tres" id="2_ljqyw"]
 [ext_resource type="Script" uid="uid://c6qi8ua6nax3u" path="res://src/core/input/InputSystem.cs" id="2_v5dbw"]
 [ext_resource type="Script" uid="uid://cra7vqw1h8d0p" path="res://src/core/event/EventBus.cs" id="3_awiwq"]
 [ext_resource type="PackedScene" uid="uid://bvfxi0tpjl43l" path="res://scenes/games/main.tscn" id="3_cl6f3"]
@@ -12,6 +13,11 @@ font_size = 120
 
 [node name="App" type="Node"]
 script = ExtResource("1_1670a")
+_settingFile = ExtResource("2_ljqyw")
+_dict = {
+"cfvg": Vector3(33, 44, 55),
+"sxxdf": PackedColorArray(0, 0.53883326, 0.61, 1)
+}
 
 [node name="Managers" type="Node" parent="."]
 

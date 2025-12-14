@@ -5,6 +5,7 @@ using Chickensoft.AutoInject;
 using Chickensoft.Introspection;
 using GameSystems.RuntimeSet;
 using GameSystems.Event;
+using GameSystems.Setting;
 
 namespace Game;
 
@@ -23,10 +24,13 @@ public partial class MainGame : Node, IMainGameRepo, IProvide<IMainGameRepo>, IP
     [Export] private VoidEventChannel _emptyMousePressed = default;
 
     private MainGameSet _mainGameSet = default;
+    private MainGameRepo _repo = default;
     private List<IGameRoleForm> _roles = [];
 
     MainGameSet IProvide<MainGameSet>.Value() => _mainGameSet;
     IMainGameRepo IProvide<IMainGameRepo>.Value() => this;
+
+    [Dependency] public SettingFile SettingFile => this.DependOn<SettingFile>();
 
     public override void _EnterTree()
     {

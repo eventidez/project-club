@@ -22,10 +22,10 @@ public partial class ExcelTool : Resource
             var table = item.AsGodotDictionary<string, string>();
             var excelPath = Path.GetFullPath(Path.Combine(dirPath, table["path"]));
             var sheetName = table["sheetName"];
-            GD.Print(excelPath);
+            // GD.Print(excelPath);
 
             var tableJson = ExcelReader.ReadJson(excelPath, sheetName);
-            GD.Print(tableJson);
+            // GD.Print(tableJson);
 
             var fileOutPath = Path.Combine(dirPath, sheetName + ".json");
             // GD.Print(fileOutPath);
