@@ -1,0 +1,34 @@
+[
+	{
+		"Id": "music_volume",
+		"InitialValue": "100",
+		"MaxValue": "100",
+		"MinValue": "0",
+		"Name": "总音量",
+		"Type": "int"
+	},
+	{
+		"Id": "music_bgm",
+		"InitialValue": "100",
+		"MaxValue": "100",
+		"MinValue": "0",
+		"Name": "音乐音量",
+		"Type": "int"
+	},
+	{
+		"Id": "music_bgs",
+		"InitialValue": "100",
+		"MaxValue": "100",
+		"MinValue": "0",
+		"Name": "音效音量",
+		"Type": "int"
+	},
+	{
+		"Id": "music_dub",
+		"InitialValue": "100",
+		"MaxValue": "100",
+		"MinValue": "0",
+		"Name": "配音音量",
+		"Type": "int"
+	}
+]

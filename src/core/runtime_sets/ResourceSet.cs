@@ -65,7 +65,21 @@ public static class ResourceSetExtensions
         return default;
     }
 
-    public static IEnumerable<T> GetAll<T>(this ResourceSet resourceSet, Func<T, bool> predicate)
+    public static IEnumerable<T> GetResources<T>(this ResourceSet resourceSet)
+        where T : Resource
+    {
+        foreach (var resource in resourceSet.Resources)
+        {
+            if (resource is not T t)
+            {
+                continue;
+            }
+
+            yield return t;
+        }
+    }
+
+    public static IEnumerable<T> GetResources<T>(this ResourceSet resourceSet, Func<T, bool> predicate)
         where T : Resource
     {
         foreach (var resource in resourceSet.Resources)
@@ -80,7 +94,7 @@ public static class ResourceSetExtensions
                 continue;
             }
 
-            yield return resource as T;
+            yield return t;
         }
     }
 }

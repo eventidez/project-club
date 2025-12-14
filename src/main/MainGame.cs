@@ -18,6 +18,7 @@ public partial class MainGame : Node, IMainGameRepo, IProvide<IMainGameRepo>, IP
 {
     public override void _Notification(int what) => this.Notify(what);
 
+    [Export] private ResourceSet _gameActionSet = default;
     [Export] private GodotNodeRuntimeSet _roleNodeSet = default;
     [Export] private VoidEventChannel _emptyMousePressed = default;
 
@@ -57,6 +58,17 @@ public partial class MainGame : Node, IMainGameRepo, IProvide<IMainGameRepo>, IP
     public void NextDay()
     {
         _mainGameSet.Day += 1;
+    }
+
+    private void Next()
+    {
+        foreach (var gameAction in _gameActionSet.GetResources<DGameAction>())
+        {
+            if (gameAction.Day != -1 && gameAction.Day != _mainGameSet.Day)
+            {
+                continue;
+            }
+        }
     }
 
     private void CloseRoles()

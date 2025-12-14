@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhs5xrd2yeqye"
-path="res://.godot/imported/inana_under.png-dc8b78fb6d66647a74cfc3bfff3f6a88.ctex"
+uid="uid://c1jvykb46aktv"
+path="res://.godot/imported/inana_sexy.png-e7e3f029bb7305ff7a5022e2d5e42952.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/inana_under.png"
-dest_files=["res://.godot/imported/inana_under.png-dc8b78fb6d66647a74cfc3bfff3f6a88.ctex"]
+source_file="res://art/roles/inana_sexy.png"
+dest_files=["res://.godot/imported/inana_sexy.png-e7e3f029bb7305ff7a5022e2d5e42952.ctex"]
 
 [params]
 

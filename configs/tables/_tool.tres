@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bq3t41i55sjpf"]
+
+[ext_resource type="Script" uid="uid://cjafasdq824wl" path="res://configs/tools/ExcelTool.cs" id="1_2bk2a"]
+
+[resource]
+script = ExtResource("1_2bk2a")

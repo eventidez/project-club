@@ -2,6 +2,7 @@ using Godot;
 using System;
 using Chickensoft.AutoInject;
 using Chickensoft.Introspection;
+using GameSystems.Setting;
 
 namespace Game;
 
@@ -9,6 +10,7 @@ namespace Game;
 public partial class App : Node, IProvide<string>
 {
     public override void _Notification(int what) => this.Notify(what);
+    private SettingFile _settingFile = new SettingFile();
 
     private TestX _test = default;
 

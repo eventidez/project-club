@@ -1,0 +1,368 @@
+[
+	{
+		"Id": "day",
+		"InitialValue": "1",
+		"MaxValue": "45",
+		"MinValue": "0",
+		"Name": "游戏内时间",
+		"Type": "int"
+	},
+	{
+		"Id": "inana_love",
+		"InitialValue": "30",
+		"MaxValue": "100",
+		"MinValue": "0",
+		"Name": "女仆好感",
+		"Type": "int"
+	},
+	{
+		"Id": "mayu_love",
+		"MaxValue": "100",
+		"MinValue": "0",
+		"Name": "JK妹好感",
+		"Type": "int"
+	},
+	{
+		"Id": "rokka_love",
+		"MaxValue": "100",
+		"MinValue": "0",
+		"Name": "运动妹好感",
+		"Type": "int"
+	},
+	{
+		"Id": "rise_love",
+		"MaxValue": "100",
+		"MinValue": "0",
+		"Name": "黑道妹好感",
+		"Type": "int"
+	},
+	{
+		"Id": "syouko_love",
+		"MaxValue": "100",
+		"MinValue": "0",
+		"Name": "条子妹好感",
+		"Type": "int"
+	},
+	{
+		"Id": "reiko_love",
+		"MaxValue": "100",
+		"MinValue": "0",
+		"Name": "老板娘好感",
+		"Type": "int"
+	},
+	{
+		"Id": "cg_start_get",
+		"InitialValue": "False",
+		"Name": "CG0已获得",
+		"Type": "bool"
+	},
+	{
+		"Id": "cg_inana_get",
+		"InitialValue": "False",
+		"Name": "CG1已获得",
+		"Type": "bool"
+	},
+	{
+		"Id": "cg_mayu_get",
+		"InitialValue": "False",
+		"Name": "CG2已获得",
+		"Type": "bool"
+	},
+	{
+		"Id": "cg_rokka_get",
+		"InitialValue": "False",
+		"Name": "CG3已获得",
+		"Type": "bool"
+	},
+	{
+		"Id": "cg_rise_get",
+		"InitialValue": "False",
+		"Name": "CG4已获得",
+		"Type": "bool"
+	},
+	{
+		"Id": "cg_syouko_get",
+		"InitialValue": "False",
+		"Name": "CG5已获得",
+		"Type": "bool"
+	},
+	{
+		"Id": "cg_reiko_get",
+		"InitialValue": "False",
+		"Name": "CG6已获得",
+		"Type": "bool"
+	},
+	{
+		"Id": "cg_oe_get",
+		"InitialValue": "False",
+		"Name": "CG7已获得",
+		"Type": "bool"
+	},
+	{
+		"Id": "cg_te_get",
+		"InitialValue": "False",
+		"Name": "CG8已获得",
+		"Type": "bool"
+	},
+	{
+		"Id": "money",
+		"InitialValue": "2137",
+		"MaxValue": "99999999",
+		"MinValue": "-99999999",
+		"Name": "当前金钱",
+		"Type": "int"
+	},
+	{
+		"Id": "money_get",
+		"InitialValue": "0",
+		"MaxValue": "99999999",
+		"MinValue": "-99999999",
+		"Name": "本日预计收入",
+		"Type": "int"
+	},
+	{
+		"Id": "money_cost",
+		"InitialValue": "0",
+		"MaxValue": "99999999",
+		"MinValue": "-99999999",
+		"Name": "本日预计支出",
+		"Type": "int"
+	},
+	{
+		"Id": "today_talk",
+		"InitialValue": "False",
+		"Name": "当日对话已推进",
+		"Type": "bool"
+	},
+	{
+		"Id": "nextday",
+		"InitialValue": "False",
+		"Name": "下一天按钮显示",
+		"Type": "bool"
+	},
+	{
+		"Id": "inana_under",
+		"InitialValue": "False",
+		"Name": "inana服装2解锁",
+		"Type": "bool"
+	},
+	{
+		"Id": "inana_sexy",
+		"InitialValue": "False",
+		"Name": "inana服装3解锁",
+		"Type": "bool"
+	},
+	{
+		"Id": "mayu_under",
+		"InitialValue": "False",
+		"Name": "mayu服装2解锁",
+		"Type": "bool"
+	},
+	{
+		"Id": "mayu_sexy",
+		"InitialValue": "False",
+		"Name": "mayu服装3解锁",
+		"Type": "bool"
+	},
+	{
+		"Id": "rokka_under",
+		"InitialValue": "False",
+		"Name": "rokka服装2解锁",
+		"Type": "bool"
+	},
+	{
+		"Id": "rokka_sexy",
+		"InitialValue": "False",
+		"Name": "rokka服装3解锁",
+		"Type": "bool"
+	},
+	{
+		"Id": "rise_under",
+		"InitialValue": "False",
+		"Name": "rise服装2解锁",
+		"Type": "bool"
+	},
+	{
+		"Id": "rise_sexy",
+		"InitialValue": "False",
+		"Name": "rise服装3解锁",
+		"Type": "bool"
+	},
+	{
+		"Id": "syouko_under",
+		"InitialValue": "False",
+		"Name": "syouko服装2解锁",
+		"Type": "bool"
+	},
+	{
+		"Id": "syouko_sexy",
+		"InitialValue": "False",
+		"Name": "syouko服装3解锁",
+		"Type": "bool"
+	},
+	{
+		"Id": "reiko_under",
+		"InitialValue": "False",
+		"Name": "reiko服装2解锁",
+		"Type": "bool"
+	},
+	{
+		"Id": "reiko_sexy",
+		"InitialValue": "False",
+		"Name": "reiko服装3解锁",
+		"Type": "bool"
+	},
+	{
+		"Id": "clerk_num",
+		"InitialValue": "2",
+		"MaxValue": "8",
+		"MinValue": "2",
+		"Name": "店员数量",
+		"Type": "int"
+	},
+	{
+		"Id": "inoperation_day",
+		"InitialValue": "0",
+		"MaxValue": "45",
+		"MinValue": "0",
+		"Name": "连续不排班日数",
+		"Type": "int"
+	},
+	{
+		"Id": "debt_day",
+		"InitialValue": "0",
+		"MaxValue": "3",
+		"MinValue": "0",
+		"Name": "连续资产为负日数",
+		"Type": "int"
+	},
+	{
+		"Id": "reiko_help",
+		"InitialValue": "False",
+		"Name": "老板娘援救一次",
+		"Type": "bool"
+	},
+	{
+		"Id": "reiko_number",
+		"InitialValue": "0",
+		"MaxValue": "6",
+		"MinValue": "0",
+		"Name": "老板娘来的次数",
+		"Type": "int"
+	},
+	{
+		"Id": "guest_num",
+		"InitialValue": "2",
+		"MaxValue": "8",
+		"MinValue": "2",
+		"Name": "当日可接待客人数量",
+		"Type": "int"
+	},
+	{
+		"Id": "prop_rope",
+		"InitialValue": "False",
+		"Name": "拥有道具-麻绳",
+		"Type": "bool"
+	},
+	{
+		"Id": "prop_candle",
+		"InitialValue": "False",
+		"Name": "拥有道具-蜡烛",
+		"Type": "bool"
+	},
+	{
+		"Id": "prop_choker",
+		"InitialValue": "False",
+		"Name": "拥有道具-项圈",
+		"Type": "bool"
+	},
+	{
+		"Id": "prop_pointer",
+		"InitialValue": "False",
+		"Name": "拥有道具-散鞭",
+		"Type": "bool"
+	},
+	{
+		"Id": "prop_muzzle",
+		"InitialValue": "False",
+		"Name": "拥有道具-口笼",
+		"Type": "bool"
+	},
+	{
+		"Id": "prop_handcuffs",
+		"InitialValue": "False",
+		"Name": "拥有道具-手铐",
+		"Type": "bool"
+	},
+	{
+		"Id": "prop_catsuit",
+		"InitialValue": "False",
+		"Name": "拥有道具-胶衣",
+		"Type": "bool"
+	},
+	{
+		"Id": "prop_electrode",
+		"InitialValue": "False",
+		"Name": "拥有道具-电极",
+		"Type": "bool"
+	},
+	{
+		"Id": "prop_equipment",
+		"InitialValue": "False",
+		"Name": "拥有道具-装置",
+		"Type": "bool"
+	},
+	{
+		"Id": "prop_horsewhip",
+		"InitialValue": "False",
+		"Name": "拥有道具-马鞭",
+		"Type": "bool"
+	},
+	{
+		"Id": "end_homeless",
+		"InitialValue": "False",
+		"Name": "触发结局-破产",
+		"Type": "bool"
+	},
+	{
+		"Id": "worker_1_get",
+		"InitialValue": "True",
+		"Name": "员工雇佣",
+		"Type": "bool"
+	},
+	{
+		"Id": "worker_2_get",
+		"InitialValue": "True",
+		"Type": "bool"
+	},
+	{
+		"Id": "worker_3_get",
+		"InitialValue": "False",
+		"Type": "bool"
+	},
+	{
+		"Id": "worker_4_get",
+		"InitialValue": "False",
+		"Type": "bool"
+	},
+	{
+		"Id": "worker_5_get",
+		"InitialValue": "False",
+		"Type": "bool"
+	},
+	{
+		"Id": "worker_6_get",
+		"InitialValue": "False",
+		"Type": "bool"
+	},
+	{
+		"Id": "worker_7_get",
+		"InitialValue": "False",
+		"Type": "bool"
+	},
+	{
+		"Id": "worker_8_get",
+		"InitialValue": "False",
+		"Type": "bool"
+	}
+]

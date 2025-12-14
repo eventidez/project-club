@@ -22,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_h438b")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Mask" type="ColorRect" parent="."]
 self_modulate = Color(1, 1, 1, 0.8392157)
 layout_mode = 1
 anchors_preset = 15

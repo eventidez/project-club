@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmracsfhhmblo"
-path="res://.godot/imported/参考2.png-93021ca2c472f902f01ef4605f88b49a.ctex"
+uid="uid://bhs5xrd2yeqye"
+path="res://.godot/imported/inana_under.png-cd92d886f3b8a727c88e9c7ff513d0cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/参考2.png"
-dest_files=["res://.godot/imported/参考2.png-93021ca2c472f902f01ef4605f88b49a.ctex"]
+source_file="res://art/roles/inana_under.png"
+dest_files=["res://.godot/imported/inana_under.png-cd92d886f3b8a727c88e9c7ff513d0cd.ctex"]
 
 [params]
 

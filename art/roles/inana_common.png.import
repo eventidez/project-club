@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cy1t2yj5h2koa"
-path="res://.godot/imported/inana_common.png-23177ea84f38ee7a4350276652635e10.ctex"
+path="res://.godot/imported/inana_common.png-8c26566526ac77fcee02ff4426f3bea1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/inana_common.png"
-dest_files=["res://.godot/imported/inana_common.png-23177ea84f38ee7a4350276652635e10.ctex"]
+source_file="res://art/roles/inana_common.png"
+dest_files=["res://.godot/imported/inana_common.png-8c26566526ac77fcee02ff4426f3bea1.ctex"]
 
 [params]
 

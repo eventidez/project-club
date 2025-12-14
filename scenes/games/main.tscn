@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://bvfxi0tpjl43l"]
+[gd_scene load_steps=15 format=3 uid="uid://bvfxi0tpjl43l"]
 
 [ext_resource type="Script" uid="uid://dqjv6wdlqkng8" path="res://src/main/MainGame.cs" id="1_3vo7c"]
 [ext_resource type="Texture2D" uid="uid://cb3pywf1t0ov8" path="res://art/background/Bg_temp.png" id="2_8otcw"]
+[ext_resource type="Script" uid="uid://ctix4it0gkpdd" path="res://src/core/runtime_sets/ResourceSet.cs" id="2_c57h3"]
 [ext_resource type="Resource" uid="uid://bdprmx4teneq0" path="res://resources/runtime_sets/main_roles.tres" id="2_cof0n"]
 [ext_resource type="PackedScene" uid="uid://dfnlotkle4hrc" path="res://scenes/role/role.tscn" id="3_bbq7e"]
 [ext_resource type="Script" uid="uid://cr7c1peyldkto" path="res://src/core/input/MouseArea2d.cs" id="3_j2hlb"]
@@ -13,8 +14,13 @@
 [ext_resource type="PackedScene" uid="uid://lnayq8ohod6r" path="res://scenes/ui/computer/computer_view.tscn" id="8_7gcnn"]
 [ext_resource type="PackedScene" uid="uid://d340t47ycaptk" path="res://scenes/ui/main_view.tscn" id="9_swccm"]
 
+[sub_resource type="Resource" id="Resource_w8ja6"]
+script = ExtResource("2_c57h3")
+metadata/_custom_type_script = "uid://ctix4it0gkpdd"
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_3vo7c")
+_gameActionSet = SubResource("Resource_w8ja6")
 _roleNodeSet = ExtResource("2_cof0n")
 _emptyMousePressed = ExtResource("3_mn5u6")
 

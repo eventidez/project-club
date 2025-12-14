@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bpx2tbyj5tp08" path="res://src/main/GameRoleForm.cs" id="1_7go5a"]
 [ext_resource type="Script" uid="uid://cn7jaub0gpp2f" path="res://src/core/runtime_sets/GodotNodeZone.cs" id="2_7go5a"]
 [ext_resource type="Script" uid="uid://cr7c1peyldkto" path="res://src/core/input/MouseArea2d.cs" id="2_7ts3a"]
-[ext_resource type="Texture2D" uid="uid://cy1t2yj5h2koa" path="res://art/inana_common.png" id="3_1pi4e"]
+[ext_resource type="Texture2D" uid="uid://cy1t2yj5h2koa" path="res://art/roles/inana_common.png" id="3_1pi4e"]
 [ext_resource type="Resource" uid="uid://bdprmx4teneq0" path="res://resources/runtime_sets/main_roles.tres" id="3_7ts3a"]
 [ext_resource type="PackedScene" uid="uid://q72a2x2cgpvt" path="res://scenes/role/role_menu_view.tscn" id="4_gnfo1"]
 
