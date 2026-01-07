@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bcty2kp54ii3u"]
+
+[ext_resource type="FontFile" uid="uid://sapfpsmvidt" path="res://fonts/HYZhengYuan-75W.ttf" id="1_7lklx"]
+
+[resource]
+font = ExtResource("1_7lklx")
+font_size = 49
+outline_size = 12
+outline_color = Color(0.59607846, 0.36862746, 0.83137256, 1)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwhnpcvwlbqfw"]
+
+[ext_resource type="Texture2D" uid="uid://dxqnh6uimaklm" path="res://art/ui/schedule/btn_close.png" id="1_t73uu"]
+[ext_resource type="Texture2D" uid="uid://bkc8x5d0u4qa1" path="res://art/ui/schedule/btn_close_on.png" id="2_uidda"]
+[ext_resource type="Script" uid="uid://bxrkcsv4g5bq1" path="res://src/ui/GameButton.cs" id="3_umeui"]
+[ext_resource type="Resource" uid="uid://c6weufqs0obtr" path="res://resources/events/ui/computer/return_button_pressed.tres" id="4_tnvrh"]
+[ext_resource type="Script" uid="uid://bjngpl5i8wn86" path="res://src/core/input/ControlMouseZone.cs" id="5_0j558"]
+
+[node name="ReturnBurron" type="TextureButton"]
+offset_right = 86.0
+offset_bottom = 85.0
+texture_normal = ExtResource("1_t73uu")
+texture_hover = ExtResource("2_uidda")
+script = ExtResource("3_umeui")
+_pressed = ExtResource("4_tnvrh")
+
+[node name="ControlMouseZone" type="Node" parent="."]
+script = ExtResource("5_0j558")
+metadata/_custom_type_script = "uid://bjngpl5i8wn86"

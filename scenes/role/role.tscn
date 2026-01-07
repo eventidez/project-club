@@ -7,9 +7,8 @@
 [ext_resource type="Resource" uid="uid://bdprmx4teneq0" path="res://resources/runtime_sets/main_roles.tres" id="3_7ts3a"]
 [ext_resource type="PackedScene" uid="uid://q72a2x2cgpvt" path="res://scenes/role/role_menu_view.tscn" id="4_gnfo1"]
 
-[node name="Role" type="Node2D" node_paths=PackedStringArray("_mouseArea2D", "_menuView")]
+[node name="Role" type="Node2D" node_paths=PackedStringArray("_menuView")]
 script = ExtResource("1_7go5a")
-_mouseArea2D = NodePath("MouseArea2d")
 _menuView = NodePath("RoleMenuView")
 metadata/_edit_group_ = true
 
@@ -35,4 +34,7 @@ visible = false
 polygon = PackedVector2Array(-86, -890, -166, -925, -257, -878, -294, -618, -321, -427, -345, -311, -393, -190, -417, -117, -242, -6, 85, -16, -43, -325, -16, -398, 122, -285, 219, -267, 194, -368, 57, -422, 44, -529, -20, -624, -86, -629, -90, -706, -60, -789)
 
 [node name="RoleMenuView" parent="." instance=ExtResource("4_gnfo1")]
-visible = false
+offset_left = 84.0
+offset_top = -856.0
+offset_right = 347.0
+offset_bottom = -532.0

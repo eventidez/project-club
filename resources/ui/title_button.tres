@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cu7dyeikjon4q"]
+
+[ext_resource type="FontFile" uid="uid://5u8wj1row7la" path="res://fonts/HYZhengYuan-85W.ttf" id="1_vngw1"]
+
+[resource]
+font = ExtResource("1_vngw1")
+font_size = 36
+font_color = Color(0.45490196, 0.36862746, 0.34509805, 1)

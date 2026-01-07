@@ -1,67 +1,125 @@
 [gd_scene load_steps=5 format=3 uid="uid://q72a2x2cgpvt"]
 
+[ext_resource type="Texture2D" uid="uid://bnxvapsbd88a7" path="res://art/ui/main/bg_fg_interact.png" id="1_cciad"]
 [ext_resource type="Script" uid="uid://du3vprba1sb7o" path="res://src/ui/RoleMenuView.cs" id="1_h1mfn"]
-[ext_resource type="Resource" uid="uid://b43mlq0do8vre" path="res://resources/events/input/empty_mouse_pressed.tres" id="2_cciad"]
-[ext_resource type="PackedScene" uid="uid://blgtls5kerxxi" path="res://scenes/ui/base/game_button.tscn" id="2_mr32v"]
-[ext_resource type="PackedScene" uid="uid://rixc16whkeds" path="res://scenes/ui/game_role_button.tscn" id="3_cciad"]
+[ext_resource type="PackedScene" uid="uid://57a7kgf8c6co" path="res://scenes/role/role_button.tscn" id="2_cciad"]
+[ext_resource type="Texture2D" uid="uid://wpvlpub0i2bs" path="res://art/ui/main/_refer_fg.png" id="6_0lte1"]
 
-[node name="RoleMenuView" type="VBoxContainer" node_paths=PackedStringArray("_buttonContainers")]
-offset_left = 26.0
-offset_top = -843.0
-offset_right = 226.0
-offset_bottom = -635.0
-mouse_filter = 2
-theme_override_constants/separation = 20
-alignment = 1
+[node name="RoleMenuView" type="Control" node_paths=PackedStringArray("_backgrounds", "_buttonContainers")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = 268.0
+offset_right = 262.0
+offset_bottom = 592.0
 script = ExtResource("1_h1mfn")
-_buttonContainers = [NodePath("First"), NodePath("Seconly")]
-_emptyMousePressed = ExtResource("2_cciad")
+_backgrounds = [NodePath("Background"), NodePath("Background2")]
+_buttonContainers = [NodePath("Contents/First"), NodePath("Contents/Seconly")]
 
-[node name="First" type="VBoxContainer" parent="."]
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -117.0
+offset_right = 263.0
+offset_bottom = 117.0
+grow_vertical = 2
+texture = ExtResource("1_cciad")
+expand_mode = 1
+
+[node name="Background2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -117.0
+offset_right = 263.0
+offset_bottom = 117.0
+grow_vertical = 2
+texture = ExtResource("1_cciad")
+
+[node name="Contents" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 23.0
+offset_top = -105.0
+offset_right = 210.0
+offset_bottom = 105.0
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="First" type="VBoxContainer" parent="Contents"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -97.0
+offset_right = 187.0
+offset_bottom = 97.0
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="ChatButton" parent="Contents/First" instance=ExtResource("2_cciad")]
 layout_mode = 2
-theme_override_constants/separation = 20
 
-[node name="ChatButton" parent="First" instance=ExtResource("2_mr32v")]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-
-[node name="Label" parent="First/ChatButton" index="1"]
+[node name="Label" parent="Contents/First/ChatButton" index="1"]
 text = "聊天"
 
-[node name="ClothingButton" parent="First" instance=ExtResource("2_mr32v")]
-custom_minimum_size = Vector2(200, 50)
+[node name="ClothingButton" parent="Contents/First" instance=ExtResource("2_cciad")]
 layout_mode = 2
 
-[node name="Label" parent="First/ClothingButton" index="1"]
+[node name="Label" parent="Contents/First/ClothingButton" index="1"]
 text = "换装"
 
-[node name="Seconly" type="VBoxContainer" parent="."]
+[node name="Seconly" type="VBoxContainer" parent="Contents"]
 visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -149.5
+offset_right = 200.0
+offset_bottom = 149.5
+grow_vertical = 2
+theme_override_constants/separation = 7
+
+[node name="GameButton" parent="Contents/Seconly" instance=ExtResource("2_cciad")]
 layout_mode = 2
-theme_override_constants/separation = 20
+_index = 0
 
-[node name="Button" parent="Seconly" instance=ExtResource("3_cciad")]
+[node name="GameButton4" parent="Contents/Seconly" instance=ExtResource("2_cciad")]
 layout_mode = 2
+_index = 1
 
-[node name="Label" parent="Seconly/Button" index="1"]
-text = "日常"
-
-[node name="GameButton2" parent="Seconly" instance=ExtResource("3_cciad")]
+[node name="GameButton5" parent="Contents/Seconly" instance=ExtResource("2_cciad")]
 layout_mode = 2
+_index = 2
 
-[node name="Label" parent="Seconly/GameButton2" index="1"]
-text = "内衣"
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.36862746)
+layout_mode = 0
+offset_left = -452.0
+offset_top = -355.0
+offset_right = 1468.0
+offset_bottom = 725.0
+texture = ExtResource("6_0lte1")
 
-[node name="GameButton3" parent="Seconly" instance=ExtResource("3_cciad")]
-layout_mode = 2
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.36862746)
+layout_mode = 0
+offset_left = -906.0
+offset_top = -150.0
+offset_right = 1014.0
+offset_bottom = 930.0
+texture = ExtResource("6_0lte1")
 
-[node name="Label" parent="Seconly/GameButton3" index="1"]
-text = "情趣"
+[connection signal="MousePressed" from="Contents/First/ClothingButton" to="." method="OnClothingButtonPressed"]
 
-[connection signal="pressed" from="First/ClothingButton" to="." method="OnClothingButtonPressed"]
-
-[editable path="First/ChatButton"]
-[editable path="First/ClothingButton"]
-[editable path="Seconly/Button"]
-[editable path="Seconly/GameButton2"]
-[editable path="Seconly/GameButton3"]
+[editable path="Contents/First/ChatButton"]
+[editable path="Contents/First/ClothingButton"]

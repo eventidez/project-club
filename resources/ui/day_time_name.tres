@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bdt8317voydak"]
+
+[ext_resource type="FontFile" uid="uid://sapfpsmvidt" path="res://fonts/HYZhengYuan-75W.ttf" id="1_523io"]
+
+[resource]
+font = ExtResource("1_523io")
+font_size = 29
+outline_size = 12
+outline_color = Color(0.59607846, 0.36862746, 0.83137256, 1)

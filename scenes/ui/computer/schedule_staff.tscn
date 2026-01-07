@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgngtcps2yrcb"]
+
+[ext_resource type="Texture2D" uid="uid://dgt2d7mdf72h" path="res://art/ui/schedule/guest_staff.png" id="1_cnnua"]
+[ext_resource type="Texture2D" uid="uid://bpe0gvm8makn8" path="res://art/ui/schedule/guest_staff_on.png" id="2_gx781"]
+[ext_resource type="PackedScene" uid="uid://bicwveu11daew" path="res://scenes/ui/computer/schedule_trait_tag.tscn" id="3_u0fs5"]
+
+[node name="Staff" type="Control"]
+custom_minimum_size = Vector2(110, 120)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Icon" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -52.0
+offset_right = 104.0
+offset_bottom = 52.0
+grow_vertical = 2
+texture_normal = ExtResource("1_cnnua")
+
+[node name="TextureRect" type="TextureRect" parent="Icon"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -59.0
+offset_right = 59.0
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gx781")
+
+[node name="Tags" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="TraitTag" parent="Tags" instance=ExtResource("3_u0fs5")]
+layout_mode = 2
+
+[node name="TraitTag2" parent="Tags" instance=ExtResource("3_u0fs5")]
+layout_mode = 2
+
+[node name="TraitTag3" parent="Tags" instance=ExtResource("3_u0fs5")]
+layout_mode = 2

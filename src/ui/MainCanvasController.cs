@@ -27,13 +27,13 @@ public partial class MainCanvasController : CanvasLayer, IMainCanvasController, 
     {
         base._EnterTree();
         this.Provide();
-        _computerAreaPressed.EventRaised += _computerView.Open;
+        // _computerAreaPressed.EventRaised += _computerView.Open;
     }
 
     public override void _ExitTree()
     {
         base._ExitTree();
-        _computerAreaPressed.EventRaised -= _computerView.Open;
+        // _computerAreaPressed.EventRaised -= _computerView.Open;
     }
 
     public override void _Ready()
@@ -49,6 +49,11 @@ public partial class MainCanvasController : CanvasLayer, IMainCanvasController, 
 
             view.Visible = false;
         }
+    }
+
+    public void OpenComputerView()
+    {
+        _computerView.Open();
     }
 
     public void OpenRoleMenu()

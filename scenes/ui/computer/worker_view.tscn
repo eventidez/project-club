@@ -1,4 +1,13 @@
-[gd_scene format=3 uid="uid://srjypf2t0g7w"]
+[gd_scene load_steps=9 format=3 uid="uid://srjypf2t0g7w"]
+
+[ext_resource type="Texture2D" uid="uid://defsbvchggqqi" path="res://art/ui/worker/_refer_staff.png" id="1_bvscd"]
+[ext_resource type="Texture2D" uid="uid://bcs1wocdnovhv" path="res://art/ui/worker/bg_recruit.png" id="1_svy84"]
+[ext_resource type="Texture2D" uid="uid://c1t38t7uxk3ar" path="res://art/ui/worker/bg_staff.png" id="2_k0gpu"]
+[ext_resource type="Texture2D" uid="uid://dfdv507becwiy" path="res://art/ui/worker/bg_staff_human.png" id="4_1m3m4"]
+[ext_resource type="PackedScene" uid="uid://bmay7mio5ltoc" path="res://scenes/ui/computer/computer_tabs.tscn" id="4_q8rke"]
+[ext_resource type="Texture2D" uid="uid://cd5u3pquir4lv" path="res://art/ui/worker/btn_refuse_on.png" id="5_md0e3"]
+[ext_resource type="PackedScene" uid="uid://cwhnpcvwlbqfw" path="res://scenes/ui/computer/return_burron.tscn" id="6_vyixk"]
+[ext_resource type="PackedScene" uid="uid://dd6e3g73liuir" path="res://scenes/ui/computer/setting_button.tscn" id="7_1e3ah"]
 
 [node name="WorkerView" type="Control"]
 layout_mode = 3
@@ -7,3 +16,102 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Tabs" parent="." instance=ExtResource("4_q8rke")]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 145.0
+offset_right = 290.0
+offset_bottom = 666.0
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 154.0
+offset_top = -413.0
+offset_right = 738.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_svy84")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -711.0
+offset_top = -402.0
+offset_right = 142.0
+offset_bottom = 340.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_k0gpu")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect4"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 89.0
+offset_right = 421.0
+offset_bottom = 215.0
+texture = ExtResource("4_1m3m4")
+
+[node name="TextureRect" type="TextureButton" parent="TextureRect4/TextureRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -94.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect4/TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 5.0
+offset_right = 39.0
+offset_bottom = 27.0
+texture = ExtResource("5_md0e3")
+
+[node name="ReturnBurron" parent="." instance=ExtResource("6_vyixk")]
+layout_mode = 0
+offset_left = 1706.0
+offset_top = 162.0
+offset_right = 1792.0
+offset_bottom = 247.0
+
+[node name="SettingButton" parent="." instance=ExtResource("7_1e3ah")]
+layout_mode = 0
+offset_left = 1706.0
+offset_top = 254.0
+offset_right = 1792.0
+offset_bottom = 339.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.18039216)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bvscd")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bvscd")

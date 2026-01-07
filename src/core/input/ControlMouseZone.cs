@@ -4,6 +4,7 @@ using GameSystems.RuntimeSet;
 
 namespace GameSystems.Input;
 
+[GlobalClass]
 public partial class ControlMouseZone : Node
 {
     private Control _parent;

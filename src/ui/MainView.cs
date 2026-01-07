@@ -13,6 +13,8 @@ public partial class MainView : BaseView
     public override void _Notification(int what) => this.Notify(what);
 
     [Export] private Label _dateLabel = default;
+    [Export] private Godot.Collections.Array<Label> _monthLabels = [];
+    [Export] private Godot.Collections.Array<Label> _dayLabels = [];
     [Export] private BaseButton _nextDayButton = default;
 
     [Dependency] public IMainGameRepo MainGameRepo => this.DependOn<IMainGameRepo>();
@@ -55,6 +57,18 @@ public partial class MainView : BaseView
 
     private void DrawContent()
     {
-        _dateLabel.Text = $"{4}月 {GameSet.Day}日";
+        var month = 4.ToString($"D{_monthLabels.Count}");
+        for (int i = 0; i < _monthLabels.Count; i++)
+        {
+            _monthLabels[i].Text = month[i].ToString();
+        }
+
+        var day = GameSet.Day.ToString($"D{_dayLabels.Count}");
+        for (int i = 0; i < _dayLabels.Count; i++)
+        {
+            _dayLabels[i].Text = day[i].ToString();
+        }
+
+        // _dateLabel.Text = $"{4}月 {GameSet.Day}日";
     }
 }

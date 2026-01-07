@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://5bu8qdqk146c"]
+
+[ext_resource type="Texture2D" uid="uid://5rpfuipl0pdh" path="res://art/ui/title/btn.png" id="1_dba6f"]
+[ext_resource type="Texture2D" uid="uid://cf1cqlqjjfyqd" path="res://art/ui/title/btn_on.png" id="2_dnyv2"]
+[ext_resource type="LabelSettings" uid="uid://cu7dyeikjon4q" path="res://resources/ui/title_button.tres" id="3_dba6f"]
+[ext_resource type="LabelSettings" uid="uid://dmsj0tqwr4g5n" path="res://resources/ui/title_button_sub.tres" id="4_dba6f"]
+[ext_resource type="LabelSettings" uid="uid://ck5b2e61nl6so" path="res://resources/ui/title_button_sub_on.tres" id="5_dnyv2"]
+
+[node name="TitleButton" type="TextureButton"]
+texture_normal = ExtResource("1_dba6f")
+texture_hover = ExtResource("2_dnyv2")
+
+[node name="Helpers" type="Node" parent="."]
+
+[node name="LabelColorChange" type="Node" parent="Helpers"]
+
+[node name="Labels" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 140.0
+offset_top = 17.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+text = "新游戏"
+label_settings = ExtResource("3_dba6f")
+vertical_alignment = 2
+
+[node name="SubLabel" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(0, 40.42)
+layout_mode = 2
+text = "NEW GAME"
+label_settings = ExtResource("4_dba6f")
+vertical_alignment = 2
+
+[node name="SubLabelOn" type="Label" parent="Labels"]
+visible = false
+custom_minimum_size = Vector2(0, 40.42)
+layout_mode = 2
+text = "NEW GAME"
+label_settings = ExtResource("5_dnyv2")
+vertical_alignment = 2

@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://dd6e3g73liuir"]
+
+[ext_resource type="Texture2D" uid="uid://dafg4bi6oqkta" path="res://art/ui/schedule/btn_set.png" id="1_22dw2"]
+[ext_resource type="Texture2D" uid="uid://dr2sbjxy84qyb" path="res://art/ui/schedule/btn_set_on.png" id="2_ph7d3"]
+[ext_resource type="Script" uid="uid://bxrkcsv4g5bq1" path="res://src/ui/GameButton.cs" id="3_7ldna"]
+[ext_resource type="Resource" uid="uid://j5vl6u7aelfr" path="res://resources/events/ui/computer/setting_button_pressed.tres" id="4_qj5hl"]
+[ext_resource type="Script" uid="uid://bjngpl5i8wn86" path="res://src/core/input/ControlMouseZone.cs" id="5_wdoq5"]
+
+[node name="SettingButton" type="TextureButton"]
+offset_right = 86.0
+offset_bottom = 85.0
+texture_normal = ExtResource("1_22dw2")
+texture_hover = ExtResource("2_ph7d3")
+script = ExtResource("3_7ldna")
+_pressed = ExtResource("4_qj5hl")
+
+[node name="ControlMouseZone" type="Node" parent="."]
+script = ExtResource("5_wdoq5")
+metadata/_custom_type_script = "uid://bjngpl5i8wn86"

@@ -16,13 +16,15 @@ public partial class BaseView : Control
     {
         Visible = true;
         Controller.AddView(this);
-    }
 
-    public virtual void OnOpen() { }
+        OnOpen();
+    }
 
     public void Close()
     {
         Visible = false;
         Controller.RemoveView(this);
     }
+
+    public virtual void OnOpen() { }
 }

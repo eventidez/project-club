@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ulydkqp6f8rr"]
+[gd_scene load_steps=12 format=3 uid="uid://ulydkqp6f8rr"]
 
 [ext_resource type="PackedScene" uid="uid://blgtls5kerxxi" path="res://scenes/ui/base/game_button.tscn" id="1_0wu41"]
 [ext_resource type="Script" uid="uid://d3o455vluscmv" path="res://src/App.cs" id="1_1670a"]
@@ -7,6 +7,9 @@
 [ext_resource type="Script" uid="uid://cra7vqw1h8d0p" path="res://src/core/event/EventBus.cs" id="3_awiwq"]
 [ext_resource type="PackedScene" uid="uid://bvfxi0tpjl43l" path="res://scenes/games/main.tscn" id="3_cl6f3"]
 [ext_resource type="Resource" uid="uid://b43mlq0do8vre" path="res://resources/events/input/empty_mouse_pressed.tres" id="4_k6d74"]
+[ext_resource type="Texture2D" uid="uid://3bjpfyp18wy4" path="res://art/ui/title/bg_club.png" id="7_s6ce1"]
+[ext_resource type="Texture2D" uid="uid://cd0nd4gppchb5" path="res://art/ui/title/_参考.png" id="8_jv7dx"]
+[ext_resource type="PackedScene" uid="uid://5bu8qdqk146c" path="res://scenes/ui/title/title_button.tscn" id="9_v5dbw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0wu41"]
 font_size = 120
@@ -45,7 +48,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/TitleView"]
+[node name="ColorRect" type="TextureRect" parent="CanvasLayer/TitleView"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -53,9 +56,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.32172796, 0.32172796, 0.32172796, 1)
+texture = ExtResource("7_s6ce1")
 
 [node name="Label" type="Label" parent="CanvasLayer/TitleView"]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -69,6 +73,7 @@ text = "SM CLUB"
 label_settings = SubResource("LabelSettings_0wu41")
 
 [node name="GameButton" parent="CanvasLayer/TitleView" instance=ExtResource("1_0wu41")]
+visible = false
 layout_mode = 1
 offset_left = -100.0
 offset_top = -40.0
@@ -76,8 +81,81 @@ offset_right = 100.0
 offset_bottom = 40.0
 
 [node name="GameButton2" parent="CanvasLayer/TitleView" instance=ExtResource("1_0wu41")]
+visible = false
 layout_mode = 1
 offset_left = -99.0
 offset_top = 89.0
 offset_right = 101.0
 offset_bottom = 169.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TitleView"]
+layout_mode = 0
+offset_left = 1351.0
+offset_top = 377.0
+offset_right = 1852.0
+offset_bottom = 483.0
+theme_override_constants/separation = 27
+
+[node name="StartButton" parent="CanvasLayer/TitleView/VBoxContainer" instance=ExtResource("9_v5dbw")]
+layout_mode = 2
+
+[node name="LoadButton" parent="CanvasLayer/TitleView/VBoxContainer" instance=ExtResource("9_v5dbw")]
+layout_mode = 2
+
+[node name="Label" parent="CanvasLayer/TitleView/VBoxContainer/LoadButton/Labels" index="0"]
+text = "读取存档"
+
+[node name="SubLabel" parent="CanvasLayer/TitleView/VBoxContainer/LoadButton/Labels" index="1"]
+text = "READ ARCHIVE"
+
+[node name="TitleButton" parent="CanvasLayer/TitleView/VBoxContainer" instance=ExtResource("9_v5dbw")]
+layout_mode = 2
+
+[node name="Label" parent="CanvasLayer/TitleView/VBoxContainer/TitleButton/Labels" index="0"]
+text = "结局图鉴"
+
+[node name="SettingButton" parent="CanvasLayer/TitleView/VBoxContainer" instance=ExtResource("9_v5dbw")]
+layout_mode = 2
+
+[node name="Label" parent="CanvasLayer/TitleView/VBoxContainer/SettingButton/Labels" index="0"]
+text = "修改设置"
+
+[node name="SubLabel" parent="CanvasLayer/TitleView/VBoxContainer/SettingButton/Labels" index="1"]
+text = "SETTINGS"
+
+[node name="ExitButton" parent="CanvasLayer/TitleView/VBoxContainer" instance=ExtResource("9_v5dbw")]
+layout_mode = 2
+
+[node name="Label" parent="CanvasLayer/TitleView/VBoxContainer/ExitButton/Labels" index="0"]
+text = "退出游戏"
+
+[node name="SubLabel" parent="CanvasLayer/TitleView/VBoxContainer/ExitButton/Labels" index="1"]
+text = "EXIT GAME"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/TitleView"]
+self_modulate = Color(1, 1, 1, 0.12941177)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_jv7dx")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/TitleView"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_jv7dx")
+metadata/_edit_lock_ = true
+
+[editable path="CanvasLayer/TitleView/VBoxContainer/StartButton"]
+[editable path="CanvasLayer/TitleView/VBoxContainer/LoadButton"]
+[editable path="CanvasLayer/TitleView/VBoxContainer/TitleButton"]
+[editable path="CanvasLayer/TitleView/VBoxContainer/SettingButton"]
+[editable path="CanvasLayer/TitleView/VBoxContainer/ExitButton"]

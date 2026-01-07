@@ -19,6 +19,8 @@ public partial class MainGame : Node, IMainGameRepo, IProvide<IMainGameRepo>, IP
 {
     public override void _Notification(int what) => this.Notify(what);
 
+    [Signal] public delegate void ComputerPressedEventHandler();
+
     [Export] private ResourceSet _gameActionSet = default;
     [Export] private GodotNodeRuntimeSet _roleNodeSet = default;
     [Export] private VoidEventChannel _emptyMousePressed = default;
@@ -95,5 +97,10 @@ public partial class MainGame : Node, IMainGameRepo, IProvide<IMainGameRepo>, IP
         {
             role.IsSelect = role == roleForm;
         }
+    }
+
+    private void ComputerMousePressed()
+    {
+        EmitSignal(SignalName.ComputerPressed);
     }
 }

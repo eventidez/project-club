@@ -5,6 +5,7 @@ namespace Game;
 
 public partial class RoleMenuView : Control
 {
+    [Export] private Control[] _backgrounds = [];
     [Export] private Godot.Collections.Array<Control> _buttonContainers = [];
 
     private int _containerIndex = 0;
@@ -55,6 +56,11 @@ public partial class RoleMenuView : Control
         for (int i = 0; i < _buttonContainers.Count; i++)
         {
             _buttonContainers[i].Visible = i == index;
+        }
+
+        for (int i = 0; i < _backgrounds.Length; i++)
+        {
+            _backgrounds[i].Visible = i == index;
         }
     }
 

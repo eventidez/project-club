@@ -53,10 +53,10 @@ public partial class EventBus : Node
         _eventPool.Subscribe(key, action);
     }
 
-    public void Subscribe<T1, T2>(string key, Action<T1, T2> action)
-    {
-        _eventPool.Subscribe(key, action);
-    }
+    // public void Subscribe<T1, T2>(string key, Action<T1, T2> action)
+    // {
+    //     _eventPool.Subscribe(key, action);
+    // }
 
     public void Unsubscribe(string key, Action action)
     {
@@ -68,10 +68,10 @@ public partial class EventBus : Node
         _eventPool.Unsubscribe(key, action);
     }
 
-    public void Unsubscribe<T1, T2>(string key, Action<T1, T2> action)
-    {
-        _eventPool.Unsubscribe(key, action);
-    }
+    // public void Unsubscribe<T1, T2>(string key, Action<T1, T2> action)
+    // {
+    //     _eventPool.Unsubscribe(key, action);
+    // }
 
     public void SendEvent(string key)
     {
@@ -83,8 +83,8 @@ public partial class EventBus : Node
         _eventPool.SendEvent(key, arg);
     }
 
-    public void SendEvent<T1, T2>(string key, T1 arg1, T2 arg2)
-    {
-        _eventPool.SendEvent(key, arg1, arg2);
-    }
+    // public void SendEvent<T1, T2>(string key, T1 arg1, T2 arg2)
+    // {
+    //     _eventPool.SendEvent(key, arg1, arg2);
+    // }
 }
