@@ -5,5 +5,4 @@
 [node name="ClothingTab" instance=ExtResource("1_ivis5")]
 
 [node name="Label" parent="." index="0"]
-text = "服
-装"
+text = "服装"

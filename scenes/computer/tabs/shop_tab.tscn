@@ -5,5 +5,4 @@
 [node name="ShopTab" instance=ExtResource("1_jxcgy")]
 
 [node name="Label" parent="." index="0"]
-text = "爱
-啵"
+text = "爱啵"

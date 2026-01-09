@@ -5,5 +5,4 @@
 [node name="WorkerTab" instance=ExtResource("1_bwy2a")]
 
 [node name="Label" parent="." index="0"]
-text = "店
-员"
+text = "店员"
