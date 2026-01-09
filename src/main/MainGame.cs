@@ -18,7 +18,8 @@ public interface IMainGameRepo
 public partial class MainGame : Node, IMainGameRepo, IProvide<IMainGameRepo>, IProvide<MainGameSet>
 {
     public override void _Notification(int what) => this.Notify(what);
-
+    public static MainGame Instance { get; private set; }
+    
     [Signal] public delegate void ComputerPressedEventHandler();
 
     [Export] private ResourceSet _gameActionSet = default;
@@ -32,10 +33,12 @@ public partial class MainGame : Node, IMainGameRepo, IProvide<IMainGameRepo>, IP
     MainGameSet IProvide<MainGameSet>.Value() => _mainGameSet;
     IMainGameRepo IProvide<IMainGameRepo>.Value() => this;
 
+    public GodotNodeRuntimeSet RoleNodes => _roleNodeSet;
     [Dependency] public SettingFile SettingFile => this.DependOn<SettingFile>();
 
     public override void _EnterTree()
     {
+        Instance = this;
         _mainGameSet = new MainGameSet();
         this.Provide();
 

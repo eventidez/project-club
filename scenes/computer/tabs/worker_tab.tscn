@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqs1nhl87odi1"]
+
+[ext_resource type="PackedScene" uid="uid://oehycrkkg3xc" path="res://scenes/computer/tabs/computer_tab.tscn" id="1_bwy2a"]
+
+[node name="WorkerTab" instance=ExtResource("1_bwy2a")]
+
+[node name="Label" parent="." index="0"]
+text = "店
+员"

@@ -1,0 +1,94 @@
+[gd_scene load_steps=12 format=3 uid="uid://lnayq8ohod6r"]
+
+[ext_resource type="Script" uid="uid://capc3jjav2bpk" path="res://src/computer/ComputerView.cs" id="1_h438b"]
+[ext_resource type="Script" uid="uid://dlkurpsdehxmm" path="res://src/core/event/nodes/VoidEventChannelListener.cs" id="2_dod05"]
+[ext_resource type="Texture2D" uid="uid://bfvl2ccitiulp" path="res://art/ui/computer/bg_computer.png" id="2_vntbr"]
+[ext_resource type="PackedScene" uid="uid://e5idhaoct3vn" path="res://scenes/computer/schedule_view.tscn" id="3_i0irq"]
+[ext_resource type="Resource" uid="uid://c6weufqs0obtr" path="res://resources/events/ui/computer/return_button_pressed.tres" id="3_tykni"]
+[ext_resource type="PackedScene" uid="uid://srjypf2t0g7w" path="res://scenes/computer/worker_view.tscn" id="4_twi7n"]
+[ext_resource type="Resource" uid="uid://j5vl6u7aelfr" path="res://resources/events/ui/computer/setting_button_pressed.tres" id="4_vntbr"]
+[ext_resource type="Script" uid="uid://phuwmte8luc2" path="res://src/core/event/nodes/IntEventChannelListener.cs" id="5_ked4d"]
+[ext_resource type="Resource" uid="uid://vkkhfnfq3igg" path="res://resources/events/ui/computer/computer_tab_changed.tres" id="6_5mfg2"]
+[ext_resource type="PackedScene" uid="uid://brshjs2uv88rc" path="res://scenes/computer/shop_view.tscn" id="8_5mfg2"]
+[ext_resource type="PackedScene" uid="uid://bcrtsgbi2vcc6" path="res://scenes/computer/clothing_view.tscn" id="9_ked4d"]
+
+[node name="ComputerView" type="Control" node_paths=PackedStringArray("_contents")]
+z_index = 10
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h438b")
+_contents = [NodePath("Content/ScheduleView"), NodePath("Content/WorkerView"), NodePath("Content/Shop"), NodePath("Content/Clothing")]
+
+[node name="EventListeners" type="Node" parent="."]
+
+[node name="ReturnButtonPressed" type="Node" parent="EventListeners"]
+script = ExtResource("2_dod05")
+_eventChannel = ExtResource("3_tykni")
+metadata/_custom_type_script = "uid://dlkurpsdehxmm"
+
+[node name="SettingButtonPressed" type="Node" parent="EventListeners"]
+script = ExtResource("2_dod05")
+_eventChannel = ExtResource("4_vntbr")
+metadata/_custom_type_script = "uid://dlkurpsdehxmm"
+
+[node name="ComputerTabChanged" type="Node" parent="EventListeners"]
+script = ExtResource("5_ked4d")
+_eventChannel = ExtResource("6_5mfg2")
+metadata/_custom_type_script = "uid://phuwmte8luc2"
+
+[node name="Mask" type="ColorRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.8392157)
+z_index = -10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -10
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -902.0
+offset_top = -1025.0
+offset_right = 917.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("2_vntbr")
+
+[node name="Content" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScheduleView" parent="Content" instance=ExtResource("3_i0irq")]
+layout_mode = 1
+
+[node name="WorkerView" parent="Content" instance=ExtResource("4_twi7n")]
+visible = false
+layout_mode = 1
+
+[node name="Shop" parent="Content" instance=ExtResource("8_5mfg2")]
+visible = false
+layout_mode = 1
+
+[node name="Clothing" parent="Content" instance=ExtResource("9_ked4d")]
+visible = false
+layout_mode = 1
+
+[connection signal="Response" from="EventListeners/ReturnButtonPressed" to="." method="Close"]
+[connection signal="Response" from="EventListeners/ComputerTabChanged" to="." method="OpenContent"]

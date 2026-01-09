@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctldc5x0l82yo"]
+
+[ext_resource type="PackedScene" uid="uid://dgl5g7y8leqlh" path="res://scenes/computer/tabs/computer_open_tab.tscn" id="1_rriy0"]
+[ext_resource type="Texture2D" uid="uid://bi8ve6p8bcmc0" path="res://art/ui/computer/tab2_check.png" id="2_w47kt"]
+
+[node name="Tab" instance=ExtResource("1_rriy0")]
+texture = ExtResource("2_w47kt")
+
+[node name="Label" parent="." index="0"]
+text = "店员"

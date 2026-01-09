@@ -1,0 +1,186 @@
+[
+	{
+		"Effect": "prop_rope = true",
+		"Id": "201",
+		"NameText": "language_rope",
+		"Price": 380,
+		"Type": "goods"
+	},
+	{
+		"Effect": "prop_candle = true",
+		"Id": "202",
+		"NameText": "language_candle",
+		"Price": 400,
+		"Type": "goods"
+	},
+	{
+		"Effect": "prop_choker = true",
+		"Id": "203",
+		"NameText": "language_choker",
+		"Price": 450,
+		"Type": "goods"
+	},
+	{
+		"Effect": "prop_pointer = true",
+		"Id": "204",
+		"NameText": "language_pointer",
+		"Price": 520,
+		"Type": "goods"
+	},
+	{
+		"Effect": "prop_muzzle = true",
+		"Id": "205",
+		"NameText": "language_muzzle",
+		"Price": 700,
+		"Type": "goods"
+	},
+	{
+		"Effect": "prop_handcuffs = true",
+		"Id": "206",
+		"NameText": "language_handcuffs",
+		"Price": 980,
+		"Type": "goods"
+	},
+	{
+		"Effect": "prop_catsuit = true",
+		"Id": "207",
+		"NameText": "language_catsuit",
+		"Price": 1250,
+		"Type": "goods"
+	},
+	{
+		"Effect": "prop_electrode = true",
+		"Id": "208",
+		"NameText": "language_electrode",
+		"Price": 1800,
+		"Type": "goods"
+	},
+	{
+		"Effect": "prop_equipment = true",
+		"Id": "209",
+		"NameText": "language_equipment",
+		"Price": 2650,
+		"Type": "goods"
+	},
+	{
+		"Effect": "prop_horsewhip = true",
+		"Id": "210",
+		"NameText": "language_horsewhip",
+		"Price": 0,
+		"Type": "goods"
+	},
+	{
+		"Condition": "guest_num == 2",
+		"Effect": "guest_num = 3",
+		"Id": "301",
+		"Price": 500,
+		"Type": "guest"
+	},
+	{
+		"Condition": "guest_num == 3",
+		"Effect": "guest_num = 4",
+		"Id": "302",
+		"Price": 700,
+		"Type": "guest"
+	},
+	{
+		"Condition": "guest_num == 4",
+		"Effect": "guest_num= 5",
+		"Id": "303",
+		"Price": 1000,
+		"Type": "guest"
+	},
+	{
+		"Condition": "guest_num == 5",
+		"Effect": "guest_num = 6",
+		"Id": "304",
+		"Price": 1500,
+		"Type": "guest"
+	},
+	{
+		"Condition": "guest_num == 6",
+		"Effect": "guest_num = 7",
+		"Id": "305",
+		"Price": 2700,
+		"Type": "guest"
+	},
+	{
+		"Condition": "guest_num == 7",
+		"Effect": "guest_num = 8",
+		"Id": "306",
+		"Price": 4500,
+		"Type": "guest"
+	},
+	{
+		"Effect": "inana_under = true",
+		"Id": "401",
+		"Price": 350,
+		"Type": "clothing"
+	},
+	{
+		"Effect": "inana_sexy = true",
+		"Id": "402",
+		"Price": 1250,
+		"Type": "clothing"
+	},
+	{
+		"Effect": "mayu_under = true",
+		"Id": "403",
+		"Price": 350,
+		"Type": "clothing"
+	},
+	{
+		"Effect": "mayu_sexy = true",
+		"Id": "404",
+		"Price": 1250,
+		"Type": "clothing"
+	},
+	{
+		"Effect": "rokka_under = true",
+		"Id": "405",
+		"Price": 350,
+		"Type": "clothing"
+	},
+	{
+		"Effect": "rokka_sexy = true",
+		"Id": "406",
+		"Price": 1250,
+		"Type": "clothing"
+	},
+	{
+		"Effect": "rise_under = true",
+		"Id": "407",
+		"Price": 350,
+		"Type": "clothing"
+	},
+	{
+		"Effect": "rise_sexy = true",
+		"Id": "408",
+		"Price": 1250,
+		"Type": "clothing"
+	},
+	{
+		"Effect": "syouko_under = true",
+		"Id": "409",
+		"Price": 750,
+		"Type": "clothing"
+	},
+	{
+		"Effect": "syouko_sexy = true",
+		"Id": "410",
+		"Price": 1650,
+		"Type": "clothing"
+	},
+	{
+		"Effect": "reiko_under = true",
+		"Id": "411",
+		"Price": 950,
+		"Type": "clothing"
+	},
+	{
+		"Effect": "reiko_sexy = true",
+		"Id": "412",
+		"Price": 1850,
+		"Type": "clothing"
+	}
+]

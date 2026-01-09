@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using MiniExcelLibs;
+using RowPair = Godot.Collections.Dictionary<string, Godot.Variant>;
+using NameStringPair = Godot.Collections.Dictionary<string, string>;
 
 [Tool, GlobalClass]
 public partial class ExcelReader : RefCounted
@@ -251,14 +253,12 @@ public partial class ExcelReader : RefCounted
         return Json.Stringify(table, "\t");
     }
 
-    public static void ReadExcel(string excelFile,
-          Action<Godot.Collections.Dictionary<string, string>, Godot.Collections.Dictionary<string, Variant>> callback)
+    public static void ReadExcel(string excelFile, Action<NameStringPair, RowPair> callback)
     {
         ReadExcel(excelFile, null, callback);
     }
 
-    public static void ReadExcel(string excelFile, string sheetName,
-        Action<Godot.Collections.Dictionary<string, string>, Godot.Collections.Dictionary<string, Variant>> callback)
+    public static void ReadExcel(string excelFile, string sheetName, Action<NameStringPair, RowPair> callback)
     {
         var colIndex = 0;
         var headers = new Godot.Collections.Dictionary<string, string>();
@@ -314,7 +314,7 @@ public partial class ExcelReader : RefCounted
                 continue;
             }
 
-            var dict = new Godot.Collections.Dictionary<string, Variant>();
+            var dict = new RowPair();
             foreach (var pair in row)
             {
                 if (headers.TryGetValue(pair.Key, out var header) == false)
@@ -332,13 +332,19 @@ public partial class ExcelReader : RefCounted
                     continue;
                 }
 
+                if (types.TryGetValue(header, out var type) == false)
+                {
+                    GD.PrintErr($"Type is invalid. ({pair.Key}{colIndex}) in '{excelFile}({sheetName})'");
+                    return;
+                }
+
                 try
                 {
-                    dict[header] = ConvertValue(valueText, types[header]);
+                    dict[header] = ConvertValue(valueText, type);
                 }
                 catch (Exception)
                 {
-                    GD.PrintErr($"'{pair.Key}{colIndex}' in '{excelFile}'");
+                    GD.PrintErr($"'{header} :{type}={valueText}' ({pair.Key}{colIndex}) in '{excelFile}'");
                 }
             }
 
@@ -369,7 +375,7 @@ public partial class ExcelReader : RefCounted
         else if (typeParams.Length == 2
             && typeParams[0] == "list" && typeParams[1] == "string")
         {
-            value = new Godot.Collections.Array<string>(valueText.ToString().Split(','));
+            value = new Godot.Collections.Array<string>(valueText.ToString().Split(',').Select((i)=>i.Trim()));
         }
 
         return value;

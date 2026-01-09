@@ -1,0 +1,11 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://b5m1ix4optypx"]
+
+[ext_resource type="FontFile" uid="uid://crywt4d86rr58" path="res://fonts/HYZhengYuan-95W.ttf" id="1_gt5g3"]
+
+[resource]
+font = ExtResource("1_gt5g3")
+font_size = 41
+outline_color = Color(0.4745098, 0.29803923, 0.6627451, 1)
+shadow_size = 2
+shadow_color = Color(0.1764706, 0.1764706, 0.1764706, 0.5058824)
+shadow_offset = Vector2(2, 2)

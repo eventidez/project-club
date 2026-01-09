@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GodotNodeRuntimeSet" load_steps=2 format=3 uid="uid://8v1x4rg1ltg6"]
+
+[ext_resource type="Script" uid="uid://tb4n6wcraqe2" path="res://src/core/runtime_sets/GodotNodeRuntimeSet.cs" id="1_mfe5v"]
+
+[resource]
+resource_name = "SHOP_GOODS_ITEMS"
+script = ExtResource("1_mfe5v")
+metadata/_custom_type_script = "uid://tb4n6wcraqe2"

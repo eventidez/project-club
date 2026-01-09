@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://fo6eol5nyiip"]
+
+[ext_resource type="Texture2D" uid="uid://88q3haofj2lf" path="res://art/ui/shop/furnish_item_cell.png" id="1_18utp"]
+[ext_resource type="Script" uid="uid://035205sayrh4" path="res://src/computer/ShopGoodsItem.cs" id="2_yhpjk"]
+[ext_resource type="FontFile" uid="uid://bfbn85hb1cc36" path="res://fonts/Alibaba-PuHuiTi-Medium.otf" id="3_ur0g5"]
+[ext_resource type="Texture2D" uid="uid://cr6hrpuwqraqr" path="res://art/ui/shop/furnish_item_value.png" id="4_qsxqc"]
+[ext_resource type="Resource" uid="uid://8v1x4rg1ltg6" path="res://scenes/computer/shop_goods_items.tres" id="4_ur0g5"]
+[ext_resource type="FontFile" uid="uid://sapfpsmvidt" path="res://fonts/HYZhengYuan-75W.ttf" id="5_btio6"]
+[ext_resource type="Script" uid="uid://cn7jaub0gpp2f" path="res://src/core/runtime_sets/GodotNodeZone.cs" id="6_yhpjk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_74vcr"]
+font = ExtResource("3_ur0g5")
+font_size = 23
+font_color = Color(0.827451, 0.76862746, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_re5ev"]
+font = ExtResource("5_btio6")
+font_size = 20
+font_color = Color(0.61960787, 0.5254902, 0.85490197, 1)
+
+[node name="GoodsItem" type="TextureButton" node_paths=PackedStringArray("_nameLabel", "_priceLabel", "_priceContainer")]
+texture_normal = ExtResource("1_18utp")
+script = ExtResource("2_yhpjk")
+_nameLabel = NodePath("NameLabel")
+_priceLabel = NodePath("Price/PriceLabel")
+_priceContainer = NodePath("Price")
+metadata/_edit_group_ = true
+
+[node name="GodotNodeZone" type="Node" parent="."]
+script = ExtResource("6_yhpjk")
+_nodeSet = ExtResource("4_ur0g5")
+metadata/_custom_type_script = "uid://cn7jaub0gpp2f"
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -37.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "道具名"
+label_settings = SubResource("LabelSettings_74vcr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Price" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.5
+offset_top = 4.0
+offset_right = 52.5
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_qsxqc")
+
+[node name="PriceLabel" type="Label" parent="Price"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "200¥"
+label_settings = SubResource("LabelSettings_re5ev")
+horizontal_alignment = 1

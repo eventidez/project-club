@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=3 uid="uid://ulydkqp6f8rr"]
+
+[ext_resource type="Script" uid="uid://d3o455vluscmv" path="res://src/app/App.cs" id="1_7gyx4"]
+[ext_resource type="PackedScene" uid="uid://dqixqcuanml2y" path="res://scenes/games/dialogue.tscn" id="2_jfrml"]
+[ext_resource type="Resource" uid="uid://cld24642iqt0t" path="res://resources/setting/settings.tres" id="3_jcqnt"]
+[ext_resource type="Script" uid="uid://cra7vqw1h8d0p" path="res://src/core/event/EventBus.cs" id="4_tfade"]
+[ext_resource type="Script" uid="uid://c6qi8ua6nax3u" path="res://src/core/input/InputSystem.cs" id="5_kpch1"]
+[ext_resource type="Resource" uid="uid://b43mlq0do8vre" path="res://resources/events/input/empty_mouse_pressed.tres" id="6_nw8wv"]
+[ext_resource type="PackedScene" uid="uid://bvfxi0tpjl43l" path="res://scenes/games/main.tscn" id="7_4tibl"]
+[ext_resource type="PackedScene" uid="uid://ixv6nr3rp0xd" path="res://scenes/title/title_view.tscn" id="8_slhlo"]
+
+[node name="App" type="Node" node_paths=PackedStringArray("_gameParent")]
+script = ExtResource("1_7gyx4")
+_dialogueScene = ExtResource("2_jfrml")
+_settingFile = ExtResource("3_jcqnt")
+_dict = {
+"cfvg": Vector3(33, 44, 55),
+"sxxdf": PackedColorArray(0, 0.53883326, 0.61, 1)
+}
+_gameParent = NodePath("Game")
+
+[node name="Managers" type="Node" parent="."]
+
+[node name="EventBus" type="Node" parent="Managers"]
+script = ExtResource("4_tfade")
+metadata/_custom_type_script = "uid://cra7vqw1h8d0p"
+
+[node name="InputSystem" type="Node" parent="Managers"]
+script = ExtResource("5_kpch1")
+_emptyMousePressed = ExtResource("6_nw8wv")
+
+[node name="Game" type="Node2D" parent="."]
+
+[node name="Main" parent="Game" instance=ExtResource("7_4tibl")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TitleView" parent="CanvasLayer" instance=ExtResource("8_slhlo")]
+visible = false

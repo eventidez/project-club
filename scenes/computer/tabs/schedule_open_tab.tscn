@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca3ixc6imm7r"]
+
+[ext_resource type="PackedScene" uid="uid://dgl5g7y8leqlh" path="res://scenes/computer/tabs/computer_open_tab.tscn" id="1_mbip1"]
+
+[node name="OpenTab" instance=ExtResource("1_mbip1")]
+
+[node name="Label" parent="." index="0"]
+text = "排班"

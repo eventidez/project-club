@@ -1,0 +1,8 @@
+{
+	"tables": [
+		{
+			"path": "../excel/Data.xlsx",
+			"sheetName": "i18n"
+		}
+	]
+}

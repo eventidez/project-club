@@ -1,12 +1,18 @@
+using Chickensoft.AutoInject;
+using Chickensoft.Introspection;
 using Godot;
 using System;
 
 namespace Game;
 
+[Meta(typeof(IAutoNode))]
 public partial class RoleMenuView : Control
 {
+    public override void _Notification(int what) => this.Notify(what);
+
     [Export] private Control[] _backgrounds = [];
     [Export] private Godot.Collections.Array<Control> _buttonContainers = [];
+    [Dependency] public App App => this.DependOn<App>();
 
     private int _containerIndex = 0;
 
@@ -15,6 +21,7 @@ public partial class RoleMenuView : Control
     public override void _EnterTree()
     {
         base._EnterTree();
+        this.Provide();
     }
 
     public override void _ExitTree()
@@ -64,8 +71,34 @@ public partial class RoleMenuView : Control
         }
     }
 
+    public void OnChatButtonClicked()
+    {
+        App.AddDialogue();
+        Close();
+    }
+
     public void OnClothingButtonPressed()
     {
         UpdateContainer(1);
+    }
+
+    public void OnClothingItemButtonPressed(int index)
+    {
+        var roleForm = this.FindParent<GameRoleForm>();
+        var bodyName = roleForm.RoleId;
+        switch (index)
+        {
+            case 0:
+                bodyName = $"{bodyName}_common";
+                break;
+            case 1:
+                bodyName = $"{bodyName}_under";
+                break;
+            case 2:
+                bodyName = $"{bodyName}_sexy";
+                break;
+        }
+
+        roleForm.SetBody(bodyName);
     }
 }

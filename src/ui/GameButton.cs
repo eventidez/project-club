@@ -5,8 +5,7 @@ using GameSystems.Event;
 public partial class GameButton : TextureButton
 {
     [Signal] public delegate void MousePressedEventHandler();
-    [Signal] public delegate void MousePressedAtIndexEventHandler();
-
+    [Signal] public delegate void MousePressedAtIndexEventHandler(int index);
     [Export] private VoidEventChannel _pressed = default;
     [Export] private Label _label;
     [Export] private int _index = -1;
@@ -25,8 +24,15 @@ public partial class GameButton : TextureButton
     public override void _EnterTree()
     {
         base._EnterTree();
-        EventTriggerListener.Get(this).Pressed = Press;
+        // EventTriggerListener.Get(this).Pressed = Press;
+        Pressed += Press;
         // MouseEntered += () => GD.Print("XXX");
+    }
+
+    public override void _ExitTree()
+    {
+        base._ExitTree();
+        Pressed -= Press;
     }
     // public Action MousePressed;
 
@@ -37,7 +43,7 @@ public partial class GameButton : TextureButton
 
         if (Index >= 0)
         {
-            EmitSignal(SignalName.MousePressedAtIndex);
+            EmitSignal(SignalName.MousePressedAtIndex, Index);
         }
     }
 }

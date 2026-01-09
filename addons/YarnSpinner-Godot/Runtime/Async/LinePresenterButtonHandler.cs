@@ -16,7 +16,7 @@ public partial class LinePresenterButtonHandler : ActionMarkupHandler
     /// any animations that are playing.
     /// </summary>
     /// <seealso cref="autoAdvance"/>
-    [Export] Button? continueButton;
+    [Export] BaseButton? continueButton;
 
     /// <summary>
     /// Reference to the dialogue runner.

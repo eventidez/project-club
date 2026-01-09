@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cs3mbhgrx6dgd"]
+
+[ext_resource type="Script" uid="uid://dgxaeg36ndspc" path="res://dialogue/tools/DialogueToYarnTool.cs" id="1_puwti"]
+
+[resource]
+script = ExtResource("1_puwti")

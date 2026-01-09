@@ -3,7 +3,7 @@ using System;
 using Chickensoft.AutoInject;
 using Chickensoft.Introspection;
 
-namespace Game.UI;
+namespace Game;
 
 [Meta(typeof(IAutoNode))]
 public partial class MainView : BaseView

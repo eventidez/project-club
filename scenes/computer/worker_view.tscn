@@ -1,0 +1,249 @@
+[gd_scene load_steps=17 format=3 uid="uid://srjypf2t0g7w"]
+
+[ext_resource type="Texture2D" uid="uid://defsbvchggqqi" path="res://art/ui/worker/_refer_staff.png" id="1_bvscd"]
+[ext_resource type="Texture2D" uid="uid://bcs1wocdnovhv" path="res://art/ui/worker/bg_recruit.png" id="1_svy84"]
+[ext_resource type="Texture2D" uid="uid://c1t38t7uxk3ar" path="res://art/ui/worker/bg_staff.png" id="2_k0gpu"]
+[ext_resource type="Texture2D" uid="uid://dfdv507becwiy" path="res://art/ui/worker/bg_staff_human.png" id="4_1m3m4"]
+[ext_resource type="Texture2D" uid="uid://bgc2hhww5ldga" path="res://art/ui/worker/bg_recruit_human.png" id="4_feaov"]
+[ext_resource type="PackedScene" uid="uid://bmay7mio5ltoc" path="res://scenes/computer/tabs/computer_tabs.tscn" id="4_q8rke"]
+[ext_resource type="Texture2D" uid="uid://cd5u3pquir4lv" path="res://art/ui/worker/btn_refuse_on.png" id="5_md0e3"]
+[ext_resource type="Texture2D" uid="uid://cg1eymnstk7i4" path="res://art/ui/worker/btn_recruit.png" id="5_ydmxw"]
+[ext_resource type="FontFile" uid="uid://crywt4d86rr58" path="res://fonts/HYZhengYuan-95W.ttf" id="6_8jmea"]
+[ext_resource type="FontFile" uid="uid://5u8wj1row7la" path="res://fonts/HYZhengYuan-85W.ttf" id="6_c4wmb"]
+[ext_resource type="PackedScene" uid="uid://cwhnpcvwlbqfw" path="res://scenes/computer/return_burron.tscn" id="6_vyixk"]
+[ext_resource type="PackedScene" uid="uid://dd6e3g73liuir" path="res://scenes/computer/setting_button.tscn" id="7_1e3ah"]
+[ext_resource type="PackedScene" uid="uid://dethibm6dhlj0" path="res://scenes/computer/worker_trait_tag.tscn" id="8_hw5fr"]
+[ext_resource type="PackedScene" uid="uid://ctldc5x0l82yo" path="res://scenes/computer/tabs/worker_open_tab.tscn" id="13_hw5fr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_djeu3"]
+font = ExtResource("6_8jmea")
+font_size = 37
+outline_size = 13
+outline_color = Color(0.6392157, 0.54509807, 0.972549, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hw5fr"]
+font = ExtResource("6_c4wmb")
+font_size = 21
+
+[node name="WorkerView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tabs" parent="." instance=ExtResource("4_q8rke")]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 133.0
+offset_right = 291.0
+offset_bottom = 801.0
+
+[node name="Space" type="Control" parent="Tabs/Buttons" index="1"]
+custom_minimum_size = Vector2(0, 190)
+layout_mode = 2
+
+[node name="WorkerTab" parent="Tabs/Buttons" index="2"]
+visible = false
+
+[node name="ClothingTab" parent="Tabs/Buttons" index="4"]
+z_index = -1
+
+[node name="OpenTab" parent="." instance=ExtResource("13_hw5fr")]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 260.0
+offset_right = 274.0
+offset_bottom = 455.0
+
+[node name="Workers" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -711.0
+offset_top = -402.0
+offset_right = 142.0
+offset_bottom = 340.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_k0gpu")
+
+[node name="WorkerItem" type="TextureRect" parent="Workers"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 89.0
+offset_right = 421.0
+offset_bottom = 215.0
+texture = ExtResource("4_1m3m4")
+
+[node name="TextureRect" type="TextureButton" parent="Workers/WorkerItem"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -37.0
+offset_right = -10.0
+offset_bottom = -11.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Workers/WorkerItem/TextureRect"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.0
+offset_right = 22.0
+offset_bottom = 11.0
+grow_vertical = 2
+texture = ExtResource("5_md0e3")
+
+[node name="Label" type="Label" parent="Workers/WorkerItem/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "辞退"
+
+[node name="Label" type="Label" parent="Workers/WorkerItem"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -215.0
+offset_top = -71.0
+offset_right = -9.0
+offset_bottom = -4.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "员工姓名"
+label_settings = SubResource("LabelSettings_djeu3")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Workers/WorkerItem"]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 52.0
+offset_right = 227.0
+offset_bottom = 79.0
+theme_override_constants/separation = 5
+
+[node name="TraitTag" parent="Workers/WorkerItem/HBoxContainer" instance=ExtResource("8_hw5fr")]
+layout_mode = 2
+
+[node name="TraitTag2" parent="Workers/WorkerItem/HBoxContainer" instance=ExtResource("8_hw5fr")]
+layout_mode = 2
+
+[node name="TraitTag3" parent="Workers/WorkerItem/HBoxContainer" instance=ExtResource("8_hw5fr")]
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 154.0
+offset_top = -413.0
+offset_right = 738.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_svy84")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 52.0
+offset_top = 159.0
+offset_right = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect3/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_feaov")
+
+[node name="TraitTag" parent="TextureRect3/VBoxContainer/TextureRect" instance=ExtResource("8_hw5fr")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 27.0
+
+[node name="TextureButton" type="TextureButton" parent="TextureRect3/VBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("5_ydmxw")
+
+[node name="Label" type="Label" parent="TextureRect3/VBoxContainer/TextureRect/TextureButton"]
+layout_mode = 0
+offset_right = 59.0
+offset_bottom = 38.0
+text = "招募"
+label_settings = SubResource("LabelSettings_hw5fr")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="ReturnBurron" parent="." instance=ExtResource("6_vyixk")]
+layout_mode = 0
+offset_left = 1706.0
+offset_top = 162.0
+offset_right = 1792.0
+offset_bottom = 247.0
+
+[node name="SettingButton" parent="." instance=ExtResource("7_1e3ah")]
+layout_mode = 0
+offset_left = 1706.0
+offset_top = 254.0
+offset_right = 1792.0
+offset_bottom = 339.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.18039216)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bvscd")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bvscd")
+metadata/_edit_lock_ = true
+
+[editable path="Tabs"]

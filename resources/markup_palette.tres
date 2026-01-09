@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MarkupPalette" load_steps=5 format=3 uid="uid://ch5q1xw1ug5e2"]
+
+[ext_resource type="Script" uid="uid://b3q2v7wyxccs0" path="res://addons/YarnSpinner-Godot/Runtime/BasicMarker.cs" id="1_emnoq"]
+[ext_resource type="Script" uid="uid://lvtve3yjd8v7" path="res://addons/YarnSpinner-Godot/Runtime/CustomMarker.cs" id="2_5c6rf"]
+[ext_resource type="Script" uid="uid://dn5hil73gapip" path="res://addons/YarnSpinner-Godot/Runtime/Views/MarkupPalette.cs" id="3_q6f7c"]
+
+[sub_resource type="Resource" id="Resource_emnoq"]
+script = ExtResource("1_emnoq")
+Marker = "b"
+Color = Color(1, 1, 1, 0)
+metadata/_custom_type_script = "uid://b3q2v7wyxccs0"
+
+[resource]
+script = ExtResource("3_q6f7c")
+BasicMarkers = [SubResource("Resource_emnoq")]
+metadata/_custom_type_script = "uid://dn5hil73gapip"

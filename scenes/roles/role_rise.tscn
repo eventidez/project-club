@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt32vnjmmnttu"]
+
+[ext_resource type="PackedScene" uid="uid://dfnlotkle4hrc" path="res://scenes/roles/role.tscn" id="1_4s20i"]
+[ext_resource type="Texture2D" uid="uid://8ro44v3nhshj" path="res://art/roles/rise_common.png" id="2_pssrj"]
+[ext_resource type="Texture2D" uid="uid://r5jty5leie4c" path="res://art/roles/rise_ordinary.png" id="3_v58ov"]
+
+[node name="Role" instance=ExtResource("1_4s20i")]
+_roleId = "rise"
+
+[node name="Skin" parent="." index="2"]
+texture = ExtResource("2_pssrj")
+
+[node name="Face" parent="Skin" index="0"]
+texture = ExtResource("3_v58ov")
+
+[node name="CollisionPolygon2D" parent="Area2D" index="0"]
+visible = true
+polygon = PackedVector2Array(-179, -828, -326, -386, -358, 19, 292, 15, 361, -320, 72, -469, 96, -736, -50, -899)

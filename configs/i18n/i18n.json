@@ -1,0 +1,376 @@
+[
+	{
+		"Id": "name_aina",
+		"english": "yakira aina",
+		"japanese": "柳楽愛奈",
+		"schinese": "柳乐爱奈",
+		"tchinese": "柳樂愛奈"
+	},
+	{
+		"Id": "name_inana",
+		"english": "inana",
+		"schinese": "爱娜娜",
+		"tchinese": "愛娜娜"
+	},
+	{
+		"Id": "name_mayume",
+		"english": "uduki mayume",
+		"japanese": "卯月真夢",
+		"schinese": "卯月真梦",
+		"tchinese": "卯月真夢"
+	},
+	{
+		"Id": "name_duki",
+		"english": "mayuduki",
+		"schinese": "真由月",
+		"tchinese": "真由月"
+	},
+	{
+		"Id": "name_rokka",
+		"english": "sonozaki rokka",
+		"japanese": "園崎六花",
+		"schinese": "园崎六花",
+		"tchinese": "園崎六花"
+	},
+	{
+		"Id": "name_rise",
+		"english": "akesaka rise",
+		"japanese": "明坂リーセ",
+		"schinese": "明坂莉瑟",
+		"tchinese": "明坂莉瑟"
+	},
+	{
+		"schinese": "贝阿朵莉斯"
+	},
+	{
+		"Id": "name_syouko",
+		"english": "saginomiya syouko",
+		"japanese": "鷺ノ宮頌子",
+		"schinese": "鹭宫颂子",
+		"tchinese": "鷺宮頌子"
+	},
+	{
+		"Id": "name_reiko",
+		"english": "saginomiya reiko",
+		"japanese": "鷺ノ宮礼子",
+		"schinese": "鹭宫礼子",
+		"tchinese": "鷺宮禮子"
+	},
+	{
+		"Id": "name_player",
+		"schinese": "我",
+		"tchinese": "我"
+	},
+	{
+		"Id": "name_unknown",
+		"english": "???",
+		"schinese": "？？？",
+		"tchinese": "？？？"
+	},
+	{
+		"Id": "name_man",
+		"schinese": "男性的声音",
+		"tchinese": "男性的聲音"
+	},
+	{
+		"Id": "name_catgod",
+		"schinese": "神明？",
+		"tchinese": "神明？"
+	},
+	{
+		"Id": "name_mrs_reiko",
+		"schinese": "礼子姐",
+		"tchinese": "禮子姐"
+	},
+	{
+		"Id": "name_lady",
+		"schinese": "温和的女性声音",
+		"tchinese": "溫和的女性聲音"
+	},
+	{
+		"Id": "name_duki1",
+		"english": "mayuduki?",
+		"schinese": "真由月？",
+		"tchinese": "真由月？"
+	},
+	{
+		"Id": "uitext_newgame",
+		"english": "new game",
+		"schinese": "新游戏",
+		"tchinese": "新游戲"
+	},
+	{
+		"Id": "uitext_continue",
+		"english": "continue",
+		"schinese": "继续游戏",
+		"tchinese": "繼續游戲"
+	},
+	{
+		"Id": "uitext_setting",
+		"english": "setting",
+		"schinese": "设置",
+		"tchinese": "設置"
+	},
+	{
+		"Id": "uitext_cg",
+		"schinese": "CG图鉴",
+		"tchinese": "CG圖鑒"
+	},
+	{
+		"Id": "uitext_quit",
+		"schinese": "退出游戏",
+		"tchinese": "退出游戲"
+	},
+	{
+		"Id": "uitext_nextday",
+		"english": "next day",
+		"schinese": "下一天",
+		"tchinese": "下一天"
+	},
+	{
+		"Id": "uitext_month",
+		"english": "M",
+		"schinese": "月",
+		"tchinese": "月"
+	},
+	{
+		"Id": "uitext_day",
+		"english": "D",
+		"schinese": "日",
+		"tchinese": "日"
+	},
+	{
+		"Id": "uitext_chat",
+		"schinese": "聊天",
+		"tchinese": "聊天"
+	},
+	{
+		"Id": "uitext_changeclothes",
+		"schinese": "换装",
+		"tchinese": "換裝"
+	},
+	{
+		"Id": "uitext_common",
+		"schinese": "日常",
+		"tchinese": "日常"
+	},
+	{
+		"Id": "uitext_under",
+		"schinese": "内衣",
+		"tchinese": "内衣"
+	},
+	{
+		"Id": "uitext_sexy",
+		"schinese": "情趣",
+		"tchinese": "情趣"
+	},
+	{
+		"Id": "uitext_workforce",
+		"schinese": "排班",
+		"tchinese": "排班"
+	},
+	{
+		"Id": "uitext_staff",
+		"schinese": "店员",
+		"tchinese": "店員"
+	},
+	{
+		"Id": "uitext_vacancy",
+		"schinese": "招聘",
+		"tchinese": "招聘"
+	},
+	{
+		"Id": "uitext_dismiss",
+		"schinese": "辞退",
+		"tchinese": "辭退"
+	},
+	{
+		"Id": "uitext_amuazon",
+		"english": "amuazon",
+		"schinese": "爱啵",
+		"tchinese": "愛啵"
+	},
+	{
+		"Id": "uitext_cloth",
+		"schinese": "服装",
+		"tchinese": "服裝"
+	},
+	{
+		"Id": "uitext_income",
+		"schinese": "预计收入",
+		"tchinese": "預計收入"
+	},
+	{
+		"Id": "uitext_expent",
+		"schinese": "预计支出",
+		"tchinese": "預計支出"
+	},
+	{
+		"Id": "uitext_balance",
+		"schinese": "当前余额",
+		"tchinese": "當前餘額"
+	},
+	{
+		"Id": "uitext_buyitem",
+		"schinese": "购买道具",
+		"tchinese": "購買道具"
+	},
+	{
+		"Id": "uitext_furnish",
+		"schinese": "扩张店面",
+		"tchinese": "擴張店面"
+	},
+	{
+		"Id": "uitext_bgms",
+		"schinese": "总音量",
+		"tchinese": "縂音量"
+	},
+	{
+		"Id": "uitext_bgm",
+		"schinese": "音乐音量",
+		"tchinese": "音樂音量"
+	},
+	{
+		"Id": "uitext_sound",
+		"schinese": "音效音量",
+		"tchinese": "音效音量"
+	},
+	{
+		"Id": "uitext_voice",
+		"schinese": "语音音量",
+		"tchinese": "語音音量"
+	},
+	{
+		"Id": "uitext_save",
+		"schinese": "存档",
+		"tchinese": "存檔"
+	},
+	{
+		"Id": "uitext_load",
+		"schinese": "读档",
+		"tchinese": "讀檔"
+	},
+	{
+		"Id": "uitext_language",
+		"schinese": "语言",
+		"tchinese": "語言"
+	},
+	{
+		"Id": "uitext_returntitle",
+		"schinese": "返回标题",
+		"tchinese": "返回標題"
+	},
+	{
+		"Id": "uitext_upperlimit",
+		"schinese": "已达到上限",
+		"tchinese": "以達到上限"
+	},
+	{
+		"Id": "language_rope",
+		"schinese": "麻绳",
+		"tchinese": "麻繩"
+	},
+	{
+		"Id": "language_candle",
+		"schinese": "蜡烛",
+		"tchinese": "蠟燭"
+	},
+	{
+		"Id": "language_choker",
+		"schinese": "项圈",
+		"tchinese": "項圈"
+	},
+	{
+		"Id": "language_pointer",
+		"schinese": "散鞭",
+		"tchinese": "散鞭"
+	},
+	{
+		"Id": "language_muzzle",
+		"schinese": "口笼",
+		"tchinese": "口籠"
+	},
+	{
+		"Id": "language_handcuffs",
+		"schinese": "手铐",
+		"tchinese": "手銬"
+	},
+	{
+		"Id": "language_catsuit",
+		"schinese": "胶衣",
+		"tchinese": "膠衣"
+	},
+	{
+		"Id": "language_electrode",
+		"schinese": "电极",
+		"tchinese": "電極"
+	},
+	{
+		"Id": "language_equipment",
+		"schinese": "装置",
+		"tchinese": "裝置"
+	},
+	{
+		"Id": "language_horsewhip",
+		"schinese": "马鞭",
+		"tchinese": "馬鞭"
+	},
+	{
+		"Id": "language_queen",
+		"schinese": "女王",
+		"tchinese": "女王"
+	},
+	{
+		"Id": "language_cute",
+		"schinese": "可爱",
+		"tchinese": "可愛"
+	},
+	{
+		"Id": "language_contrast",
+		"schinese": "反差",
+		"tchinese": "反差"
+	},
+	{
+		"Id": "language_sharp",
+		"schinese": "毒舌",
+		"tchinese": "毒舌"
+	},
+	{
+		"Id": "language_indifferent",
+		"schinese": "冷漠",
+		"tchinese": "冷漠"
+	},
+	{
+		"Id": "language_fiery",
+		"schinese": "暴躁",
+		"tchinese": "暴躁"
+	},
+	{
+		"Id": "language_intense",
+		"schinese": "热情",
+		"tchinese": "熱情"
+	},
+	{
+		"Id": "language_cos",
+		"schinese": "扮演",
+		"tchinese": "扮演"
+	},
+	{
+		"schinese": "扩张店面可以增加每天接待的客人数量！但也会增加每天的维护支出哦~"
+	},
+	{
+		"schinese": "当前维护支出："
+	},
+	{
+		"schinese": "扩张后维护支出："
+	},
+	{
+		"schinese": "确实要返回标题吗？\n未保存的进度会直接消失。"
+	},
+	{
+		"schinese": "确实要删除存档吗？\n删除后的存档无法以任何方式找回。"
+	},
+	{
+		"schinese": "确实要覆盖存档吗？\n覆盖后的存档无法以任何方式找回。"
+	}
+]

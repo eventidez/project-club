@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://dethibm6dhlj0"]
+
+[ext_resource type="FontFile" uid="uid://biemq8wuhl3s2" path="res://fonts/HYZhengYuan-65W.ttf" id="1_6ua1j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hw5fr"]
+bg_color = Color(0.41960785, 0.73333335, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_e4ng8"]
+font = ExtResource("1_6ua1j")
+font_size = 19
+
+[node name="TraitTag" type="Panel"]
+custom_minimum_size = Vector2(64, 27)
+offset_left = 133.0
+offset_top = 60.0
+offset_right = 197.0
+offset_bottom = 87.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hw5fr")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "反差"
+label_settings = SubResource("LabelSettings_e4ng8")
+horizontal_alignment = 1
+vertical_alignment = 1

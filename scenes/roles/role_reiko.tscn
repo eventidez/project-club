@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbi3mvtrd5ycw"]
+
+[ext_resource type="PackedScene" uid="uid://dfnlotkle4hrc" path="res://scenes/roles/role.tscn" id="1_wu47m"]
+[ext_resource type="Texture2D" uid="uid://diniykvv8u4n8" path="res://art/roles/reiko_common.png" id="2_ipjbd"]
+[ext_resource type="Texture2D" uid="uid://x45xakokeyj0" path="res://art/roles/reiko_ordinary.png" id="3_hploc"]
+
+[node name="Role" instance=ExtResource("1_wu47m")]
+_roleId = "reiko"
+
+[node name="Skin" parent="." index="2"]
+texture = ExtResource("2_ipjbd")
+
+[node name="Face" parent="Skin" index="0"]
+texture = ExtResource("3_hploc")
+
+[node name="CollisionPolygon2D" parent="Area2D" index="0"]
+visible = true
+polygon = PackedVector2Array(-254, -629, -370, 13, 151, 11, 109, -377, 394, -671, 271, -659, 97, -636, -10, -908, -137, -880)
+
+[node name="RoleMenuView" parent="." index="4"]
+offset_left = 124.0
+offset_top = -978.0
+offset_right = 387.0
+offset_bottom = -654.0

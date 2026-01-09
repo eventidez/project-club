@@ -1,0 +1,304 @@
+[gd_scene load_steps=19 format=3 uid="uid://brshjs2uv88rc"]
+
+[ext_resource type="Script" uid="uid://c7xt3j6usqb88" path="res://src/computer/ShopView.cs" id="1_bfsio"]
+[ext_resource type="PackedScene" uid="uid://bmay7mio5ltoc" path="res://scenes/computer/tabs/computer_tabs.tscn" id="1_ijac3"]
+[ext_resource type="Texture2D" uid="uid://br5t8rsbwdd35" path="res://art/ui/shop/bg_furnish.png" id="2_3d1i1"]
+[ext_resource type="Resource" uid="uid://8v1x4rg1ltg6" path="res://scenes/computer/shop_goods_items.tres" id="2_1705u"]
+[ext_resource type="PackedScene" uid="uid://60p76b5557nm" path="res://scenes/computer/tabs/shop_open_tab.tscn" id="2_bfsio"]
+[ext_resource type="Resource" uid="uid://dmpa8kcwuhdvt" path="res://resources/datas/shop_items.tres" id="2_lvvs7"]
+[ext_resource type="Texture2D" uid="uid://r2p31tyvrih" path="res://art/ui/shop/bg_furnish_items.png" id="3_bfsio"]
+[ext_resource type="PackedScene" uid="uid://fo6eol5nyiip" path="res://scenes/computer/shop_goods_item.tscn" id="5_bfsio"]
+[ext_resource type="Texture2D" uid="uid://dk8pmamefa5yb" path="res://art/ui/shop/bg_furnish_expand.png" id="7_scbet"]
+[ext_resource type="Texture2D" uid="uid://duxsu8o83v0tc" path="res://art/ui/shop/furnish_expand_finish.png" id="8_gu0hq"]
+[ext_resource type="Texture2D" uid="uid://brpr5e4qni0w8" path="res://art/ui/shop/furnish_expand_next.png" id="9_36dn8"]
+[ext_resource type="Texture2D" uid="uid://bjk11b45ow5f0" path="res://art/ui/shop/furnish_expand_lock.png" id="10_0xwpo"]
+[ext_resource type="Texture2D" uid="uid://ghuqelyyatp6" path="res://art/ui/shop/furnish_expand_price.png" id="11_p6dwh"]
+[ext_resource type="Texture2D" uid="uid://ijfqwppks2dv" path="res://art/ui/shop/furnish_expand_price_on.png" id="12_2qgit"]
+[ext_resource type="Texture2D" uid="uid://drws82ittilmj" path="res://art/ui/shop/_refer_furnish.png" id="13_4261o"]
+[ext_resource type="PackedScene" uid="uid://dd6e3g73liuir" path="res://scenes/computer/setting_button.tscn" id="14_1705u"]
+[ext_resource type="PackedScene" uid="uid://cwhnpcvwlbqfw" path="res://scenes/computer/return_burron.tscn" id="15_lvvs7"]
+[ext_resource type="PackedScene" uid="uid://sd1bedxhv50j" path="res://scenes/computer/computer_wallet_view.tscn" id="17_74vcr"]
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bfsio")
+_shopItemDataGroup = ExtResource("2_lvvs7")
+_goodsItemGroup = ExtResource("2_1705u")
+
+[node name="Tabs" parent="." instance=ExtResource("1_ijac3")]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 133.0
+offset_right = 285.0
+offset_bottom = 654.0
+
+[node name="Space" type="Control" parent="Tabs/Buttons" index="2"]
+custom_minimum_size = Vector2(0, 190)
+layout_mode = 2
+
+[node name="ShopTab" parent="Tabs/Buttons" index="3"]
+visible = false
+
+[node name="OpenTab" parent="." instance=ExtResource("2_bfsio")]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 389.0
+offset_right = 274.0
+offset_bottom = 584.0
+
+[node name="Content" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -717.0
+offset_top = -399.0
+offset_right = 717.0
+offset_bottom = 343.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3d1i1")
+
+[node name="TextureRect2" type="TextureRect" parent="Content"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 72.0
+offset_right = 1384.0
+offset_bottom = 509.0
+texture = ExtResource("3_bfsio")
+
+[node name="GridContainer" type="GridContainer" parent="Content/TextureRect2"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 70.0
+offset_right = 809.0
+offset_bottom = 365.0
+theme_override_constants/h_separation = 77
+theme_override_constants/v_separation = 40
+columns = 5
+
+[node name="GoodsItem" parent="Content/TextureRect2/GridContainer" instance=ExtResource("5_bfsio")]
+layout_mode = 2
+
+[node name="GoodsItem2" parent="Content/TextureRect2/GridContainer" instance=ExtResource("5_bfsio")]
+layout_mode = 2
+
+[node name="GoodsItem3" parent="Content/TextureRect2/GridContainer" instance=ExtResource("5_bfsio")]
+layout_mode = 2
+
+[node name="GoodsItem4" parent="Content/TextureRect2/GridContainer" instance=ExtResource("5_bfsio")]
+layout_mode = 2
+
+[node name="GoodsItem5" parent="Content/TextureRect2/GridContainer" instance=ExtResource("5_bfsio")]
+layout_mode = 2
+
+[node name="GoodsItem6" parent="Content/TextureRect2/GridContainer" instance=ExtResource("5_bfsio")]
+layout_mode = 2
+
+[node name="GoodsItem7" parent="Content/TextureRect2/GridContainer" instance=ExtResource("5_bfsio")]
+layout_mode = 2
+
+[node name="GoodsItem8" parent="Content/TextureRect2/GridContainer" instance=ExtResource("5_bfsio")]
+layout_mode = 2
+
+[node name="GoodsItem9" parent="Content/TextureRect2/GridContainer" instance=ExtResource("5_bfsio")]
+layout_mode = 2
+
+[node name="GoodsItem10" parent="Content/TextureRect2/GridContainer" instance=ExtResource("5_bfsio")]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Content"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 52.0
+offset_top = -237.0
+offset_right = 1073.0
+offset_bottom = -50.0
+grow_vertical = 0
+texture = ExtResource("7_scbet")
+
+[node name="Control" type="HBoxContainer" parent="Content/TextureRect"]
+layout_mode = 1
+offset_left = 41.0
+offset_top = 75.0
+offset_right = 115.0
+offset_bottom = 149.0
+theme_override_constants/separation = 25
+
+[node name="TextureRect" type="TextureRect" parent="Content/TextureRect/Control"]
+layout_mode = 2
+texture = ExtResource("8_gu0hq")
+
+[node name="TextureRect2" type="TextureRect" parent="Content/TextureRect/Control"]
+layout_mode = 2
+texture = ExtResource("8_gu0hq")
+
+[node name="TextureRect3" type="TextureRect" parent="Content/TextureRect/Control"]
+layout_mode = 2
+texture = ExtResource("8_gu0hq")
+
+[node name="TextureButton" type="TextureButton" parent="Content/TextureRect/Control/TextureRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("9_36dn8")
+
+[node name="TextureRect4" type="TextureRect" parent="Content/TextureRect/Control/TextureRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -37.0
+offset_right = 37.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_0xwpo")
+
+[node name="Price" type="Control" parent="Content/TextureRect/Control/TextureRect3"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Price0" type="TextureRect" parent="Content/TextureRect/Control/TextureRect3/Price"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -39.0
+offset_top = -24.0
+offset_right = 39.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("11_p6dwh")
+
+[node name="Price1" type="TextureRect" parent="Content/TextureRect/Control/TextureRect3/Price"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -39.0
+offset_top = -24.0
+offset_right = 39.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("12_2qgit")
+
+[node name="Label" type="Label" parent="Content/TextureRect/Control/TextureRect3/Price"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "1200"
+horizontal_alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="Content/TextureRect/Control"]
+layout_mode = 2
+texture = ExtResource("8_gu0hq")
+
+[node name="TextureRect5" type="TextureRect" parent="Content/TextureRect/Control"]
+layout_mode = 2
+texture = ExtResource("8_gu0hq")
+
+[node name="TextureRect6" type="TextureRect" parent="Content/TextureRect/Control"]
+layout_mode = 2
+texture = ExtResource("8_gu0hq")
+
+[node name="TextureRect7" type="TextureRect" parent="Content/TextureRect/Control"]
+layout_mode = 2
+texture = ExtResource("8_gu0hq")
+
+[node name="TextureRect8" type="TextureRect" parent="Content/TextureRect/Control"]
+layout_mode = 2
+texture = ExtResource("8_gu0hq")
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -213.0
+offset_top = 161.0
+offset_right = -127.0
+offset_bottom = 340.0
+grow_horizontal = 0
+theme_override_constants/separation = 9
+alignment = 2
+
+[node name="ReturnBurron" parent="Buttons" instance=ExtResource("15_lvvs7")]
+layout_mode = 2
+
+[node name="SettingButton" parent="Buttons" instance=ExtResource("14_1705u")]
+layout_mode = 2
+
+[node name="ComputerWalletView" parent="." instance=ExtResource("17_74vcr")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -588.0
+offset_top = -426.0
+offset_right = -108.0
+offset_bottom = -236.0
+grow_horizontal = 0
+
+[node name="Ref0" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.36862746)
+z_index = 99
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_4261o")
+metadata/_edit_lock_ = true
+
+[node name="Ref1" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_4261o")
+metadata/_edit_lock_ = true
+
+[editable path="Tabs"]

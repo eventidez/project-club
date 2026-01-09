@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://rb0uhrwkmwbt"]
+
+[ext_resource type="Script" uid="uid://cra7vqw1h8d0p" path="res://src/core/event/EventBus.cs" id="1_st4qh"]
+[ext_resource type="Script" uid="uid://c6qi8ua6nax3u" path="res://src/core/input/InputSystem.cs" id="2_51e2l"]
+[ext_resource type="Resource" uid="uid://b43mlq0do8vre" path="res://resources/events/input/empty_mouse_pressed.tres" id="3_oj4i3"]
+[ext_resource type="PackedScene" uid="uid://brshjs2uv88rc" path="res://scenes/computer/shop_view.tscn" id="4_51e2l"]
+[ext_resource type="Script" uid="uid://dgrsa68mpnv0j" path="res://src/utilities/DataLoading.cs" id="4_oj4i3"]
+[ext_resource type="Resource" uid="uid://dmpa8kcwuhdvt" path="res://resources/datas/shop_items.tres" id="5_k6n02"]
+
+[node name="Test" type="Node"]
+
+[node name="Managers" type="Node" parent="."]
+
+[node name="EventBus" type="Node" parent="Managers"]
+script = ExtResource("1_st4qh")
+metadata/_custom_type_script = "uid://cra7vqw1h8d0p"
+
+[node name="InputSystem" type="Node" parent="Managers"]
+script = ExtResource("2_51e2l")
+_emptyMousePressed = ExtResource("3_oj4i3")
+
+[node name="DataLoading" type="Node" parent="Managers"]
+script = ExtResource("4_oj4i3")
+_shopItemGroup = ExtResource("5_k6n02")
+
+[node name="Game" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Game"]
+
+[node name="Shop" parent="Game/CanvasLayer" instance=ExtResource("4_51e2l")]

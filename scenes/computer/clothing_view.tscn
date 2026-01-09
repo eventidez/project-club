@@ -1,0 +1,370 @@
+[gd_scene load_steps=11 format=3 uid="uid://bcrtsgbi2vcc6"]
+
+[ext_resource type="PackedScene" uid="uid://bmay7mio5ltoc" path="res://scenes/computer/tabs/computer_tabs.tscn" id="1_gfgjn"]
+[ext_resource type="Texture2D" uid="uid://bftw0087ibm1p" path="res://art/ui/clothing/bg_cloth.png" id="1_wyld4"]
+[ext_resource type="Texture2D" uid="uid://bevuxcmfocbii" path="res://art/ui/clothing/参考.png" id="2_gfgjn"]
+[ext_resource type="PackedScene" uid="uid://b206ghatahvr3" path="res://scenes/computer/tabs/clothing_open_tab.tscn" id="2_smxkg"]
+[ext_resource type="Texture2D" uid="uid://be02m88ajrmlm" path="res://art/ui/clothing/cloth_box_off.png" id="4_6cxch"]
+[ext_resource type="Texture2D" uid="uid://dg8yu0nrrfrib" path="res://art/ui/clothing/cloth_box.png" id="4_7npnj"]
+[ext_resource type="Texture2D" uid="uid://bwca6xw01y6hi" path="res://art/ui/clothing/cloth_box_on.png" id="6_rfxse"]
+[ext_resource type="PackedScene" uid="uid://cwhnpcvwlbqfw" path="res://scenes/computer/return_burron.tscn" id="8_2xua7"]
+[ext_resource type="PackedScene" uid="uid://sd1bedxhv50j" path="res://scenes/computer/computer_wallet_view.tscn" id="8_rfxse"]
+[ext_resource type="PackedScene" uid="uid://dd6e3g73liuir" path="res://scenes/computer/setting_button.tscn" id="9_lvuqg"]
+
+[node name="Clothing" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tabs" parent="." instance=ExtResource("1_gfgjn")]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 130.0
+offset_right = 285.0
+offset_bottom = 802.0
+
+[node name="ClothingTab" parent="Tabs/Buttons" index="3"]
+visible = false
+
+[node name="Space" type="Control" parent="Tabs/Buttons" index="4"]
+custom_minimum_size = Vector2(0, 190)
+layout_mode = 2
+
+[node name="OpenTab" parent="." instance=ExtResource("2_smxkg")]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 525.0
+offset_right = 274.0
+offset_bottom = 720.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 140.0
+offset_right = 1680.0
+offset_bottom = 882.0
+texture = ExtResource("1_wyld4")
+
+[node name="GridContainer" type="GridContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -664.0
+offset_top = -242.0
+offset_right = 667.0
+offset_bottom = 296.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 9
+theme_override_constants/v_separation = 28
+columns = 7
+
+[node name="ClothingItem" type="TextureButton" parent="TextureRect/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_7npnj")
+texture_hover = ExtResource("6_rfxse")
+
+[node name="Mask" type="TextureRect" parent="TextureRect/GridContainer/ClothingItem"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -126.0
+offset_right = 91.5
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6cxch")
+
+[node name="ClothingItem8" type="TextureButton" parent="TextureRect/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_7npnj")
+texture_hover = ExtResource("6_rfxse")
+
+[node name="Mask" type="TextureRect" parent="TextureRect/GridContainer/ClothingItem8"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -126.0
+offset_right = 91.5
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6cxch")
+
+[node name="ClothingItem9" type="TextureButton" parent="TextureRect/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_7npnj")
+texture_hover = ExtResource("6_rfxse")
+
+[node name="Mask" type="TextureRect" parent="TextureRect/GridContainer/ClothingItem9"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -126.0
+offset_right = 91.5
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6cxch")
+
+[node name="ClothingItem10" type="TextureButton" parent="TextureRect/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_7npnj")
+texture_hover = ExtResource("6_rfxse")
+
+[node name="Mask" type="TextureRect" parent="TextureRect/GridContainer/ClothingItem10"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -126.0
+offset_right = 91.5
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6cxch")
+
+[node name="ClothingItem11" type="TextureButton" parent="TextureRect/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_7npnj")
+texture_hover = ExtResource("6_rfxse")
+
+[node name="Mask" type="TextureRect" parent="TextureRect/GridContainer/ClothingItem11"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -126.0
+offset_right = 91.5
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6cxch")
+
+[node name="ClothingItem12" type="TextureButton" parent="TextureRect/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_7npnj")
+texture_hover = ExtResource("6_rfxse")
+
+[node name="Mask" type="TextureRect" parent="TextureRect/GridContainer/ClothingItem12"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -126.0
+offset_right = 91.5
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6cxch")
+
+[node name="ClothingItem2" type="TextureButton" parent="TextureRect/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_7npnj")
+texture_hover = ExtResource("6_rfxse")
+
+[node name="Mask" type="TextureRect" parent="TextureRect/GridContainer/ClothingItem2"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -126.0
+offset_right = 91.5
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6cxch")
+
+[node name="ClothingItem3" type="TextureButton" parent="TextureRect/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_7npnj")
+texture_hover = ExtResource("6_rfxse")
+
+[node name="Mask" type="TextureRect" parent="TextureRect/GridContainer/ClothingItem3"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -126.0
+offset_right = 91.5
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6cxch")
+
+[node name="ClothingItem4" type="TextureButton" parent="TextureRect/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_7npnj")
+texture_hover = ExtResource("6_rfxse")
+
+[node name="Mask" type="TextureRect" parent="TextureRect/GridContainer/ClothingItem4"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -126.0
+offset_right = 91.5
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6cxch")
+
+[node name="ClothingItem5" type="TextureButton" parent="TextureRect/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_7npnj")
+texture_hover = ExtResource("6_rfxse")
+
+[node name="Mask" type="TextureRect" parent="TextureRect/GridContainer/ClothingItem5"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -126.0
+offset_right = 91.5
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6cxch")
+
+[node name="ClothingItem6" type="TextureButton" parent="TextureRect/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_7npnj")
+texture_hover = ExtResource("6_rfxse")
+
+[node name="Mask" type="TextureRect" parent="TextureRect/GridContainer/ClothingItem6"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -126.0
+offset_right = 91.5
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6cxch")
+
+[node name="ClothingItem7" type="TextureButton" parent="TextureRect/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_7npnj")
+texture_hover = ExtResource("6_rfxse")
+
+[node name="Mask" type="TextureRect" parent="TextureRect/GridContainer/ClothingItem7"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -126.0
+offset_right = 91.5
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6cxch")
+
+[node name="ComputerWalletView" parent="." instance=ExtResource("8_rfxse")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -646.0
+offset_top = -430.0
+offset_right = -166.0
+offset_bottom = -240.0
+grow_horizontal = 0
+
+[node name="ReturnBurron" parent="." instance=ExtResource("8_2xua7")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -213.0
+offset_top = 162.0
+offset_right = -127.0
+offset_bottom = 247.0
+grow_horizontal = 0
+
+[node name="SettingButton" parent="." instance=ExtResource("9_lvuqg")]
+layout_mode = 0
+offset_left = 1707.0
+offset_top = 254.0
+offset_right = 1793.0
+offset_bottom = 339.0
+
+[node name="Ref0" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.32941177)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gfgjn")
+
+[node name="Ref1" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gfgjn")
+
+[editable path="Tabs"]

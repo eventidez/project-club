@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GameSystems.RuntimeSet;
 
@@ -16,5 +17,18 @@ public partial class GodotNodeRuntimeSet : RuntimeSet<Node>
                 yield return t;
             }
         }
+    }
+}
+
+public static class GodotNodeRuntimeSetEx
+{
+    public static T FindNode<T>(this GodotNodeRuntimeSet set, Func<T, bool> predicate)
+    {
+        return set.GetNodes<T>().FirstOrDefault(predicate);
+    }
+
+      public static T[] ToArray<T>(this GodotNodeRuntimeSet set)
+    {
+        return [.. set.GetNodes<T>()];
     }
 }

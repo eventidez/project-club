@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://3hujtlqvaun4"]
+
+[ext_resource type="PackedScene" uid="uid://dfnlotkle4hrc" path="res://scenes/roles/role.tscn" id="1_k11sb"]
+[ext_resource type="Texture2D" uid="uid://c7rfnageymtmt" path="res://art/roles/mayume_common.png" id="2_fmowe"]
+[ext_resource type="Texture2D" uid="uid://cae3ts6w6o0w3" path="res://art/roles/mayume_ordinary.png" id="3_eoone"]
+
+[node name="Role" instance=ExtResource("1_k11sb")]
+_roleId = "mayume"
+
+[node name="Skin" parent="." index="2"]
+texture = ExtResource("2_fmowe")
+
+[node name="Face" parent="Skin" index="0"]
+texture = ExtResource("3_eoone")
+
+[node name="CollisionPolygon2D" parent="Area2D" index="0"]
+polygon = PackedVector2Array(-186, -515, -218, 14, 194, 10, 168, -276, 140, -512, 46, -811, -40, -876, -149, -810)

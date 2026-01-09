@@ -1,0 +1,62 @@
+[
+	{
+		"Id": "201",
+		"Money": 80,
+		"NameText": "language_rope",
+		"SettingName": "prop_rope"
+	},
+	{
+		"Id": "202",
+		"Money": 115,
+		"NameText": "language_candle",
+		"SettingName": "prop_candle"
+	},
+	{
+		"Id": "203",
+		"Money": 160,
+		"NameText": "language_choker",
+		"SettingName": "prop_choker"
+	},
+	{
+		"Id": "204",
+		"Money": 200,
+		"NameText": "language_pointer",
+		"SettingName": "prop_pointer"
+	},
+	{
+		"Id": "205",
+		"Money": 265,
+		"NameText": "language_muzzle",
+		"SettingName": "prop_muzzle"
+	},
+	{
+		"Id": "206",
+		"Money": 330,
+		"NameText": "language_handcuffs",
+		"SettingName": "prop_handcuffs"
+	},
+	{
+		"Id": "207",
+		"Money": 400,
+		"NameText": "language_catsuit",
+		"SettingName": "prop_catsuit"
+	},
+	{
+		"Id": "208",
+		"Money": 490,
+		"NameText": "language_electrode",
+		"SettingName": "prop_electrode"
+	},
+	{
+		"Id": "209",
+		"Money": 600,
+		"NameText": "language_equipment",
+		"SettingName": "prop_equipment"
+	},
+	{
+		"Id": "210",
+		"Money": 800,
+		"NameText": "language_horsewhip",
+		"SettingName": "prop_horsewhip"
+	}
+]

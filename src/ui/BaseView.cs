@@ -3,7 +3,7 @@ using Chickensoft.AutoInject;
 using Chickensoft.Introspection;
 using Godot;
 
-namespace Game.UI;
+namespace Game;
 
 [Meta(typeof(IAutoNode))]
 public partial class BaseView : Control

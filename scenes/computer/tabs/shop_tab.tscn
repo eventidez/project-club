@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmfif4i2iv67t"]
+
+[ext_resource type="PackedScene" uid="uid://oehycrkkg3xc" path="res://scenes/computer/tabs/computer_tab.tscn" id="1_jxcgy"]
+
+[node name="ShopTab" instance=ExtResource("1_jxcgy")]
+
+[node name="Label" parent="." index="0"]
+text = "爱
+啵"

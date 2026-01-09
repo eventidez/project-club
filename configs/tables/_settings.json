@@ -1,0 +1,32 @@
+{
+	"tables": [
+		{
+			"path": "../excel/Data.xlsx",
+			"sheetName": "roles"
+		},
+		{
+			"path": "../excel/Data.xlsx",
+			"sheetName": "clothings"
+		},
+		{
+			"path": "../excel/Data.xlsx",
+			"sheetName": "actions"
+		},
+		{
+			"path": "../excel/Data.xlsx",
+			"sheetName": "workers"
+		},
+		{
+			"path": "../excel/Data.xlsx",
+			"sheetName": "items"
+		},
+		{
+			"path": "../excel/Data.xlsx",
+			"sheetName": "guests"
+		},
+		{
+			"path": "../excel/Data.xlsx",
+			"sheetName": "shop"
+		}
+	]
+}

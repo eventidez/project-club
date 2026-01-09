@@ -1,0 +1,50 @@
+[
+	{
+		"Id": "1",
+		"SettingName": "worker_1_get",
+		"Trait1": "105",
+		"Trait2": "108"
+	},
+	{
+		"Id": "2",
+		"SettingName": "worker_2_get",
+		"Trait1": "102",
+		"Trait2": "103"
+	},
+	{
+		"Id": "3",
+		"SettingName": "worker_3_get",
+		"Trait1": "107"
+	},
+	{
+		"Id": "4",
+		"SettingName": "worker_4_get",
+		"Trait1": "101"
+	},
+	{
+		"Id": "5",
+		"SettingName": "worker_5_get",
+		"Trait1": "104",
+		"Trait2": "106"
+	},
+	{
+		"Id": "6",
+		"SettingName": "worker_6_get",
+		"Trait1": "101",
+		"Trait2": "108"
+	},
+	{
+		"Id": "7",
+		"SettingName": "worker_7_get",
+		"Trait1": "102",
+		"Trait2": "104",
+		"Trait3": "106"
+	},
+	{
+		"Id": "8",
+		"SettingName": "worker_8_get",
+		"Trait1": "103",
+		"Trait2": "105",
+		"Trait3": "107"
+	}
+]

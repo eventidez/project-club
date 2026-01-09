@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmay7mio5ltoc"]
+
+[ext_resource type="Script" uid="uid://burwdlwojmsp" path="res://src/computer/ComputerTabsView.cs" id="1_g6ijm"]
+[ext_resource type="Resource" uid="uid://vkkhfnfq3igg" path="res://resources/events/ui/computer/computer_tab_changed.tres" id="2_3fu8s"]
+[ext_resource type="PackedScene" uid="uid://dfm5o753djjde" path="res://scenes/computer/tabs/clothing_tab.tscn" id="4_3o7ly"]
+[ext_resource type="PackedScene" uid="uid://cmfif4i2iv67t" path="res://scenes/computer/tabs/shop_tab.tscn" id="5_abnc8"]
+[ext_resource type="PackedScene" uid="uid://dqs1nhl87odi1" path="res://scenes/computer/tabs/worker_tab.tscn" id="6_vxir1"]
+[ext_resource type="PackedScene" uid="uid://sbi3i66kmgo0" path="res://scenes/computer/tabs/schedule_tab.tscn" id="7_5jlq6"]
+
+[node name="Tabs" type="Control" node_paths=PackedStringArray("_tabs")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 123.0
+offset_bottom = 576.0
+script = ExtResource("1_g6ijm")
+_tabs = [NodePath("Buttons/ScheduleTab"), NodePath("Buttons/WorkerTab"), NodePath("Buttons/ShopTab"), NodePath("Buttons/ClothingTab")]
+_tabChanged = ExtResource("2_3fu8s")
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -44
+
+[node name="ScheduleTab" parent="Buttons" instance=ExtResource("7_5jlq6")]
+z_as_relative = true
+layout_mode = 2
+_index = 0
+
+[node name="WorkerTab" parent="Buttons" instance=ExtResource("6_vxir1")]
+z_as_relative = true
+layout_mode = 2
+_index = 1
+
+[node name="ShopTab" parent="Buttons" instance=ExtResource("5_abnc8")]
+z_as_relative = true
+layout_mode = 2
+_index = 2
+
+[node name="ClothingTab" parent="Buttons" instance=ExtResource("4_3o7ly")]
+z_as_relative = true
+layout_mode = 2
+_index = 3
+
+[connection signal="MousePressedAtIndex" from="Buttons/ScheduleTab" to="." method="ToggleChanged"]
+[connection signal="MousePressedAtIndex" from="Buttons/WorkerTab" to="." method="ToggleChanged"]
+[connection signal="MousePressedAtIndex" from="Buttons/ShopTab" to="." method="ToggleChanged"]
+[connection signal="MousePressedAtIndex" from="Buttons/ClothingTab" to="." method="ToggleChanged"]

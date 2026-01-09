@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3 uid="uid://dmpa8kcwuhdvt"]
+
+[ext_resource type="Script" uid="uid://dblf6xc2va243" path="res://src/core/runtime_sets/ResourceGroup.cs" id="1_o7afs"]
+
+[resource]
+script = ExtResource("1_o7afs")
+metadata/_custom_type_script = "uid://dblf6xc2va243"

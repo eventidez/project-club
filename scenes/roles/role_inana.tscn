@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdby11fnrk7l4"]
+
+[ext_resource type="PackedScene" uid="uid://dfnlotkle4hrc" path="res://scenes/roles/role.tscn" id="1_yabah"]
+[ext_resource type="Texture2D" uid="uid://cy1t2yj5h2koa" path="res://art/roles/inana_common.png" id="2_wyxqy"]
+[ext_resource type="Texture2D" uid="uid://brax7a36dl6ck" path="res://art/roles/inana_ordinary.png" id="3_vn4uc"]
+
+[node name="Role" instance=ExtResource("1_yabah")]
+_roleId = "inana"
+
+[node name="Skin" parent="." index="2"]
+texture = ExtResource("2_wyxqy")
+
+[node name="Face" parent="Skin" index="0"]
+texture = ExtResource("3_vn4uc")
+
+[node name="CollisionPolygon2D" parent="Area2D" index="0"]
+polygon = PackedVector2Array(8, -816, -89, -827, -131, -726, -173, -564, -198, -297, -256, -41, -242, -6, 234, -3, 219, -267, 172, -361, 110, -457, 74, -602, 20, -680, 29, -732)

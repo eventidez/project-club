@@ -1,0 +1,135 @@
+[
+	{
+		"Id": "inana_common",
+		"Name": "日常",
+		"Role": "inana"
+	},
+	{
+		"ClothingName": "under",
+		"IconAsset": "icon_inana_sexy",
+		"Id": "inana_under",
+		"Name": "内衣",
+		"NameText": "name_inana",
+		"Role": "inana",
+		"SettingName": "inana_under"
+	},
+	{
+		"ClothingName": "sexy",
+		"IconAsset": "icon_inana_under",
+		"Id": "inana_sexy",
+		"Name": "情趣",
+		"NameText": "name_inana",
+		"Role": "inana",
+		"SettingName": "inana_sexy"
+	},
+	{
+		"Name": "日常",
+		"Role": "mayu"
+	},
+	{
+		"ClothingName": "under",
+		"IconAsset": "icon_mayu_sexy",
+		"Id": "mayu_under",
+		"Name": "内衣",
+		"NameText": "name_duki",
+		"Role": "mayu",
+		"SettingName": "mayu_under"
+	},
+	{
+		"ClothingName": "sexy",
+		"IconAsset": "icon_mayu_under",
+		"Id": "mayu_sexy",
+		"Name": "情趣",
+		"NameText": "name_duki",
+		"Role": "mayu",
+		"SettingName": "mayu_sexy"
+	},
+	{
+		"Name": "日常",
+		"Role": "rokka"
+	},
+	{
+		"ClothingName": "under",
+		"IconAsset": "icon_rokka_sexy",
+		"Id": "rokka_under",
+		"Name": "内衣",
+		"NameText": "name_rokka",
+		"Role": "rokka",
+		"SettingName": "rokka_under"
+	},
+	{
+		"ClothingName": "sexy",
+		"IconAsset": "icon_rokka_under",
+		"Id": "rokka_sexy",
+		"Name": "情趣",
+		"NameText": "name_rokka",
+		"Role": "rokka",
+		"SettingName": "rokka_sexy"
+	},
+	{
+		"Name": "日常",
+		"Role": "rise"
+	},
+	{
+		"ClothingName": "under",
+		"IconAsset": "icon_rise_sexy",
+		"Id": "rise_under",
+		"Name": "内衣",
+		"NameText": "name_rise",
+		"Role": "rise",
+		"SettingName": "rise_under"
+	},
+	{
+		"ClothingName": "sexy",
+		"IconAsset": "icon_rise_under",
+		"Id": "rise_sexy",
+		"Name": "情趣",
+		"NameText": "name_rise",
+		"Role": "rise",
+		"SettingName": "rise_sexy"
+	},
+	{
+		"Name": "日常",
+		"Role": "syouko"
+	},
+	{
+		"ClothingName": "under",
+		"IconAsset": "icon_syouco_sexy",
+		"Id": "syouko_under",
+		"Name": "内衣",
+		"NameText": "name_syouko",
+		"Role": "syouko",
+		"SettingName": "syouko_under"
+	},
+	{
+		"ClothingName": "sexy",
+		"IconAsset": "icon_syouco_under",
+		"Id": "syouko_sexy",
+		"Name": "情趣",
+		"NameText": "name_syouko",
+		"Role": "syouko",
+		"SettingName": "syouko_sexy"
+	},
+	{
+		"Name": "日常",
+		"Role": "reiko"
+	},
+	{
+		"ClothingName": "under",
+		"IconAsset": "icon_reiko_sexy",
+		"Id": "reiko_under",
+		"Name": "内衣",
+		"NameText": "name_reiko",
+		"Role": "reiko",
+		"SettingName": "reiko_under"
+	},
+	{
+		"ClothingName": "sexy",
+		"IconAsset": "icon_reiko_under",
+		"Id": "reiko_sexy",
+		"Name": "情趣",
+		"NameText": "name_reiko",
+		"Role": "reiko",
+		"SettingName": "reiko_sexy"
+	}
+]

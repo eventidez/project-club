@@ -1,35 +1,244 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqixqcuanml2y"]
+[gd_scene load_steps=24 format=3 uid="uid://dqixqcuanml2y"]
 
+[ext_resource type="Script" uid="uid://b4n1534ysqs10" path="res://src/dialogue/DialogueGame.cs" id="1_f6d3w"]
 [ext_resource type="Script" uid="uid://budnld4qd513n" path="res://addons/YarnSpinner-Godot/Runtime/DialogueRunner.cs" id="1_o2lx1"]
+[ext_resource type="Resource" uid="uid://cbr2bn8guffld" path="res://dialogue/day1_1.yarnproject" id="2_o4y3q"]
+[ext_resource type="Script" uid="uid://b1o5xpu22evvx" path="res://addons/YarnSpinner-Godot/Runtime/InMemoryVariableStorage.cs" id="3_3hnh0"]
+[ext_resource type="Texture2D" uid="uid://db135ujnxkbme" path="res://art/ui/dialogue/bg_dialogue.png" id="3_ky160"]
+[ext_resource type="Script" uid="uid://c5gxawri864uf" path="res://addons/YarnSpinner-Godot/Runtime/LineProviders/TextLineProvider.cs" id="4_1kbwp"]
+[ext_resource type="Script" uid="uid://c6ecl6k3dlc37" path="res://addons/YarnSpinner-Godot/Runtime/Async/PaletteMarkerProcessor.cs" id="4_m2lio"]
+[ext_resource type="Texture2D" uid="uid://c6ofg4f7vpew7" path="res://art/ui/dialogue/bg_dialogue_next.png" id="5_1kbwp"]
+[ext_resource type="Resource" uid="uid://ch5q1xw1ug5e2" path="res://resources/markup_palette.tres" id="5_3hfpt"]
+[ext_resource type="Script" uid="uid://drwr7dpn73cxj" path="res://src/dialogue/NewLineMarkupProcessor.cs" id="5_a4j7p"]
+[ext_resource type="Script" uid="uid://cm822dsbyq7mj" path="res://addons/YarnSpinner-Godot/Runtime/Async/LinePresenterButtonHandler.cs" id="5_bfw3f"]
+[ext_resource type="Texture2D" uid="uid://w85405ivfj2d" path="res://art/ui/dialogue/btn_choice.png" id="6_bfw3f"]
+[ext_resource type="Texture2D" uid="uid://c3ylcvt86ibkt" path="res://art/ui/dialogue/_refer_dialogue.png" id="7_7xqkd"]
+[ext_resource type="Texture2D" uid="uid://cgl3q7nu588sn" path="res://art/ui/dialogue/bg_dialogue_heart.png" id="7_w5318"]
+[ext_resource type="FontFile" uid="uid://5u8wj1row7la" path="res://fonts/HYZhengYuan-85W.ttf" id="8_jxwwh"]
+[ext_resource type="FontFile" uid="uid://bfq4h6qxbfox5" path="res://fonts/HYZhengYuan-45W.ttf" id="8_txot5"]
+[ext_resource type="FontFile" uid="uid://sapfpsmvidt" path="res://fonts/HYZhengYuan-75W.ttf" id="9_7xqkd"]
+[ext_resource type="Texture2D" uid="uid://dj5k13nswahq" path="res://art/space_white.png" id="9_bfw3f"]
+[ext_resource type="FontFile" uid="uid://crywt4d86rr58" path="res://fonts/HYZhengYuan-95W.ttf" id="10_lwk11"]
+[ext_resource type="Script" uid="uid://cwryhcb303sr1" path="res://src/dialogue/DialogueLinePresenter.cs" id="11_jxwwh"]
+[ext_resource type="Script" uid="uid://ba6k2ox6e4qg" path="res://addons/YarnSpinner-Godot/Runtime/Async/OptionsPresenter.cs" id="12_b3lbr"]
+[ext_resource type="PackedScene" uid="uid://br4djkyt01l6i" path="res://scenes/games/option_item.tscn" id="13_o4y3q"]
 
-[node name="Dialogue" type="Node2D"]
+[sub_resource type="Theme" id="Theme_jxwwh"]
+RichTextLabel/font_sizes/bold_font_size = 31
+RichTextLabel/font_sizes/normal_font_size = 31
+RichTextLabel/fonts/bold_font = ExtResource("8_jxwwh")
+RichTextLabel/fonts/normal_font = ExtResource("8_txot5")
 
-[node name="DialogueRunner" type="Node" parent="."]
+[node name="Dialogue" type="Node2D" node_paths=PackedStringArray("_dialogueRunner", "_heartContent", "_heartLabel")]
+script = ExtResource("1_f6d3w")
+_dialogueRunner = NodePath("DialogueRunner")
+_heartContent = NodePath("DialogueLayer/DialogueView/TextureRect")
+_heartLabel = NodePath("DialogueLayer/DialogueView/TextureRect/RichTextLabel")
+
+[node name="DialogueRunner" type="Node" parent="." node_paths=PackedStringArray("variableStorage", "lineProvider", "dialoguePresenters")]
 script = ExtResource("1_o2lx1")
+yarnProject = ExtResource("2_o4y3q")
+variableStorage = NodePath("../InMemoryVariableStorage")
+lineProvider = NodePath("../TextLineProvider")
+dialoguePresenters = [NodePath("../DialogueLayer/DialogueView/Line"), NodePath("../DialogueLayer/DialogueView/Options")]
+autoStart = true
+startNode = "Start"
 metadata/_custom_type_script = "uid://budnld4qd513n"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="PaletteMarkerProcessor" type="Node" parent="." node_paths=PackedStringArray("lineProvider")]
+script = ExtResource("4_m2lio")
+palette = ExtResource("5_3hfpt")
+lineProvider = NodePath("../TextLineProvider")
+metadata/_custom_type_script = "uid://c6ecl6k3dlc37"
 
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="InMemoryVariableStorage" type="Node" parent="."]
+script = ExtResource("3_3hnh0")
+metadata/_custom_type_script = "uid://b1o5xpu22evvx"
+
+[node name="TextLineProvider" type="Node2D" parent="."]
+script = ExtResource("4_1kbwp")
+YarnProject = ExtResource("2_o4y3q")
+
+[node name="NewLineMarkupProcessor" type="Node" parent="." node_paths=PackedStringArray("LineProvider")]
+script = ExtResource("5_a4j7p")
+LineProvider = NodePath("../TextLineProvider")
+
+[node name="DialogueLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogueView" type="Control" parent="DialogueLayer"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
+mouse_filter = 2
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+[node name="LinePresenterButtonHandler" type="Node" parent="DialogueLayer/DialogueView" node_paths=PackedStringArray("continueButton", "dialogueRunner")]
+script = ExtResource("5_bfw3f")
+continueButton = NodePath("../Button")
+dialogueRunner = NodePath("../../../DialogueRunner")
+
+[node name="TextureRect" type="TextureRect" parent="DialogueLayer/DialogueView"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -920.0
+offset_top = 43.0
+offset_right = -37.0
+offset_bottom = 295.0
+grow_horizontal = 0
+texture = ExtResource("7_w5318")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogueLayer/DialogueView/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 51.0
+offset_top = 50.0
+offset_right = -51.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_jxwwh")
+bbcode_enabled = true
+text = "对话对话"
+scroll_active = false
+
+[node name="Line" type="TextureRect" parent="DialogueLayer/DialogueView" node_paths=PackedStringArray("dialogueRunner", "lineText", "characterNameText", "eventHandlers")]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1382.0
-offset_top = -388.0
-offset_right = -56.0
-offset_bottom = -58.0
+offset_left = -1644.0
+offset_top = -409.0
+offset_right = -93.0
+offset_bottom = -49.0
 grow_horizontal = 0
 grow_vertical = 0
-color = Color(0, 0, 0, 0.44313726)
+texture = ExtResource("3_ky160")
+script = ExtResource("11_jxwwh")
+dialogueRunner = NodePath("../../../DialogueRunner")
+lineText = NodePath("ContentLabel")
+characterNameText = NodePath("CharecterNameLabel")
+useFadeEffect = false
+ConvertHTMLToBBCode = true
+eventHandlers = [NodePath("../LinePresenterButtonHandler")]
+
+[node name="TextureRect3" type="TextureRect" parent="DialogueLayer/DialogueView/Line"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -140.0
+offset_top = -84.0
+offset_right = -87.0
+offset_bottom = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("5_1kbwp")
+
+[node name="ContentLabel" type="RichTextLabel" parent="DialogueLayer/DialogueView/Line"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 88.0
+offset_top = 138.0
+offset_right = -87.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.3529412, 0.24705882, 0.4509804, 1)
+theme_override_constants/line_separation = 5
+theme_override_constants/paragraph_separation = 10
+theme_override_fonts/normal_font = ExtResource("9_7xqkd")
+theme_override_fonts/bold_font = ExtResource("10_lwk11")
+theme_override_font_sizes/normal_font_size = 31
+theme_override_font_sizes/bold_font_size = 31
+bbcode_enabled = true
+text = "对话文本对话文本对话文本对话文本对话文本对话文本对话文本/n[b]对话文本对话文本对话文本对话文本对话文本对话文本对话文本[/b]"
+scroll_active = false
+
+[node name="CharecterNameLabel" type="RichTextLabel" parent="DialogueLayer/DialogueView/Line"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 15.0
+offset_right = 333.0
+offset_bottom = 101.0
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="TextureButton" parent="DialogueLayer/DialogueView"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("9_bfw3f")
+stretch_mode = 0
+
+[node name="Options" type="Control" parent="DialogueLayer/DialogueView" node_paths=PackedStringArray("presenterControl", "optionParent")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("12_b3lbr")
+presenterControl = NodePath("Options")
+optionItemPrefab = ExtResource("13_o4y3q")
+optionParent = NodePath("Options")
+
+[node name="Options" type="VBoxContainer" parent="DialogueLayer/DialogueView/Options"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -715.5
+offset_top = -208.0
+offset_right = 715.5
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 48
+
+[node name="TextureButton2" type="TextureButton" parent="DialogueLayer/DialogueView/Options/Options"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("6_bfw3f")
+
+[node name="Ref0" type="TextureRect" parent="DialogueLayer/DialogueView"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.4117647)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_7xqkd")
+metadata/_edit_lock_ = true
+
+[node name="Ref1" type="TextureRect" parent="DialogueLayer/DialogueView"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_7xqkd")
+metadata/_edit_lock_ = true

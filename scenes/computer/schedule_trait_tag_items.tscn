@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://truxm7f8gr3g"]
+
+[ext_resource type="PackedScene" uid="uid://bicwveu11daew" path="res://scenes/computer/schedule_trait_tag.tscn" id="1_1buab"]
+[ext_resource type="Texture2D" uid="uid://cfyp6d3deeqvu" path="res://art/ui/schedule/tag_items.png" id="2_e84qd"]
+
+[node name="TraitTag" instance=ExtResource("1_1buab")]
+texture = ExtResource("2_e84qd")

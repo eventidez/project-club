@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpawlqvfcgte6"]
+
+[ext_resource type="Script" uid="uid://dhd7bc6b3xhc0" path="res://sample/sample.gd" id="1_jduqb"]
+
+[node name="Sample" type="Node"]
+script = ExtResource("1_jduqb")
+metadata/can_happy = true
+metadata/item_count = 5

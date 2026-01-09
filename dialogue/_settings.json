@@ -1,0 +1,12 @@
+{
+	"tables": [
+		{
+			"path": "./excel/dialogue.xlsx",
+			"sheetName": "day1_0"
+		},
+		{
+			"path": "./excel/dialogue.xlsx",
+			"sheetName": "day1_1"
+		}
+	]
+}

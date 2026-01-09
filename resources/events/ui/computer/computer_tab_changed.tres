@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="IntEventChannel" load_steps=2 format=3 uid="uid://vkkhfnfq3igg"]
+
+[ext_resource type="Script" uid="uid://cx3vkfmaxisj5" path="res://src/core/event/IntEventChannel.cs" id="1_540gs"]
+
+[resource]
+script = ExtResource("1_540gs")
+metadata/_custom_type_script = "uid://cx3vkfmaxisj5"

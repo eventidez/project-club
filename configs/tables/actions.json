@@ -1,0 +1,226 @@
+[
+	{
+		"Day": -1,
+		"Effect": "debt_day += 1",
+		"Id": "101001",
+		"MaxCount": 0,
+		"MoneyCondition": "< 0",
+		"Trigger": "_"
+	},
+	{
+		"Day": -1,
+		"Effect": "debt_day = 0",
+		"MaxCount": 0,
+		"MoneyCondition": ">= 0",
+		"Trigger": "_"
+	},
+	{
+		"Conditions": [
+			"debt_day >= 3"
+		],
+		"Day": -1,
+		"Effect": "end_homeless = true",
+		"Id": "101002",
+		"MaxCount": 1,
+		"Trigger": "ending"
+	},
+	{
+		"Conditions": [
+			"inana_love >= 100"
+		],
+		"Day": -1,
+		"Dialogue": "cg_inana",
+		"Effect": "cg_inana_get = true",
+		"Id": "101004",
+		"MaxCount": 1,
+		"Trigger": "ending"
+	},
+	{
+		"Conditions": [
+			"mayu_love >= 100"
+		],
+		"Day": -1,
+		"Dialogue": "cg_mayu",
+		"Effect": "cg_mayu_get = true",
+		"Id": "101005",
+		"MaxCount": 1,
+		"Trigger": "ending"
+	},
+	{
+		"Conditions": [
+			"rokka_love >= 100"
+		],
+		"Day": -1,
+		"Dialogue": "cg_rokka",
+		"Effect": "cg_rokka_get = true",
+		"Id": "101006",
+		"MaxCount": 1,
+		"Trigger": "ending"
+	},
+	{
+		"Conditions": [
+			"rise_love >= 100"
+		],
+		"Day": -1,
+		"Dialogue": "cg_rise",
+		"Effect": "cg_rise_get = true",
+		"Id": "101007",
+		"MaxCount": 1,
+		"Trigger": "ending"
+	},
+	{
+		"Conditions": [
+			"syouko_love >= 100"
+		],
+		"Day": -1,
+		"Dialogue": "cg_syouko",
+		"Effect": "cg_syouko_get = true",
+		"Id": "101008",
+		"MaxCount": 1,
+		"Trigger": "ending"
+	},
+	{
+		"Conditions": [
+			"reiko_love >= 100"
+		],
+		"Day": -1,
+		"Dialogue": "cg_reiko",
+		"Effect": "cg_reiko_get = true",
+		"Id": "101009",
+		"MaxCount": 1,
+		"Trigger": "ending"
+	},
+	{
+		"Day": 1,
+		"Dialogue": "cg_start",
+		"Id": "102001",
+		"MaxCount": 1,
+		"Trigger": "auto"
+	},
+	{
+		"Day": 1,
+		"Dialogue": "day1_0",
+		"Id": "102002",
+		"MaxCount": 1,
+		"Trigger": "auto"
+	},
+	{
+		"Day": 1,
+		"Id": "102003",
+		"MaxCount": 1
+	},
+	{
+		"Day": 1,
+		"Dialogue": "day1_1",
+		"Id": "102004",
+		"MaxCount": 1,
+		"Trigger": "talk"
+	},
+	{
+		"Day": 2,
+		"Dialogue": "day2_1",
+		"Id": "102005",
+		"MaxCount": 1,
+		"Trigger": "talk"
+	},
+	{
+		"Day": 3,
+		"Dialogue": "day3_1",
+		"Id": "102006",
+		"MaxCount": 1,
+		"Trigger": "talk"
+	},
+	{
+		"Day": 4,
+		"Dialogue": "day4_1",
+		"Id": "102007",
+		"MaxCount": 1,
+		"Trigger": "talk"
+	},
+	{
+		"Day": 5,
+		"Dialogue": "day5_1",
+		"Id": "102008",
+		"MaxCount": 1,
+		"Trigger": "talk"
+	},
+	{
+		"Day": 6,
+		"Dialogue": "day6_1",
+		"Id": "102009",
+		"MaxCount": 1,
+		"Trigger": "talk"
+	},
+	{
+		"Day": 7,
+		"Dialogue": "day7_1",
+		"Id": "102010",
+		"MaxCount": 1,
+		"MoneyCondition": "<= 2000",
+		"Trigger": "talk"
+	},
+	{
+		"Day": 7,
+		"Dialogue": "day7_2",
+		"Effect": "reiko_number += 1",
+		"Id": "102011",
+		"MaxCount": 1,
+		"MoneyCondition": "> 2000",
+		"Trigger": "talk"
+	},
+	{
+		"Day": 8,
+		"Dialogue": "day8_1",
+		"Id": "102012",
+		"MaxCount": 1,
+		"Trigger": "talk"
+	},
+	{
+		"Day": 9,
+		"Dialogue": "day9_1",
+		"Id": "102013",
+		"MaxCount": 1,
+		"Trigger": "talk"
+	},
+	{
+		"Day": 10,
+		"Dialogue": "day10_1",
+		"Id": "102014",
+		"MaxCount": 1,
+		"Trigger": "talk"
+	},
+	{
+		"Conditions": [
+			"temp_day10_mayu == TRUE"
+		],
+		"Day": 11,
+		"Dialogue": "day11_1",
+		"Id": "102015",
+		"MaxCount": 1,
+		"Trigger": "talk"
+	},
+	{
+		"Conditions": [
+			"temp_day10_mayu == FALSE"
+		],
+		"Day": 11,
+		"Dialogue": "day11_2",
+		"Id": "102016",
+		"MaxCount": 1,
+		"Trigger": "talk"
+	},
+	{
+		"Day": 12,
+		"Dialogue": "day12_1",
+		"Id": "102017",
+		"MaxCount": 1,
+		"Trigger": "talk"
+	},
+	{
+		"Day": 13,
+		"Dialogue": "day13_1",
+		"Id": "102018",
+		"MaxCount": 1,
+		"Trigger": "talk"
+	}
+]

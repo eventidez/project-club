@@ -1,0 +1,11 @@
+{
+  "projectFileVersion": 3,
+  "sourceFiles": [
+    "day1_1.yarn"
+  ],
+  "excludeFiles": [],
+  "localisation": {},
+  "baseLanguage": "zh-Hans",
+  "compilerOptions": {},
+  "definitionsFiles": []
+}

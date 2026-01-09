@@ -1,0 +1,38 @@
+[
+	{
+		"ClothingSettingName": "inana_selected_clothing",
+		"Id": "inana",
+		"LoveSetting": "inana_love",
+		"Name": "女仆"
+	},
+	{
+		"ClothingSettingName": "mayu_selected_clothing",
+		"Id": "mayu",
+		"LoveSetting": "mayu_love",
+		"Name": "JK妹"
+	},
+	{
+		"ClothingSettingName": "rokka_selected_clothing",
+		"Id": "rokka",
+		"LoveSetting": "rokka_love",
+		"Name": "运动妹"
+	},
+	{
+		"ClothingSettingName": "rise_selected_clothing",
+		"Id": "rise",
+		"LoveSetting": "rise_love",
+		"Name": "黑道妹"
+	},
+	{
+		"ClothingSettingName": "syouko_selected_clothing",
+		"Id": "syouko",
+		"LoveSetting": "syouko_love",
+		"Name": "条子妹"
+	},
+	{
+		"ClothingSettingName": "reiko_selected_clothing",
+		"Id": "reiko",
+		"LoveSetting": "reiko_love",
+		"Name": "老板娘"
+	}
+]

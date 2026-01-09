@@ -5,7 +5,7 @@ using Chickensoft.GodotNodeInterfaces;
 using Chickensoft.Introspection;
 using GameSystems.Event;
 
-namespace Game.UI;
+namespace Game;
 
 public interface IMainCanvasController : ICanvasLayer
 {

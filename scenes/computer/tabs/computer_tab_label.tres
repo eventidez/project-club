@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://vh5w4t4xaijc"]
+
+[ext_resource type="FontFile" uid="uid://sapfpsmvidt" path="res://fonts/HYZhengYuan-75W.ttf" id="1_ou3vb"]
+
+[resource]
+line_spacing = -12.0
+font = ExtResource("1_ou3vb")
+font_size = 42
+font_color = Color(0.34901962, 0.28235295, 0.5176471, 1)

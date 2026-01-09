@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cj5q8g23ogmht"]
+
+[ext_resource type="FontFile" uid="uid://bygl20bgldvl8" path="res://fonts/Alibaba-PuHuiTi-Bold.otf" id="1_61ve4"]
+
+[resource]
+font = ExtResource("1_61ve4")
+font_size = 53
+font_color = Color(0.34901962, 0.24705882, 0.4509804, 1)

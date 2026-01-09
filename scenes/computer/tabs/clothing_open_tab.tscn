@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b206ghatahvr3"]
+
+[ext_resource type="PackedScene" uid="uid://dgl5g7y8leqlh" path="res://scenes/computer/tabs/computer_open_tab.tscn" id="1_fogup"]
+[ext_resource type="Texture2D" uid="uid://r5nmtoi2arkc" path="res://art/ui/computer/tab4_check.png" id="2_4g1uu"]
+
+[node name="OpenTab" instance=ExtResource("1_fogup")]
+texture = ExtResource("2_4g1uu")
+
+[node name="Label" parent="." index="0"]
+text = "服装"

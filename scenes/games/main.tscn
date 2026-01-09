@@ -1,24 +1,22 @@
-[gd_scene load_steps=21 format=3 uid="uid://bvfxi0tpjl43l"]
+[gd_scene load_steps=19 format=3 uid="uid://bvfxi0tpjl43l"]
 
 [ext_resource type="Script" uid="uid://dqjv6wdlqkng8" path="res://src/main/MainGame.cs" id="1_3vo7c"]
 [ext_resource type="Script" uid="uid://ctix4it0gkpdd" path="res://src/core/runtime_sets/ResourceSet.cs" id="2_c57h3"]
 [ext_resource type="Resource" uid="uid://bdprmx4teneq0" path="res://resources/runtime_sets/main_roles.tres" id="2_cof0n"]
-[ext_resource type="PackedScene" uid="uid://dfnlotkle4hrc" path="res://scenes/role/role.tscn" id="3_bbq7e"]
 [ext_resource type="Script" uid="uid://cr7c1peyldkto" path="res://src/core/input/MouseArea2d.cs" id="3_j2hlb"]
 [ext_resource type="Resource" uid="uid://b43mlq0do8vre" path="res://resources/events/input/empty_mouse_pressed.tres" id="3_mn5u6"]
 [ext_resource type="Script" uid="uid://bknut24qsq06f" path="res://src/main/GameComputerArea.cs" id="3_swccm"]
 [ext_resource type="Resource" uid="uid://cw7x1j31gc762" path="res://resources/events/scenes/main/computer_area_pressed.tres" id="4_mn5u6"]
 [ext_resource type="Texture2D" uid="uid://buv21f4a4pxj6" path="res://art/ui/main/bg_club.png" id="5_2lqq6"]
+[ext_resource type="PackedScene" uid="uid://3hujtlqvaun4" path="res://scenes/roles/role_mayume.tscn" id="6_i66o2"]
 [ext_resource type="Script" uid="uid://s0li1vwxtuw3" path="res://src/ui/MainCanvasController.cs" id="7_cof0n"]
 [ext_resource type="Texture2D" uid="uid://b0f72qihwo6rp" path="res://art/ui/main/bg_club_table.png" id="7_i66o2"]
-[ext_resource type="PackedScene" uid="uid://lnayq8ohod6r" path="res://scenes/ui/computer/computer_view.tscn" id="8_7gcnn"]
+[ext_resource type="PackedScene" uid="uid://lnayq8ohod6r" path="res://scenes/computer/computer_view.tscn" id="8_7gcnn"]
 [ext_resource type="Texture2D" uid="uid://d1qpsr7tbi2bu" path="res://art/ui/main/bg_club_computer.png" id="8_nhxtf"]
 [ext_resource type="Texture2D" uid="uid://bo8k2rkbt2305" path="res://art/ui/main/bg_club_computer_screen.png" id="9_e1jf1"]
 [ext_resource type="PackedScene" uid="uid://d340t47ycaptk" path="res://scenes/ui/main_view.tscn" id="9_swccm"]
-[ext_resource type="Texture2D" uid="uid://c3ylcvt86ibkt" path="res://art/ui/dialogue/_refer_dialogue.png" id="16_2lqq6"]
-[ext_resource type="Texture2D" uid="uid://db135ujnxkbme" path="res://art/ui/dialogue/bg_dialogue.png" id="16_i66o2"]
-[ext_resource type="Texture2D" uid="uid://c6ofg4f7vpew7" path="res://art/ui/dialogue/bg_dialogue_next.png" id="17_nhxtf"]
-[ext_resource type="Texture2D" uid="uid://w85405ivfj2d" path="res://art/ui/dialogue/btn_choice.png" id="19_e1jf1"]
+[ext_resource type="PackedScene" uid="uid://bwkirl3gjebem" path="res://scenes/roles/role_rokka.tscn" id="12_2lqq6"]
+[ext_resource type="Texture2D" uid="uid://dewbsppblbams" path="res://art/ui/main/_refer_club.png" id="16_2lqq6"]
 
 [sub_resource type="Resource" id="Resource_w8ja6"]
 script = ExtResource("2_c57h3")
@@ -39,8 +37,10 @@ Roles"
 position = Vector2(960, 540)
 texture = ExtResource("5_2lqq6")
 
-[node name="Role2" parent="Level" instance=ExtResource("3_bbq7e")]
-position = Vector2(1043, 960)
+[node name="Point2" type="Node2D" parent="Level"]
+position = Vector2(1043, 1080)
+
+[node name="Role2" parent="Level/Point2" instance=ExtResource("6_i66o2")]
 
 [node name="BgClubTable" type="Sprite2D" parent="Level"]
 position = Vector2(961, 857)
@@ -68,8 +68,10 @@ script = ExtResource("3_j2hlb")
 visible = false
 polygon = PackedVector2Array(-191, -93, 260, -62, 249, 224, -197, 165)
 
-[node name="Role" parent="Level" instance=ExtResource("3_bbq7e")]
-position = Vector2(462, 1096)
+[node name="Point1" type="Node2D" parent="Level"]
+position = Vector2(376, 1080)
+
+[node name="Role" parent="Level/Point1" instance=ExtResource("12_2lqq6")]
 
 [node name="MainCanvas" type="CanvasLayer" parent="." node_paths=PackedStringArray("_mainView", "_computerView")]
 script = ExtResource("7_cof0n")
@@ -82,91 +84,11 @@ _computerAreaPressed = ExtResource("4_mn5u6")
 [node name="Computer" parent="MainCanvas" instance=ExtResource("8_7gcnn")]
 visible = false
 
-[node name="Dialogue" type="Control" parent="MainCanvas"]
+[node name="ReferClub" type="Sprite2D" parent="."]
 visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect2" type="TextureRect" parent="MainCanvas/Dialogue"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1644.0
-offset_top = -409.0
-offset_right = -93.0
-offset_bottom = -49.0
-grow_horizontal = 0
-grow_vertical = 0
-texture = ExtResource("16_i66o2")
-
-[node name="TextureRect3" type="TextureRect" parent="MainCanvas/Dialogue/TextureRect2"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -140.0
-offset_top = -84.0
-offset_right = -87.0
-offset_bottom = -32.0
-grow_horizontal = 0
-grow_vertical = 0
-texture = ExtResource("17_nhxtf")
-
-[node name="Label" type="Label" parent="MainCanvas/Dialogue/TextureRect2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 77.0
-offset_top = 141.0
-offset_right = -87.0
-offset_bottom = -20.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "对话文本对话文本对话文本对话文本对话文本对话文本对话文本"
-
-[node name="Control" type="VBoxContainer" parent="MainCanvas/Dialogue"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -715.5
-offset_top = -208.0
-offset_right = 715.5
-offset_bottom = 34.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 48
-
-[node name="TextureButton" type="TextureButton" parent="MainCanvas/Dialogue/Control"]
-layout_mode = 2
-texture_normal = ExtResource("19_e1jf1")
-
-[node name="TextureButton2" type="TextureButton" parent="MainCanvas/Dialogue/Control"]
-layout_mode = 2
-texture_normal = ExtResource("19_e1jf1")
-
-[node name="Ref0" type="TextureRect" parent="MainCanvas/Dialogue"]
-self_modulate = Color(1, 1, 1, 0.4117647)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+self_modulate = Color(1, 1, 1, 0.34117648)
+position = Vector2(960, 540)
 texture = ExtResource("16_2lqq6")
-metadata/_edit_lock_ = true
 
 [connection signal="ComputerPressed" from="." to="MainCanvas" method="OpenComputerView"]
 [connection signal="MousePressed" from="Level/ComputerArea2D" to="." method="ComputerMousePressed"]

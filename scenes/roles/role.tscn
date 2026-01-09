@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfnlotkle4hrc"]
+
+[ext_resource type="Script" uid="uid://bpx2tbyj5tp08" path="res://src/main/GameRoleForm.cs" id="1_7go5a"]
+[ext_resource type="Script" uid="uid://cn7jaub0gpp2f" path="res://src/core/runtime_sets/GodotNodeZone.cs" id="2_7go5a"]
+[ext_resource type="Script" uid="uid://cr7c1peyldkto" path="res://src/core/input/MouseArea2d.cs" id="2_7ts3a"]
+[ext_resource type="Resource" uid="uid://bdprmx4teneq0" path="res://resources/runtime_sets/main_roles.tres" id="3_7ts3a"]
+[ext_resource type="PackedScene" uid="uid://q72a2x2cgpvt" path="res://scenes/roles/menu/role_menu_view.tscn" id="4_gnfo1"]
+
+[node name="Role" type="Node2D" node_paths=PackedStringArray("_menuView", "_bodySprite", "_faceSprite")]
+script = ExtResource("1_7go5a")
+_menuView = NodePath("RoleMenuView")
+_bodySprite = NodePath("Skin")
+_faceSprite = NodePath("Skin/Face")
+metadata/_edit_group_ = true
+
+[node name="GodotNodeZone" type="Node" parent="."]
+script = ExtResource("2_7go5a")
+_nodeSet = ExtResource("3_7ts3a")
+metadata/_custom_type_script = "uid://cn7jaub0gpp2f"
+
+[node name="MouseArea2d" type="Node" parent="." node_paths=PackedStringArray("_area2d")]
+script = ExtResource("2_7ts3a")
+_area2d = NodePath("../Area2D")
+
+[node name="Skin" type="Sprite2D" parent="."]
+position = Vector2(0, -422)
+
+[node name="Face" type="Sprite2D" parent="Skin"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
+polygon = PackedVector2Array(-165, -466, -319, 22, 292, 15, 146, -463)
+
+[node name="RoleMenuView" parent="." instance=ExtResource("4_gnfo1")]
+offset_left = 84.0
+offset_top = -856.0
+offset_right = 347.0
+offset_bottom = -532.0
