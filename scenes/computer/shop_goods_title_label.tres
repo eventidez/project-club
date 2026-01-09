@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://sub4akrhjil"]
+
+[ext_resource type="FontFile" uid="uid://crywt4d86rr58" path="res://fonts/HYZhengYuan-95W.ttf" id="1_rc1y7"]
+
+[resource]
+line_spacing = -55.96
+font = ExtResource("1_rc1y7")
+font_size = 98
+font_color = Color(0.5529412, 0.46666667, 0.76862746, 1)

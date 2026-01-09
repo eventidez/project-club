@@ -5,6 +5,8 @@ namespace GameSystems.Event;
 
 public abstract partial class GenericEventChannel<T> : Resource
 {
+    public string EventId => GetRid().ToString();
+
     private Action<T> _eventRaised;
 
     public event Action<T> EventRaised
@@ -21,7 +23,7 @@ public abstract partial class GenericEventChannel<T> : Resource
         }
         else
         {
-            EventBus.Instance.Subscribe(ResourcePath, action);
+            EventBus.Instance.Subscribe(EventId, action);
         }
     }
 
@@ -33,7 +35,7 @@ public abstract partial class GenericEventChannel<T> : Resource
         }
         else
         {
-            EventBus.Instance.Unsubscribe(ResourcePath, action);
+            EventBus.Instance.Unsubscribe(EventId, action);
         }
     }
 
@@ -45,7 +47,7 @@ public abstract partial class GenericEventChannel<T> : Resource
         }
         else
         {
-            EventBus.Instance.SendEvent(ResourcePath, parameter);
+            EventBus.Instance.SendEvent(EventId, parameter);
         }
     }
 }
